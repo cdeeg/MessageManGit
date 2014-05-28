@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: b2c8367dd00664c009753fc994b4a4c2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Ankle_left_Joint
+    100002: Ankle_right_Joint
+    100004: back
+    100006: Belly_joint
+    100008: Body_female
+    100010: Chest_Joint
+    100012: ellbow_left_joint
+    100014: ellbow_right_joint
+    100016: Foot_left_Joint
+    100018: Foot_right_Joint
+    100020: Head_end_joint
+    100022: Head_joint
+    100024: Hip_center_end_joint
+    100026: Hip_center_joint
+    100028: Hip_left_joint
+    100030: Hip_right_joint
+    100032: ikHandle1
+    100034: ikHandle2
+    100036: ikHandle3
+    100038: ikHandle4
+    100040: indexfinger_left_end_joint
+    100042: indexfinger_left_joint
+    100044: indexfinger_right_end_joint
+    100046: indexfinger_right_joint
+    100048: Knee_left_joint
+    100050: Knee_right_joint
+    100052: left
+    100054: middlefinger_left_end_joint
+    100056: middlefinger_left_joint
+    100058: middlefinger_right_end_joint
+    100060: middlefinger_right_joint
+    100062: Neck_joint
+    100064: //RootNode
+    100066: pinky_left_end_joint
+    100068: pinky_left_joint
+    100070: pinky_right_end_joint
+    100072: pinky_right_joint
+    100074: pPlane1
+    100076: ringfinger_left_end_joint
+    100078: ringfinger_left_joint
+    100080: ringfinger_right_end_joint
+    100082: ringfinger_right_joint
+    100084: Root_Joint
+    100086: shoulder_left_joint
+    100088: shoulder_right_joint
+    100090: thumb_a_left_joint
+    100092: thumb_a_right_joint
+    100094: thumb_b_left_joint
+    100096: thumb_b_right_joint
+    100098: thumb_end_joint
+    100100: thumb_end_joint 1
+    100102: Toe_left_end_joint
+    100104: Toe_right_end_joint
+    100106: wrist_left_joint
+    100108: wrist_right_joint
+    400000: Ankle_left_Joint
+    400002: Ankle_right_Joint
+    400004: back
+    400006: Belly_joint
+    400008: Body_female
+    400010: Chest_Joint
+    400012: ellbow_left_joint
+    400014: ellbow_right_joint
+    400016: Foot_left_Joint
+    400018: Foot_right_Joint
+    400020: Head_end_joint
+    400022: Head_joint
+    400024: Hip_center_end_joint
+    400026: Hip_center_joint
+    400028: Hip_left_joint
+    400030: Hip_right_joint
+    400032: ikHandle1
+    400034: ikHandle2
+    400036: ikHandle3
+    400038: ikHandle4
+    400040: indexfinger_left_end_joint
+    400042: indexfinger_left_joint
+    400044: indexfinger_right_end_joint
+    400046: indexfinger_right_joint
+    400048: Knee_left_joint
+    400050: Knee_right_joint
+    400052: left
+    400054: middlefinger_left_end_joint
+    400056: middlefinger_left_joint
+    400058: middlefinger_right_end_joint
+    400060: middlefinger_right_joint
+    400062: Neck_joint
+    400064: //RootNode
+    400066: pinky_left_end_joint
+    400068: pinky_left_joint
+    400070: pinky_right_end_joint
+    400072: pinky_right_joint
+    400074: pPlane1
+    400076: ringfinger_left_end_joint
+    400078: ringfinger_left_joint
+    400080: ringfinger_right_end_joint
+    400082: ringfinger_right_joint
+    400084: Root_Joint
+    400086: shoulder_left_joint
+    400088: shoulder_right_joint
+    400090: thumb_a_left_joint
+    400092: thumb_a_right_joint
+    400094: thumb_b_left_joint
+    400096: thumb_b_right_joint
+    400098: thumb_end_joint
+    400100: thumb_end_joint 1
+    400102: Toe_left_end_joint
+    400104: Toe_right_end_joint
+    400106: wrist_left_joint
+    400108: wrist_right_joint
+    2300000: pPlane1
+    3300000: pPlane1
+    4300000: Body_female
+    4300002: pPlane1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body_female
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body_female
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: ikHandle4
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      - path: Root_Joint
+        weight: 1
+      - path: Root_Joint/Belly_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/Neck_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/Neck_joint/Head_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/Neck_joint/Head_joint/Head_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/indexfinger_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/indexfinger_left_joint/indexfinger_left_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/middlefinger_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/middlefinger_left_joint/middlefinger_left_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/pinky_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/pinky_left_joint/pinky_left_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/ringfinger_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/ringfinger_left_joint/ringfinger_left_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/thumb_a_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/thumb_a_left_joint/thumb_b_left_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint/thumb_a_left_joint/thumb_b_left_joint/thumb_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/indexfinger_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/indexfinger_right_joint/indexfinger_right_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/middlefinger_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/middlefinger_right_joint/middlefinger_right_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/pinky_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/pinky_right_joint/pinky_right_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/ringfinger_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/ringfinger_right_joint/ringfinger_right_end_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/thumb_a_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/thumb_a_right_joint/thumb_b_right_joint
+        weight: 1
+      - path: Root_Joint/Belly_joint/Chest_Joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/thumb_a_right_joint/thumb_b_right_joint/thumb_end_joint
+          1
+        weight: 1
+      - path: Root_Joint/Hip_center_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_center_end_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_left_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_left_joint/Knee_left_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_left_joint/Knee_left_joint/Ankle_left_Joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_left_joint/Knee_left_joint/Ankle_left_Joint/Foot_left_Joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_left_joint/Knee_left_joint/Ankle_left_Joint/Foot_left_Joint/Toe_left_end_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_right_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_right_joint/Knee_right_joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_right_joint/Knee_right_joint/Ankle_right_Joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_right_joint/Knee_right_joint/Ankle_right_Joint/Foot_right_Joint
+        weight: 1
+      - path: Root_Joint/Hip_center_joint/Hip_right_joint/Knee_right_joint/Ankle_right_Joint/Foot_right_Joint/Toe_right_end_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
