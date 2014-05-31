@@ -23,6 +23,8 @@ public class PrototypeGameController : MonoBehaviour {
 
 	bool isPaused;
 
+	int indx = 0;
+
 	public bool StopGame
 	{
 		get { return stop; }
@@ -39,6 +41,7 @@ public class PrototypeGameController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, Finished);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, GameWon);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, PauseUnPause);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
 	}
 	
 	void Start()
@@ -48,6 +51,22 @@ public class PrototypeGameController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, Finished);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, PauseUnPause);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
+	}
+
+	void TimeUpdated (object sender, System.EventArgs args)
+	{
+		switch(indx)
+		{
+			case 0: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub", "Clock updated! WHOWHOWHOW",true)); break;
+			case 1: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub aonjkal eioyd", "mopmop!",true)); break;
+			case 2: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub aonjkal eioyd", "Clock updated! slNDLJ SIKSJ CABJKW sisfa",true)); break;
+			default: break;
+		}
+
+		indx++;
+		if(indx == 3)
+			indx = 0;
 	}
 
 	void PauseUnPause (object sender, System.EventArgs args)
@@ -104,7 +123,7 @@ public class PrototypeGameController : MonoBehaviour {
 
 		if(currentTweetWaitTimePassed > tweetWaitTime)
 		{
-			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.TWEET_INCOMING, new MessageEventArgs(sender2, "",""));
+			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.TWEET_INCOMING, new MessageEventArgs(sender2, "Aww man! Super hotdogs!",false));
 			currentTweetWaitTimePassed = 0f;
 			tweetWaitTime = Random.Range(minTimeTweetWait, maxTimeTweetWait);
 		}

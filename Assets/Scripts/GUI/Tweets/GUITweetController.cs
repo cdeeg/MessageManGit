@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class GUITweetController : MonoBehaviour {
 
 	private const int INIT_POOL_OBJECTS = 3;
+	private const float OFFSET_SCREEN_BOUNDS = 10f;
 
 	public GUITweet tweetPrefab;
 
@@ -18,6 +19,9 @@ public class GUITweetController : MonoBehaviour {
 	AudioSource audio;
 	GUITweet[] existingTweets;
 
+	List<GUITweet> queue;
+	bool running;
+
 	#region Unity methods
 	void Awake ()
 	{
@@ -29,26 +33,35 @@ public class GUITweetController : MonoBehaviour {
 		audio = GetComponent<AudioSource>();
 
 		if(!isNotificationAnchor)
+		{
 			GlobalEventHandler.GetInstance().RegisterListener(EEventType.TWEET_INCOMING, ShowTweet);
+			GlobalEventHandler.GetInstance().RegisterListener(EEventType.SPECIAL_TWEET, ShowTweet);
+		}
 		else
 			GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ShowTweet);
 
 		tweetPrefab.CreatePool();
+		queue = new List<GUITweet>();
+		running = false;
 	}
 
 	void OnDestroy()
 	{
+		queue.Clear();
 		if(!isNotificationAnchor)
+		{
 			GlobalEventHandler.GetInstance().UnregisterListener(EEventType.TWEET_INCOMING, ShowTweet);
+			GlobalEventHandler.GetInstance().UnregisterListener(EEventType.SPECIAL_TWEET, ShowTweet);
+		}
 		else
 			GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ShowTweet);
 	}
 	#endregion
 
 	#region Visible stuff
-	void ReorderTweets(GUITweet newTweet)
+	IEnumerator ReorderTweets(float newTweetHeight, Vector3 spawnPos)
 	{
-		existingTweets = GetComponentsInChildren<GUITweet>();
+		running = true;
 
 		GUITweet tweet;
 		for(int x=existingTweets.Length-1; x>=0; x--)
@@ -56,13 +69,34 @@ public class GUITweetController : MonoBehaviour {
 			tweet = existingTweets[x];
 			Vector3 pos = tweet.transform.localPosition;
 			if(orientationDown)
-				pos.y -= newTweet.Height+offset;
+				pos.y -= newTweetHeight+offset;
 			else
-				pos.y += newTweet.Height+offset;
+				pos.y += newTweetHeight+offset;
+
 			tweet.MoveToPosition(pos.y);
+//			tweet.transform.localPosition = pos;
+
+			yield return null;
 		}
 
-		newTweet.transform.localPosition = Vector3.zero;
+		yield return null;
+		
+		if(queue.Count > 0)
+		{
+			GUITweet queuedTweet = queue[0];
+			queue.RemoveAt(0);
+
+			if(!orientationDown)
+				spawnPos = new Vector3(OFFSET_SCREEN_BOUNDS, OFFSET_SCREEN_BOUNDS+(queuedTweet.Height));
+			else
+				spawnPos = new Vector3(-OFFSET_SCREEN_BOUNDS, -OFFSET_SCREEN_BOUNDS-(queuedTweet.Height));
+
+			StartCoroutine(ReorderTweets(queuedTweet.Height, spawnPos));
+		}
+		else
+		{
+			running = false;
+		}
 	}
 
 	void ShowTweet (object sender, System.EventArgs args)
@@ -70,16 +104,27 @@ public class GUITweetController : MonoBehaviour {
 		MessageEventArgs msgArgs = (MessageEventArgs)args;
 		if(msgArgs == null) return;
 
+		existingTweets = GetComponentsInChildren<GUITweet>();
+
 		GUITweet tweet = tweetPrefab.Spawn(transform);
-		tweet.Activate(msgArgs.Sender);
-		Vector3 spawnPos = Vector3.zero;
-		spawnPos.y -= tweet.Height;
+		if(isNotificationAnchor)
+			tweet.Activate(msgArgs.Sender, "");
+		else
+			tweet.Activate(msgArgs.Sender, "", msgArgs.Text, msgArgs.IsSpecial);
+
+		Vector3 spawnPos;
+		if(!orientationDown)
+			spawnPos = new Vector3(OFFSET_SCREEN_BOUNDS, OFFSET_SCREEN_BOUNDS+(tweet.Height));
+		else
+			spawnPos = new Vector3(-OFFSET_SCREEN_BOUNDS, -OFFSET_SCREEN_BOUNDS-(tweet.Height));
+
 		tweet.transform.localPosition = spawnPos;
 		tweet.DoneFading += TweetIsDoneFading;
 
 		if(audio != null) audio.PlayOneShot(tweetIncoming);
 
-		ReorderTweets(tweet);
+		if(!running) StartCoroutine( ReorderTweets(tweet.Height, spawnPos) );
+		else queue.Add(tweet);
 	}
 
 	void TweetIsDoneFading (object sender, System.EventArgs e)

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\GUI\Tweets\GUITweetController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Logic\Enums.cs" />
+     <Compile Include="Assets\Scripts\Logic\EventArgs\ClockEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\EventArgs\GameOverEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\EventArgs\MessageEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\GlobalEventHandler.cs" />

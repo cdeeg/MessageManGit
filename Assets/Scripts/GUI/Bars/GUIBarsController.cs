@@ -3,15 +3,19 @@ using System.Collections;
 
 public class GUIBarsController : MonoBehaviour {
 
+	const float MODULO_THINGY = 4f;
+
 	public GUITweenableBar timeBar;
 	public GUITweenableBar friendsBar;
 
-	public float initialFriendsAmount = 5f;
-	public float initialTimeInSeconds = 120f;
+	public float initialFriendsAmount = 10f;
+	public float initialTimeInSeconds = 180f;
 
 	bool isPaused = false;
 
 	bool allDone = false;
+
+	int initMinutes;
 
 	void Start()
 	{
@@ -22,7 +26,7 @@ public class GUIBarsController : MonoBehaviour {
 
 		timeBar.Init(initialTimeInSeconds);
 		friendsBar.Init(initialFriendsAmount);
-
+		initMinutes = (int)(initialTimeInSeconds/60f);
 		StartCoroutine(UpdateTime());
 	}
 
@@ -79,6 +83,12 @@ public class GUIBarsController : MonoBehaviour {
 			if(!isPaused)
 			{
 				timeBar.UpdateBar(-1f, true);
+
+				if(timeBar.CurrentValue % MODULO_THINGY == 0f)
+				{
+					ClockEventArgs args = new ClockEventArgs((int)(timeBar.CurrentValue/MODULO_THINGY), initMinutes);
+					GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.UPDATE_CLOCK, args);
+				}
 			}
 			else
 			{

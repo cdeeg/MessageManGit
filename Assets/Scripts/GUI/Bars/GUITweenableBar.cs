@@ -4,6 +4,8 @@ using System.Collections;
 public class GUITweenableBar : MonoBehaviour {
 
 	public tk2dSlicedSprite foreground;
+	public tk2dSlicedSprite background;
+	public bool isVisible = true;
 
 	float initialSize;
 	float initValue;
@@ -31,10 +33,19 @@ public class GUITweenableBar : MonoBehaviour {
 		initValue = initialValue;
 		currentValue = initialValue;
 
+		foreground.gameObject.SetActive(true);
+		background.gameObject.SetActive(true);
+
 		// reset size
 		Vector2 dim = foreground.dimensions;
 		dim.x = initialSize;
 		foreground.dimensions = dim;
+
+		if(!isVisible)
+		{
+			foreground.gameObject.SetActive(false);
+			background.gameObject.SetActive(false);
+		}
 	}
 
 	public void UpdateBar(float value, bool isDelta)
@@ -52,19 +63,17 @@ public class GUITweenableBar : MonoBehaviour {
 		if(currentValue < 0f) currentValue = -1f;
 		if(currentValue > initValue) currentValue = initValue;
 
-		if(gameObject.activeInHierarchy)
-			StartCoroutine(ResizeBar());
+		if(gameObject.activeInHierarchy && isVisible)
+			ResizeBar();
 	}
 
-	IEnumerator ResizeBar()
+	void ResizeBar()
 	{
 		float blah = (currentValue/initValue)*initialSize;
 		if( blah <= 0f ) blah = 0.1f;
 		Vector2 size = foreground.dimensions;
 		size.x = blah;
 		foreground.dimensions = size;
-
-		yield return null;
 	}
 
 	public override string ToString ()

@@ -7,19 +7,43 @@ public class GUITweet : MonoBehaviour {
 	public tk2dSlicedSprite background;
 	public tk2dSlicedSprite icon;
 	public tk2dTextMesh senderName;
+	public tk2dTextMesh messageText;
+	public float offsetSenderMessage = 5.5f;
+	public float offsetTextBackground = 40f;
 	public float stayTime = 3f;
 	public float fadeTime = 2f;
 
+	public Color specialTweetColor = new Color(1f,1f,1f);
+	public tk2dSprite defaultPicture;
+	
 	public event EventHandler DoneFading;
 
+	tk2dSpriteCollection myCollection;
 	float height;
+	float width;
 	float moveTime = 1f;
 	bool instaFade;
 	bool pause;
+	bool specialTweet;
+	float minBgSize;
+	bool hasMessage = false;
+
+	bool isMoving;
+	float targetMovePos;
 
 	public float Height
 	{
 		get { return height; }
+	}
+
+	public float Width
+	{
+		get { return width; }
+	}
+
+	public bool IsSpecial
+	{
+		get { return specialTweet; }
 	}
 
 	void Awake()
@@ -36,25 +60,71 @@ public class GUITweet : MonoBehaviour {
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, PauseFading);
 	}
 
-	public void Activate(string sender)
+	public void Activate(string sender, string pictureName, string message = "", bool useSpecialColor = false)
 	{
 		background.gameObject.SetActive(true);
+		minBgSize = icon.dimensions.y + offsetTextBackground*2;
 		instaFade = false;
+		specialTweet = useSpecialColor;
 		senderName.text = sender;
+		Vector3 pos = senderName.transform.localPosition;
+		pos.y = background.transform.localPosition.y - offsetTextBackground;
+		senderName.transform.localPosition = pos;
+		Vector3 iconPos = icon.transform.localPosition;
+		iconPos.y = background.transform.localPosition.y - offsetTextBackground;
+		icon.transform.localPosition = iconPos;
+		float sizeSender = senderName.GetEstimatedMeshBoundsForString(sender).size.y + offsetSenderMessage;
+		float backgroundsize = sizeSender + offsetTextBackground*2;
+		if(!String.IsNullOrEmpty(message))
+		{
+			hasMessage = true;
+			messageText.gameObject.SetActive(true);
+			messageText.text = message;
+			messageText.transform.localPosition = new Vector3(senderName.transform.localPosition.x, senderName.transform.localPosition.y - sizeSender, senderName.transform.localPosition.z);
+			backgroundsize += messageText.GetEstimatedMeshBoundsForString(message).size.y;
+			Vector2 bgScale = background.dimensions;
+			bgScale.y = backgroundsize;
+			background.dimensions = bgScale;
+		}
+		else
+		{
+			messageText.text = "";
+			Vector2 bgScale = background.dimensions;
+			bgScale.y = backgroundsize;
+			background.dimensions = bgScale;
+			messageText.gameObject.SetActive(false);
+		}
+
+		width = background.dimensions.x;
+		height = backgroundsize;
+		if(backgroundsize < minBgSize)
+		{
+			Vector2 bgScale = background.dimensions;
+			bgScale.y = minBgSize;
+			background.dimensions = bgScale;
+			height = minBgSize;
+		}
+
+		if(!String.IsNullOrEmpty(pictureName))
+			icon.spriteId = icon.GetSpriteIdByName(pictureName);
 
 		Color col = background.color;
+		if(useSpecialColor) col = specialTweetColor;
+		else col = Color.white;
 		col.a = 1f;
 		background.color = col;
-		
+
 		col = senderName.color;
 		col.a = 1f;
 		senderName.color = col;
 
+		col = messageText.color;
+		col.a = 1f;
+		messageText.color = col;
+
 		col = icon.color;
 		col.a = 1f;
 		icon.color = col;
-
-		height = background.dimensions.y;
 
 		StartCoroutine(FadeMe());
 	}
@@ -76,18 +146,28 @@ public class GUITweet : MonoBehaviour {
 
 	public void MoveToPosition(float yPos)
 	{
-		StartCoroutine(MoveToPos(yPos));
+		targetMovePos = yPos;
+		if(!isMoving)
+		{
+			Debug.Log("DIFF NEW OLD: " + (targetMovePos - transform.localPosition.y));
+			StartCoroutine(MoveToPos());
+		}
 	}
 
 	void SendEvent()
 	{
 		if(DoneFading != null)
 			DoneFading(this, null);
+
+		isMoving = false;
+		hasMessage = false;
+		targetMovePos = 0f;
 	}
 
 	#region Coroutines
-	IEnumerator MoveToPos(float yPos)
+	IEnumerator MoveToPos()
 	{
+		isMoving = true;
 		float passed = 0f;
 		while (passed < moveTime)
 		{
@@ -100,11 +180,12 @@ public class GUITweet : MonoBehaviour {
 			passed += Time.deltaTime;
 
 			Vector3 pos = transform.localPosition;
-			pos.y = Mathf.Lerp(pos.y, yPos, passed/moveTime);
+			pos.y = Mathf.Lerp(pos.y, targetMovePos, passed/moveTime);
 			transform.localPosition = pos;
 
 			yield return null;
 		}
+		isMoving = false;
 	}
 
 	IEnumerator FadeMe()
@@ -150,6 +231,13 @@ public class GUITweet : MonoBehaviour {
 			col = senderName.color;
 			col.a = alpha;
 			senderName.color = col;
+
+			if(hasMessage)
+			{
+				col = messageText.color;
+				col.a = alpha;
+				messageText.color = col;
+			}
 
 			col = icon.color;
 			col.a = alpha;
