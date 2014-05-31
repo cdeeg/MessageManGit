@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/Bars/GUIBarsController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/Messages/GUIMessageController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GUI/Menu/GUIMenuController.cs" Line="12" Column="2" />
-      <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="80" Column="22" />
-      <File FileName="Assets/Scripts/GUI/Tweets/GUITweetController.cs" Line="45" Column="19" />
-      <File FileName="Assets/Scripts/GUI/Bars/GUIBarsController.cs" Line="6" Column="31" />
-      <File FileName="Assets/Scripts/PrototypeGameController.cs" Line="126" Column="143" />
+      <File FileName="Assets/Scripts/GUI/Highscores/GUIHighscoreController.cs" Line="26" Column="27" />
+      <File FileName="Assets/Scripts/PrototypeGameController.cs" Line="26" Column="15" />
+      <File FileName="Assets/Scripts/Logic/HighscoreInformationData.cs" Line="17" Column="16" />
+      <File FileName="Assets/Scripts/GUI/Bars/GUIBarsController.cs" Line="52" Column="53" />
+      <File FileName="Assets/Scripts/GUI/Messages/GUIMessageController.cs" Line="114" Column="83" />
+      <File FileName="Assets/Scripts/Logic/Enums.cs" Line="17" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

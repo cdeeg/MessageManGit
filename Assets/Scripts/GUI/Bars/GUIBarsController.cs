@@ -45,6 +45,12 @@ public class GUIBarsController : MonoBehaviour {
 
 	void DoNotUpdate (object sender, System.EventArgs args)
 	{
+		HighscoreInformationData.GetInstance().TimePlayed = timeBar.CurrentValue/60f;
+		HighscoreInformationData.GetInstance().InitialTime = initMinutes;
+
+		HighscoreInformationData.GetInstance().LeftFriends = friendsBar.CurrentValue;
+		HighscoreInformationData.GetInstance().LostFriends = initialFriendsAmount-friendsBar.CurrentValue;
+
 		allDone = true;
 		StopCoroutine("UpdateTime");
 	}

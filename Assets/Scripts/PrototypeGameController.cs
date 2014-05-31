@@ -77,8 +77,8 @@ public class PrototypeGameController : MonoBehaviour {
 	
 	void GameWon (object sender, System.EventArgs args)
 	{
-		gameOverScreen.gameObject.SetActive(true);
-		allDone = true;
+//		gameOverScreen.gameObject.SetActive(true);
+//		allDone = true;
 	}
 	
 	void Finished (object sender, System.EventArgs args)

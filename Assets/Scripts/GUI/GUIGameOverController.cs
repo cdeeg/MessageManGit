@@ -10,14 +10,14 @@ public class GUIGameOverController : MonoBehaviour {
 	void Start ()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, GameOver);
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
 	}
 	
 	// Update is called once per frame
 	void OnDestroy ()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, GameOver);
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, GameWon);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, GameWon);
 	}
 
 	void GameOver(object sender, System.EventArgs args)

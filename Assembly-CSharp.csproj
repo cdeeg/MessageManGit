@@ -50,12 +50,15 @@
      <Compile Include="Assets\Scripts\GUI\Bars\GUITweenableBar.cs" />
      <Compile Include="Assets\Scripts\GUI\GUIGameOverController.cs" />
      <Compile Include="Assets\Scripts\GUI\GUIHudController.cs" />
+     <Compile Include="Assets\Scripts\GUI\GUIMainController.cs" />
      <Compile Include="Assets\Scripts\GUI\GUIPhoneController.cs" />
-     <Compile Include="Assets\Scripts\GUI\HUIPhoneController.cs" />
+     <Compile Include="Assets\Scripts\GUI\Highscores\GUIHighscoreController.cs" />
+     <Compile Include="Assets\Scripts\GUI\Highscores\GUIHighscoreRow.cs" />
+     <Compile Include="Assets\Scripts\GUI\Interfaces\IGUIContext.cs" />
+     <Compile Include="Assets\Scripts\GUI\Interfaces\IHoverable.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMainMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuButton.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuController.cs" />
-     <Compile Include="Assets\Scripts\GUI\Menu\IHoverable.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\PauseMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Messages\GUIMessage.cs" />
      <Compile Include="Assets\Scripts\GUI\Messages\GUIMessageController.cs" />
@@ -67,6 +70,7 @@
      <Compile Include="Assets\Scripts\Logic\EventArgs\GameOverEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\EventArgs\MessageEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\GlobalEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Logic\HighscoreInformationData.cs" />
      <Compile Include="Assets\Scripts\Logic\IGameContext.cs" />
      <Compile Include="Assets\Scripts\Logic\MessageCVSParser.cs" />
      <Compile Include="Assets\Scripts\Logic\MessageController.cs" />
@@ -75,8 +79,8 @@
      <Compile Include="Assets\Scripts\Main\FPSCharacterController.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCAgent.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCHandler.cs" />
-     <Compile Include="Assets\Scripts\Main\Trigger\LocationTrigger.cs" />
      <Compile Include="Assets\Scripts\Main\Trigger\ObstacleTrigger.cs" />
+     <Compile Include="Assets\Scripts\Main\Trigger\WinGameTrigger.cs" />
      <Compile Include="Assets\Scripts\Prototype\PrototypeNPCControl.cs" />
      <Compile Include="Assets\Scripts\Prototype\PrototypeNPCHandler.cs" />
      <Compile Include="Assets\Scripts\PrototypeGameController.cs" />

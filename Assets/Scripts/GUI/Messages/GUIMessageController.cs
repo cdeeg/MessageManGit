@@ -41,6 +41,7 @@ public class GUIMessageController : MonoBehaviour
 	void Start()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, SetMessage);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.SHOVED, ShovedByNpcs);
 		guiAnchor.gameObject.SetActive(false);
 
 		audio = GetComponent<AudioSource>();
@@ -56,6 +57,7 @@ public class GUIMessageController : MonoBehaviour
 	void OnDestroy()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED, SetMessage);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.SHOVED, ShovedByNpcs);
 	}
 
 	public void ToggleGUI(bool visible)
@@ -75,6 +77,13 @@ public class GUIMessageController : MonoBehaviour
 		b = (byte)(c.a*255);
 		build.Append(string.Format("{0:x2}",b));
 		return build.ToString();
+	}
+
+	#region Event methods
+	void ShovedByNpcs (object sender, EventArgs args)
+	{
+		messageAnswered = false;
+		HighscoreInformationData.GetInstance().FailedMessages++;
 	}
 
 	void SetMessage (object sender, System.EventArgs args)
@@ -102,9 +111,11 @@ public class GUIMessageController : MonoBehaviour
 	void SendFinishEvent()
 	{
 		if(audio != null) audio.PlayOneShot(messageDone);
+		if(messageAnswered) HighscoreInformationData.GetInstance().SuccessfulMessages++;
 		GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(messageAnswered));
 		guiAnchor.gameObject.SetActive(false);
 	}
+	#endregion
 
 	#region Coroutines
 	IEnumerator HighlightText(int subIndex, bool isWrong)
