@@ -10,6 +10,8 @@ public class FPSCharacterController : MonoBehaviour {
 	public bool doHeadBob = false;
 	public Camera playerCamera;
 
+	public GameObject bigCollider;
+
 	public PrototypeGameController gctrl;
 
 	Vector2 input;
@@ -21,9 +23,17 @@ public class FPSCharacterController : MonoBehaviour {
 
 	float previous = 0f;
 
+	static Vector3 myForward;
+
+	public static Vector3 MyForward
+	{
+		get { return myForward; }
+	}
+
 	void Start()
 	{
 		isMoving = false;
+		bigCollider.SetActive(false);
 		origPos = playerCamera.transform.localPosition.y;
 		if(rigidbody == null)
 		{
@@ -42,6 +52,9 @@ public class FPSCharacterController : MonoBehaviour {
 
 		float speed = run ? runSpeed : walkSpeed;
 
+		if(run) bigCollider.SetActive(true);
+		else bigCollider.SetActive(false);
+
 		input = new Vector2( rotate, forwards );
 		
 		// normalize input if it exceeds 1 in combined length:
@@ -56,6 +69,8 @@ public class FPSCharacterController : MonoBehaviour {
 
 		transform.RotateAround(transform.position, Vector3.up, 0.1f * input.x * rotateSpeed);
 		isMoving = (forwards != 0f);
+
+		myForward = transform.forward;
 	}
 
 	void Update()
@@ -69,7 +84,8 @@ public class FPSCharacterController : MonoBehaviour {
 			pos.y = origPos + Mathf.Sin(stuff) * .04f;
 			if(!isMoving)
 			{
-				if(playerCamera.transform.localPosition.y+.03f >= origPos || playerCamera.transform.localPosition.y-.03f <= origPos)
+				if(playerCamera.transform.localPosition.y+.03f >= origPos
+				   || playerCamera.transform.localPosition.y-.03f <= origPos)
 				{
 					stuff = 0f;
 					pos.y = origPos;
@@ -78,10 +94,7 @@ public class FPSCharacterController : MonoBehaviour {
 			}
 			if(Mathf.Sin(stuff) == 0f) stuff = 0f;
 			if(Mathf.Sin(stuff) < 0f && previous >= 0f || Mathf.Sin(stuff) >= 0f && previous < 0f)
-			{
-				Debug.Log("CHANGE BOB!");
 				bobspeed = Random.Range(3f, 6f);
-			}
 			previous = Mathf.Sin(stuff);
 			playerCamera.transform.localPosition = pos;
 		}

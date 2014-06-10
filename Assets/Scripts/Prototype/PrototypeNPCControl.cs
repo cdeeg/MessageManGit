@@ -6,18 +6,17 @@ public class PrototypeNPCControl : MonoBehaviour {
 	public Animator animator;
 	public float walkRadius = 5f;
 
-	NavMeshAgent agent;
+	public float speed = 4f;
+
 	int failedTimes = 5;
 	int failedYet = 0;
+
+	Vector3 finalPosition;
 
 	// Use this for initialization
 	void Start ()
 	{
-		agent = GetComponent<NavMeshAgent>();
-		if(agent == null)
-		{
-			Debug.LogError("No NavMeshAgent found!");
-		}
+		GetRandomPointOnNavMesh();
 	}
 
 	void GetRandomPointOnNavMesh()
@@ -25,14 +24,16 @@ public class PrototypeNPCControl : MonoBehaviour {
 		if(failedYet == failedTimes)
 		{
 			Debug.LogError("No point found!");
+			finalPosition = Vector3.zero;
+			return;
 		}
 		Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
 		randomDirection += transform.position;
 		NavMeshHit hit;
 		if( NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1))
 		{
-			Vector3 finalPosition = hit.position;
-			agent.SetDestination(finalPosition);
+			finalPosition = hit.position;
+			transform.LookAt(finalPosition);
 		}
 		else
 		{
@@ -44,9 +45,13 @@ public class PrototypeNPCControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if(agent.remainingDistance <= 1f)
+		if(Vector3.Distance(transform.position, finalPosition) <= 1f)
 		{
 			GetRandomPointOnNavMesh();
+		}
+		else
+		{
+			transform.position = Vector3.MoveTowards(transform.position, finalPosition, speed * Time.deltaTime);
 		}
 	}
 }

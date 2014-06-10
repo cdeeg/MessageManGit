@@ -2,87 +2,87 @@
 using System.Collections;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(NavMeshAgent))]
 public class NPCAgent : MonoBehaviour {
 
-	public float minIdleTimeSpan = 3f;
-	public float maxIdleTimeSpan = 5f;
-	public float minWalkTimeSpan = 4f;
-	public float maxWalkTimeSpan = 10f;
+	public Animator animator;
+	public float walkRadius = 5f;
 
-	public float speed = 0.5f;
-
-	Animator animator;
-	bool stop;
-	Vector3 moveTarget;
-
+	public float maxDistanceRespawn = 10f;
+	
+	public float speed = 4f;
+	
+	int failedTimes = 5;
+	int failedYet = 0;
+	
+	Vector3 finalPosition;
+	
+	// Use this for initialization
 	void Start ()
 	{
-		animator = GetComponent<Animator>();
-
-		stop = false;
-
-		ChooseAction();
+//		GetRandomPointOnNavMesh();
 	}
-
-	public void SeekPosition(Vector3 playerPos)
-	{}
-
-	public void StopActions()
+	
+	void GetRandomPointOnNavMesh()
 	{
-		stop = true;
-	}
-
-	public void Update()
-	{
-		Vector3 pos = Vector3.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
-		transform.position = pos;
-	}
-
-	void ChooseAction()
-	{
-		if(stop) return;
-
-		// TODO
-		// animator.SetBool(Animator.StringToHash("Idle"), false);
-		// animator.SetBool(Animator.StringToHash("Walk"), false);
-
-		if(Random.value >= .5f)
+		if(failedYet == failedTimes)
 		{
-			// idle
-			float idleDur = Random.Range(minIdleTimeSpan, maxIdleTimeSpan);
-
-			// TODO
-			// animator.SetBool(Animator.StringToHash("Idle"), true);
-
-			StartCoroutine(DoWait(idleDur));
+			Debug.LogError("No point found!");
+			finalPosition = Vector3.zero;
+			transform.LookAt(finalPosition);
+			return;
+		}
+		Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
+		randomDirection += transform.position;
+		NavMeshHit hit;
+		if( NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1))
+		{
+			finalPosition = hit.position;
+			transform.LookAt(finalPosition);
+			failedYet = 0;
 		}
 		else
 		{
-			// walk to point
-			Vector3 target = NPCHandler.GetRandomPoint(transform.position);
-			transform.LookAt(target);
-			moveTarget = target;
-
-
-			// TODO
-			// animator.SetBool(Animator.StringToHash("Walk"), true);
-
-			float walkDur = Random.Range(minWalkTimeSpan, maxWalkTimeSpan);
-			StartCoroutine(DoWait(walkDur));
+			failedYet++;
+			GetRandomPointOnNavMesh();
 		}
 	}
 
-	IEnumerator DoWait(float duration)
+	public void SeekPosition(Vector3 playerPos, bool withDistance = false)
 	{
-		float passedTime = 0f;
-		while(passedTime < duration)
-		{
-			passedTime += Time.deltaTime;
+		Vector3 randDir = Random.insideUnitSphere * NPCHandler.maxDistancePlayer;
+		randDir += NPCHandler.PlayerPos + FPSCharacterController.MyForward*3f;
 
-			yield return null;
+		float dist = withDistance ? NPCHandler.maxDistancePlayer/4f : NPCHandler.maxDistancePlayer; 
+
+		NavMeshHit hit;
+		if(NavMesh.SamplePosition(randDir, out hit, dist, 1))
+		{
+			transform.position = hit.position;
+			if(withDistance && Vector3.Distance(hit.position, playerPos) < maxDistanceRespawn)
+			{
+				transform.position = hit.position + new Vector3(Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 4f), 0f, Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 4f));
+			}
 		}
 
-		ChooseAction();
+		GetRandomPointOnNavMesh();
+	}
+	
+	// Update is called once per frame
+	void Update ()
+	{
+		if(Vector3.Distance(transform.position, finalPosition) <= 3f)
+		{
+			GetRandomPointOnNavMesh();
+		}
+		else
+		{
+			transform.position = Vector3.MoveTowards(transform.position, finalPosition, speed * Time.deltaTime);
+		}
+
+		if(Vector3.Distance( NPCHandler.PlayerPos, transform.position) >= NPCHandler.maxDistancePlayer)
+		{
+			SeekPosition(NPCHandler.PlayerPos, true);
+			GetRandomPointOnNavMesh();
+		}
 	}
 }

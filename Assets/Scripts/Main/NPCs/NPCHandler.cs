@@ -6,27 +6,42 @@ public class NPCHandler : MonoBehaviour {
 	public Transform playerTransform;
 	public int maxNpcs = 20;
 
+	public float distanceFromPlayer = 100f;
+
+	public static float maxDistancePlayer;
+
 	public NPCAgent agentPrefabMale;
 	public NPCAgent agentPrefabFemale;
+
+	static Vector3 playerPos;
+
+	public static Vector3 PlayerPos
+	{
+		get { return playerPos; }
+	}
 
 	#region Unity functions
 	void Start ()
 	{
 		if(agentPrefabMale == null || agentPrefabFemale == null) return;
 
-//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, Finish);
-//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, Finish);
+		maxDistancePlayer = distanceFromPlayer;
 
+		playerPos = playerTransform.position;
 		agentPrefabFemale.CreatePool();
 		agentPrefabMale.CreatePool();
+
+		InitNpcs();
+	}
+
+	void Update()
+	{
+		playerPos = playerTransform.position;
 	}
 
 	void OnDestroy()
 	{
 		if(agentPrefabMale == null || agentPrefabFemale == null) return;
-
-//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, Finish);
-//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, Finish);
 	}
 	#endregion
 
@@ -37,16 +52,10 @@ public class NPCHandler : MonoBehaviour {
 		for(int x=0; x<maxNpcs/2; x++)
 		{
 			agentPrefabFemale.Spawn(transform).SeekPosition(playerTransform.position);
-			agentPrefabMale.Spawn(transform).SeekPosition(playerTransform.position);
+//			agentPrefabMale.Spawn(transform).SeekPosition(playerTransform.position);
 		}
 	}
 
-	void Finish(object sender, System.EventArgs args)
-	{
-		NPCAgent[] agents = GetComponentsInChildren<NPCAgent>();
-		foreach(NPCAgent agent in agents)
-			agent.StopActions();
-	}
 	#endregion
 
 	#region Static methods
