@@ -16,7 +16,7 @@ public class GUITweetController : MonoBehaviour {
 
 	public AudioClip tweetIncoming;
 
-	AudioSource audio;
+	AudioSource audioSour;
 	GUITweet[] existingTweets;
 
 	List<GUITweet> queue;
@@ -30,7 +30,7 @@ public class GUITweetController : MonoBehaviour {
 			Debug.LogWarning("GUITweetController: No component found!");
 		}
 
-		audio = GetComponent<AudioSource>();
+		audioSour = GetComponent<AudioSource>();
 
 		if(!isNotificationAnchor)
 		{
@@ -121,7 +121,7 @@ public class GUITweetController : MonoBehaviour {
 		tweet.transform.localPosition = spawnPos;
 		tweet.DoneFading += TweetIsDoneFading;
 
-		if(audio != null) audio.PlayOneShot(tweetIncoming);
+		if(audioSour != null) audioSour.PlayOneShot(tweetIncoming);
 
 		if(!running) StartCoroutine( ReorderTweets(tweet.Height, spawnPos) );
 		else queue.Add(tweet);

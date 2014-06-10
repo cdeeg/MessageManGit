@@ -10,14 +10,15 @@ public class NPCAgent : MonoBehaviour {
 	public float minWalkTimeSpan = 4f;
 	public float maxWalkTimeSpan = 10f;
 
+	public float speed = 0.5f;
+
 	Animator animator;
-	NavMeshAgent agent;
 	bool stop;
+	Vector3 moveTarget;
 
 	void Start ()
 	{
 		animator = GetComponent<Animator>();
-		agent = GetComponent<NavMeshAgent>();
 
 		stop = false;
 
@@ -30,6 +31,12 @@ public class NPCAgent : MonoBehaviour {
 	public void StopActions()
 	{
 		stop = true;
+	}
+
+	public void Update()
+	{
+		Vector3 pos = Vector3.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
+		transform.position = pos;
 	}
 
 	void ChooseAction()
@@ -54,7 +61,9 @@ public class NPCAgent : MonoBehaviour {
 		{
 			// walk to point
 			Vector3 target = NPCHandler.GetRandomPoint(transform.position);
-			agent.SetDestination(target);
+			transform.LookAt(target);
+			moveTarget = target;
+
 
 			// TODO
 			// animator.SetBool(Animator.StringToHash("Walk"), true);

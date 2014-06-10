@@ -9,15 +9,13 @@ public class GUIGameOverController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, GameOver);
-//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, GameOver);
 	}
 	
 	// Update is called once per frame
 	void OnDestroy ()
 	{
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, GameOver);
-//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, GameWon);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, GameOver);
 	}
 
 	void GameOver(object sender, System.EventArgs args)
@@ -39,13 +37,5 @@ public class GUIGameOverController : MonoBehaviour {
 		{
 			Debug.LogError("GUIGameOverController: Unknown reason for Game Over!");
 		}
-	}
-
-	void GameWon(object sender, System.EventArgs args)
-	{
-		gameOverTitleText.text = "You won!";
-		gameOverTitleText.Commit();
-		gameOverReasonText.text = "Congratulations!";
-		gameOverReasonText.Commit();
 	}
 }

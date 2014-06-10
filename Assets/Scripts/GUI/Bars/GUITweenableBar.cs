@@ -3,11 +3,11 @@ using System.Collections;
 
 public class GUITweenableBar : MonoBehaviour {
 
-	public tk2dSlicedSprite foreground;
-	public tk2dSlicedSprite background;
+	public tk2dClippedSprite foreground;
+	public tk2dSprite background;
 	public bool isVisible = true;
 
-	float initialSize;
+//	float initialSize;
 	float initValue;
 	float currentValue;
 
@@ -18,10 +18,10 @@ public class GUITweenableBar : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Awake ()
-	{
-		initialSize = foreground.dimensions.x;
-	}
+//	void Awake ()
+//	{
+//		initialSize = foreground.dimensions.x;
+//	}
 
 	void OnDisable()
 	{
@@ -37,9 +37,13 @@ public class GUITweenableBar : MonoBehaviour {
 		background.gameObject.SetActive(true);
 
 		// reset size
-		Vector2 dim = foreground.dimensions;
-		dim.x = initialSize;
-		foreground.dimensions = dim;
+//		Vector2 dim = foreground.dimensions;
+//		dim.x = initialSize;
+//		foreground.dimensions = dim;
+
+		Rect cr = foreground.ClipRect;
+		cr.height = 1f;
+		foreground.ClipRect = cr;
 
 		if(!isVisible)
 		{
@@ -69,11 +73,14 @@ public class GUITweenableBar : MonoBehaviour {
 
 	void ResizeBar()
 	{
-		float blah = (currentValue/initValue)*initialSize;
+		float blah = currentValue/initValue;
 		if( blah <= 0f ) blah = 0.1f;
-		Vector2 size = foreground.dimensions;
-		size.x = blah;
-		foreground.dimensions = size;
+//		Vector2 size = foreground.dimensions;
+//		size.x = blah;
+//		foreground.dimensions = size;
+		Rect cr = foreground.ClipRect;
+		cr.height = blah;
+		foreground.ClipRect = cr;
 	}
 
 	public override string ToString ()

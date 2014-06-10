@@ -3,11 +3,8 @@ using System.Collections;
 
 public class PrototypeGameController : MonoBehaviour {
 	
-	public GameObject gameOverScreen;
 	public float minTimeTweetWait = 2f;
 	public float maxTimeTweetWait = 10f;
-	
-	IGameContext currentContext;
 	
 	string sender1 = "Lorem Ipsum";
 	string sender2 = "Test Tweet";
@@ -46,12 +43,17 @@ public class PrototypeGameController : MonoBehaviour {
 	
 	void Start()
 	{
-		gameOverScreen.gameObject.SetActive(false);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, ResetAll);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, Finished);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, PauseUnPause);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
+	}
+
+	void GameWon(object sender, System.EventArgs args)
+	{
+		allDone = true;
+		Application.LoadLevel("Highscores");
 	}
 
 	void TimeUpdated (object sender, System.EventArgs args)
@@ -74,17 +76,11 @@ public class PrototypeGameController : MonoBehaviour {
 		if(sender.GetType() != typeof(PrototypeGameController))
 			isPaused = false;
 	}
-	
-	void GameWon (object sender, System.EventArgs args)
-	{
-//		gameOverScreen.gameObject.SetActive(true);
-//		allDone = true;
-	}
-	
+
 	void Finished (object sender, System.EventArgs args)
 	{
-		gameOverScreen.gameObject.SetActive(true);
 		allDone = true;
+		Application.LoadLevel("GameOverScreen");
 	}
 	
 	void ResetAll (object sender, System.EventArgs args)

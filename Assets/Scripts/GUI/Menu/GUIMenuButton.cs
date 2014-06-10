@@ -25,14 +25,14 @@ public class GUIMenuButton : IHoverable
 	Vector2 initialSizeBg;
 	Vector2 increaseMaxSize;
 
-	AudioSource audio;
+	AudioSource audioSour;
 
 	float passedTime = 0f;
 
 	void Awake()
 	{
 		indicator.gameObject.SetActive(false);
-		audio = GetComponent<AudioSource>();
+		audioSour = GetComponent<AudioSource>();
 	}
 
 	void Start()
@@ -61,7 +61,7 @@ public class GUIMenuButton : IHoverable
 
 	public override void PlayAudioClip(AudioClip clip)
 	{
-		audio.PlayOneShot(clip);
+		audioSour.PlayOneShot(clip);
 	}
 
 	#region Coroutines

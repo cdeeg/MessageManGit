@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\GUI\Highscores\GUIHighscoreRow.cs" />
      <Compile Include="Assets\Scripts\GUI\Interfaces\IGUIContext.cs" />
      <Compile Include="Assets\Scripts\GUI\Interfaces\IHoverable.cs" />
+     <Compile Include="Assets\Scripts\GUI\Menu\GUIGameOverMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMainMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuButton.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuController.cs" />
@@ -71,7 +72,6 @@
      <Compile Include="Assets\Scripts\Logic\EventArgs\MessageEventArgs.cs" />
      <Compile Include="Assets\Scripts\Logic\GlobalEventHandler.cs" />
      <Compile Include="Assets\Scripts\Logic\HighscoreInformationData.cs" />
-     <Compile Include="Assets\Scripts\Logic\IGameContext.cs" />
      <Compile Include="Assets\Scripts\Logic\MessageCVSParser.cs" />
      <Compile Include="Assets\Scripts\Logic\MessageController.cs" />
      <Compile Include="Assets\Scripts\Logic\Other\ObjectPool.cs" />

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GUIBarsController : MonoBehaviour {
 
-	const float MODULO_THINGY = 4f;
+	const float MODULO_THINGY = 60f;
 
 	public GUITweenableBar timeBar;
 	public GUITweenableBar friendsBar;
@@ -20,21 +20,23 @@ public class GUIBarsController : MonoBehaviour {
 	void Start()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, DoNotUpdate);
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, DoNotUpdate);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, DoNotUpdate);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, DoNotUpdate);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
 
 		timeBar.Init(initialTimeInSeconds);
 		friendsBar.Init(initialFriendsAmount);
 		initMinutes = (int)(initialTimeInSeconds/60f);
+		HighscoreInformationData.GetInstance().InitialTime = initMinutes;
+
 		StartCoroutine(UpdateTime());
 	}
 
 	void OnDestroy()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, DoNotUpdate);
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, DoNotUpdate);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, DoNotUpdate);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, DoNotUpdate);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
 	}
 
@@ -45,12 +47,6 @@ public class GUIBarsController : MonoBehaviour {
 
 	void DoNotUpdate (object sender, System.EventArgs args)
 	{
-		HighscoreInformationData.GetInstance().TimePlayed = timeBar.CurrentValue/60f;
-		HighscoreInformationData.GetInstance().InitialTime = initMinutes;
-
-		HighscoreInformationData.GetInstance().LeftFriends = friendsBar.CurrentValue;
-		HighscoreInformationData.GetInstance().LostFriends = initialFriendsAmount-friendsBar.CurrentValue;
-
 		allDone = true;
 		StopCoroutine("UpdateTime");
 	}
@@ -61,9 +57,19 @@ public class GUIBarsController : MonoBehaviour {
 		if(msgArgs == null) return;
 
 		if(!msgArgs.Success)
+		{
+			HighscoreInformationData.GetInstance().FailedMessages++;
 			UpdateFriends(-1f, true);
+		}
 		else
+		{
+			HighscoreInformationData.GetInstance().SuccessfulMessages++;
 			UpdateFriends(1f, true);
+		}
+
+
+		HighscoreInformationData.GetInstance().LeftFriends = friendsBar.CurrentValue;
+		HighscoreInformationData.GetInstance().LostFriends = initialFriendsAmount-friendsBar.CurrentValue;
 	}
 
 	void UpdateFriends(float value, bool isDelta)
@@ -89,6 +95,8 @@ public class GUIBarsController : MonoBehaviour {
 			if(!isPaused)
 			{
 				timeBar.UpdateBar(-1f, true);
+
+				HighscoreInformationData.GetInstance().TimePlayed = Mathf.Abs(timeBar.CurrentValue-initialTimeInSeconds);
 
 				if(timeBar.CurrentValue % MODULO_THINGY == 0f)
 				{

@@ -17,6 +17,10 @@ public class FPSCharacterController : MonoBehaviour {
 	float stuff;
 	float origPos;
 
+	float bobspeed = 4f;
+
+	float previous = 0f;
+
 	void Start()
 	{
 		isMoving = false;
@@ -60,7 +64,7 @@ public class FPSCharacterController : MonoBehaviour {
 
 		if(isMoving || playerCamera.transform.localPosition.y != origPos)
 		{
-			stuff += Time.deltaTime*4f;
+			stuff += Time.deltaTime*bobspeed;
 			Vector3 pos = playerCamera.transform.localPosition;
 			pos.y = origPos + Mathf.Sin(stuff) * .04f;
 			if(!isMoving)
@@ -69,9 +73,16 @@ public class FPSCharacterController : MonoBehaviour {
 				{
 					stuff = 0f;
 					pos.y = origPos;
+					bobspeed = 4f;
 				}
 			}
 			if(Mathf.Sin(stuff) == 0f) stuff = 0f;
+			if(Mathf.Sin(stuff) < 0f && previous >= 0f || Mathf.Sin(stuff) >= 0f && previous < 0f)
+			{
+				Debug.Log("CHANGE BOB!");
+				bobspeed = Random.Range(3f, 6f);
+			}
+			previous = Mathf.Sin(stuff);
 			playerCamera.transform.localPosition = pos;
 		}
 	}

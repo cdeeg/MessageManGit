@@ -14,8 +14,8 @@ public class NPCHandler : MonoBehaviour {
 	{
 		if(agentPrefabMale == null || agentPrefabFemale == null) return;
 
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, Finish);
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, Finish);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, Finish);
+//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, Finish);
 
 		agentPrefabFemale.CreatePool();
 		agentPrefabMale.CreatePool();
@@ -25,8 +25,8 @@ public class NPCHandler : MonoBehaviour {
 	{
 		if(agentPrefabMale == null || agentPrefabFemale == null) return;
 
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, Finish);
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, Finish);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, Finish);
+//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, Finish);
 	}
 	#endregion
 

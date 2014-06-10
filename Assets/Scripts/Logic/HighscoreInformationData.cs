@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HighscoreInformationData : MonoBehaviour {
+public class HighscoreInformationData {
 
 	public float SuccessfulMessages { get; set; }
 	public float FailedMessages { get; set; }

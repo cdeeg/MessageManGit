@@ -5,8 +5,6 @@ public class GameController : MonoBehaviour {
 
 	public GameObject gameOverScreen;
 
-	IGameContext currentContext;
-
 	float passedTime = 0f;
 	float waitDuration = 6f;
 

@@ -34,7 +34,7 @@ public class GUIMessageController : MonoBehaviour
 	bool messageAnswered;
 	bool stopCoroutines;
 
-	AudioSource audio;
+	AudioSource audioSour;
 
 	StringBuilder tmpString;
 
@@ -44,8 +44,8 @@ public class GUIMessageController : MonoBehaviour
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.SHOVED, ShovedByNpcs);
 		guiAnchor.gameObject.SetActive(false);
 
-		audio = GetComponent<AudioSource>();
-		if(audio == null) Debug.LogWarning("GUIMessageController: No audio source found!");
+		audioSour = GetComponent<AudioSource>();
+		if(audioSour == null) Debug.LogWarning("GUIMessageController: No audio source found!");
 
 		colorCodeSenderName = colorPrefix+ColorToHexString(colorSenderName);
 		colorCodeOpaque = colorPrefix+ColorToHexString(colorOpaque);
@@ -110,8 +110,7 @@ public class GUIMessageController : MonoBehaviour
 
 	void SendFinishEvent()
 	{
-		if(audio != null) audio.PlayOneShot(messageDone);
-		if(messageAnswered) HighscoreInformationData.GetInstance().SuccessfulMessages++;
+		if(audioSour != null) audioSour.PlayOneShot(messageDone);
 		GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(messageAnswered));
 		guiAnchor.gameObject.SetActive(false);
 	}
@@ -165,7 +164,7 @@ public class GUIMessageController : MonoBehaviour
 					if(inp == currentChar)
 					{
 						yield return StartCoroutine(HighlightText(arrayIndex, false));
-						if(audio != null) audio.PlayOneShot(hitKey);
+						if(audioSour != null) audioSour.PlayOneShot(hitKey);
 						arrayIndex++;
 						if(arrayIndex == currentMessage.Length)
 						{
