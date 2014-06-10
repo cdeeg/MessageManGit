@@ -52,8 +52,8 @@ public class FPSCharacterController : MonoBehaviour {
 
 		float speed = run ? runSpeed : walkSpeed;
 
-		if(run) bigCollider.SetActive(true);
-		else bigCollider.SetActive(false);
+//		if(run) bigCollider.SetActive(true);
+//		else bigCollider.SetActive(false);
 
 		input = new Vector2( rotate, forwards );
 		
@@ -70,11 +70,12 @@ public class FPSCharacterController : MonoBehaviour {
 		transform.RotateAround(transform.position, Vector3.up, 0.1f * input.x * rotateSpeed);
 		isMoving = (forwards != 0f);
 
-		myForward = transform.forward;
 	}
 
 	void Update()
 	{
+		myForward = transform.forward;
+
 		if(!doHeadBob) return;
 
 		if(isMoving || playerCamera.transform.localPosition.y != origPos)

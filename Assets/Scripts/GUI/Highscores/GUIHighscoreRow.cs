@@ -9,7 +9,6 @@ public class GUIHighscoreRow : MonoBehaviour {
 	public void Init(string name, float score, float ofMax = -1)
 	{
 		nameLabel.text = name;
-		Debug.Log("F: OFMAX: " + ofMax);
 		if(ofMax == -1)
 			scoreLabel.text = score.ToString();
 		else
@@ -19,7 +18,6 @@ public class GUIHighscoreRow : MonoBehaviour {
 	public void Init(string name, string score, string ofMax = "")
 	{
 		nameLabel.text = name;
-		Debug.Log("S: OFMAX: " + ofMax);
 		if(string.IsNullOrEmpty(ofMax))
 			scoreLabel.text = score.ToString();
 		else

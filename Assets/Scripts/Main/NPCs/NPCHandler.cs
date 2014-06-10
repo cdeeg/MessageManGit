@@ -57,13 +57,4 @@ public class NPCHandler : MonoBehaviour {
 	}
 
 	#endregion
-
-	#region Static methods
-	public static Vector3 GetRandomPoint(Vector3 startPos)
-	{
-		// TODO get random accessible point near the NPC with position startPos
-		// TODO maybe angles (45° * x) from startPos/Vector3.forward of NPC?
-		return Vector3.zero;
-	}
-	#endregion
 }

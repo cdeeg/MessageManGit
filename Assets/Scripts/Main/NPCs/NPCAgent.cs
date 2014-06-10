@@ -16,12 +16,6 @@ public class NPCAgent : MonoBehaviour {
 	
 	Vector3 finalPosition;
 	
-	// Use this for initialization
-	void Start ()
-	{
-//		GetRandomPointOnNavMesh();
-	}
-	
 	void GetRandomPointOnNavMesh()
 	{
 		if(failedYet == failedTimes)
@@ -49,18 +43,20 @@ public class NPCAgent : MonoBehaviour {
 
 	public void SeekPosition(Vector3 playerPos, bool withDistance = false)
 	{
-		Vector3 randDir = Random.insideUnitSphere * NPCHandler.maxDistancePlayer;
+		Vector3 randDir = Random.insideUnitSphere * walkRadius;
 		randDir += NPCHandler.PlayerPos + FPSCharacterController.MyForward*3f;
 
-		float dist = withDistance ? NPCHandler.maxDistancePlayer/4f : NPCHandler.maxDistancePlayer; 
+		Debug.Log("SEEK!");
+
+		//float dist = withDistance ? NPCHandler.maxDistancePlayer/4f : NPCHandler.maxDistancePlayer; 
 
 		NavMeshHit hit;
-		if(NavMesh.SamplePosition(randDir, out hit, dist, 1))
+		if(NavMesh.SamplePosition(randDir, out hit, walkRadius, 1))
 		{
 			transform.position = hit.position;
-			if(withDistance && Vector3.Distance(hit.position, playerPos) < maxDistanceRespawn)
+			if(withDistance && Vector3.Distance(hit.position, playerPos) <= 10f)
 			{
-				transform.position = hit.position + new Vector3(Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 4f), 0f, Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 4f));
+				transform.position = hit.position + new Vector3(Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 10f), 0f, Random.Range(maxDistanceRespawn, NPCHandler.maxDistancePlayer - 10f));
 			}
 		}
 
