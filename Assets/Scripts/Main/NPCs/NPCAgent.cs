@@ -46,10 +46,6 @@ public class NPCAgent : MonoBehaviour {
 		Vector3 randDir = Random.insideUnitSphere * walkRadius;
 		randDir += NPCHandler.PlayerPos + FPSCharacterController.MyForward*3f;
 
-		Debug.Log("SEEK!");
-
-		//float dist = withDistance ? NPCHandler.maxDistancePlayer/4f : NPCHandler.maxDistancePlayer; 
-
 		NavMeshHit hit;
 		if(NavMesh.SamplePosition(randDir, out hit, walkRadius, 1))
 		{

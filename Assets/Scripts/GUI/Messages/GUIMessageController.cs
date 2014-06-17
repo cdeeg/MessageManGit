@@ -44,6 +44,8 @@ public class GUIMessageController : MonoBehaviour
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.SHOVED, ShovedByNpcs);
 		guiAnchor.gameObject.SetActive(false);
 
+		if(indicator == null) Debug.LogError("GUIMessageController: Missing indicator object!");
+
 		audioSour = GetComponent<AudioSource>();
 		if(audioSour == null) Debug.LogWarning("GUIMessageController: No audio source found!");
 
@@ -89,6 +91,9 @@ public class GUIMessageController : MonoBehaviour
 	void SetMessage (object sender, System.EventArgs args)
 	{
 		if(indicator != null && !indicator.gameObject.activeSelf) return;
+
+		indicator.gameObject.SetActive(false);
+
 		MessageEventArgs msgArgs = (MessageEventArgs)args;
 		if(msgArgs == null) return;
 
@@ -182,8 +187,7 @@ public class GUIMessageController : MonoBehaviour
 					}
 				}
 
-				// wait two frames!
-				yield return null;
+//				yield return null;
 			}
 
 			yield return null;

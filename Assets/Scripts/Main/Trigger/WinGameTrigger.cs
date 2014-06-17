@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider))]
 public class WinGameTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll)

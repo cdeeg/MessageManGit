@@ -18,6 +18,7 @@ public class FPSCharacterController : MonoBehaviour {
 	bool isMoving;
 	float stuff;
 	float origPos;
+	float origPosX;
 
 	float bobspeed = 4f;
 
@@ -35,6 +36,7 @@ public class FPSCharacterController : MonoBehaviour {
 		isMoving = false;
 		bigCollider.SetActive(false);
 		origPos = playerCamera.transform.localPosition.y;
+		origPosX = playerCamera.transform.localPosition.x;
 		if(rigidbody == null)
 		{
 			Debug.LogError("FPSCharacterController: No rigidbody found!");
@@ -78,11 +80,12 @@ public class FPSCharacterController : MonoBehaviour {
 
 		if(!doHeadBob) return;
 
-		if(isMoving || playerCamera.transform.localPosition.y != origPos)
+		if(isMoving || playerCamera.transform.localPosition.y != origPos || playerCamera.transform.localPosition.x != origPosX)
 		{
 			stuff += Time.deltaTime*bobspeed;
 			Vector3 pos = playerCamera.transform.localPosition;
 			pos.y = origPos + Mathf.Sin(stuff) * .04f;
+			pos.x = origPosX + Mathf.Sin(stuff) * .04f;
 			if(!isMoving)
 			{
 				if(playerCamera.transform.localPosition.y+.03f >= origPos
@@ -90,6 +93,7 @@ public class FPSCharacterController : MonoBehaviour {
 				{
 					stuff = 0f;
 					pos.y = origPos;
+					pos.x = origPosX;
 					bobspeed = 4f;
 				}
 			}

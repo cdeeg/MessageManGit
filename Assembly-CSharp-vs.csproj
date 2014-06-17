@@ -79,6 +79,8 @@
      <Compile Include="Assets\Scripts\Main\FPSCharacterController.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCAgent.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCHandler.cs" />
+     <Compile Include="Assets\Scripts\Main\StartEndPoints.cs" />
+     <Compile Include="Assets\Scripts\Main\StartEndPosHandler.cs" />
      <Compile Include="Assets\Scripts\Main\Trigger\ObstacleTrigger.cs" />
      <Compile Include="Assets\Scripts\Main\Trigger\WinGameTrigger.cs" />
      <Compile Include="Assets\Scripts\Prototype\PrototypeNPCControl.cs" />
@@ -163,6 +165,7 @@
      <None Include="Assets\GUI\Fonts\testfont24.txt" />
      <None Include="Assets\tk2dUI\Shaders\DepthMaskSolid.shader" />
      <None Include="Assets\GUI\Fonts\testfont16.txt" />
+     <None Include="Assets\testest\Texture\UnlitAlpha.shader" />
      <None Include="Assets\tk2d\Shaders\resources\BlendVertexColor.shader" />
      <None Include="Assets\tk2d\Shaders\LitCutoutVertexColor.shader" />
      <None Include="Assets\tk2d\Editor\EditorUtility.shader" />

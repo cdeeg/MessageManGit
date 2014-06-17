@@ -6,7 +6,6 @@ public class PrototypeGameController : MonoBehaviour {
 	public float minTimeTweetWait = 2f;
 	public float maxTimeTweetWait = 10f;
 	
-	string sender1 = "Lorem Ipsum";
 	string sender2 = "Test Tweet";
 	bool stop = false;
 	bool stopMyself = false;
@@ -21,6 +20,8 @@ public class PrototypeGameController : MonoBehaviour {
 	bool isPaused;
 
 	int indx = 0;
+
+	ParsedMessage currentMessage;
 
 	public bool StopGame
 	{
@@ -39,6 +40,8 @@ public class PrototypeGameController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, GameWon);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, PauseUnPause);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
+
+		MessageCVSParser.GetInstance().Clear();
 	}
 	
 	void Start()
@@ -135,8 +138,11 @@ public class PrototypeGameController : MonoBehaviour {
 
 			if(Input.GetKeyDown(KeyCode.M))
 			{
+				currentMessage = MessageCVSParser.GetInstance().GetRandomMessage();
+				if(currentMessage == null) return;
+
 				stopMyself = true;
-				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_INCOMING, new MessageEventArgs(sender1, "",""));
+				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_INCOMING, new MessageEventArgs(currentMessage.Sender, currentMessage.Message, currentMessage.Answer));
 			}
 		}
 		else
@@ -149,7 +155,7 @@ public class PrototypeGameController : MonoBehaviour {
 				stop = true;
 				stopMyself = true;
 				msgSent = true;
-				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED, new MessageEventArgs(sender1,"Dolor sit amet, consectetur.","Thanks bro"));
+				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED, new MessageEventArgs(currentMessage.Sender,currentMessage.Message,currentMessage.Answer));
 			}
 		}
 	}

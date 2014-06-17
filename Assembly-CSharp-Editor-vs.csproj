@@ -150,6 +150,7 @@
      <None Include="Assets\GUI\Fonts\testfont24.txt" />
      <None Include="Assets\tk2dUI\Shaders\DepthMaskSolid.shader" />
      <None Include="Assets\GUI\Fonts\testfont16.txt" />
+     <None Include="Assets\testest\Texture\UnlitAlpha.shader" />
      <None Include="Assets\tk2d\Shaders\resources\BlendVertexColor.shader" />
      <None Include="Assets\tk2d\Shaders\LitCutoutVertexColor.shader" />
      <None Include="Assets\tk2d\Editor\EditorUtility.shader" />
