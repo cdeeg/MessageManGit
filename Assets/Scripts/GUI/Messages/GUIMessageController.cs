@@ -8,7 +8,6 @@ using System.Text;
 public class GUIMessageController : MonoBehaviour
 {
 	public GameObject guiAnchor;
-	public float defaultAnswerTime = 8f;
 	public GameObject indicator;
 
 	public tk2dTextMesh senderText;

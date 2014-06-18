@@ -5,7 +5,7 @@ public class GUIMainMenuController : GUIMenuController
 {
 	void StartNewGame()
 	{
-		Application.LoadLevel("Main");
+		Application.LoadLevel("jpscene");
 	}
 	
 	void QuitGame()

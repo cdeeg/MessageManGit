@@ -6,7 +6,7 @@ using System.Text;
 
 public class MessageCVSParser {
 
-	string RESOURCE_PATH="Assets/Resources/CSV/";
+//	string RESOURCE_PATH="InstantMessages";
 	const int WALK_THRESHOLD = 10;
 
 	delegate void ParserDelegate(string[] args);
@@ -54,33 +54,26 @@ public class MessageCVSParser {
 	#region Initialization
 	void Parse()
 	{
-		ReadFile("InstantMessages.csv", ParseMessage);
+		ReadFile("InstantMessages", ParseMessage);
 	}
 
 	void ReadFile(string fileName, ParserDelegate deleg)
 	{
-		string line;
 		bool firstLine = true;
-		StreamReader theReader = new StreamReader(RESOURCE_PATH + fileName, Encoding.Default);
+		TextAsset txt = Resources.Load(fileName) as TextAsset;
+		string allText = txt.text;
 
-		using (theReader)
+		string[] lines = allText.Split('\n');
+		foreach(string line in lines)
 		{
-			do
+			if(!string.IsNullOrEmpty(line))
 			{
-				line = theReader.ReadLine();
-				
-				if (line != null)
-				{
-					string[] entries = line.Split(',');
-					if(firstLine) { firstLine = false; continue; }
-					if(string.IsNullOrEmpty(entries[1])) continue;
-					if (entries.Length > 0)
-						deleg(entries);
-				}
+				string[] entries = line.Split(',');
+				if(firstLine) { firstLine = false; continue; }
+				if(string.IsNullOrEmpty(entries[1].Trim())) continue;
+				if (entries.Length > 0)
+					deleg(entries);
 			}
-			while (line != null);
-			
-			theReader.Close();
 		}
 	}
 
@@ -93,9 +86,17 @@ public class MessageCVSParser {
 	{
 		if(args.Length != 5) return;
 
-		if(string.IsNullOrEmpty( args[4] )) args[4] = "-1";
+		if(string.IsNullOrEmpty( args[4].Trim() )) args[4] = "-1";
 
-		ParsedMessage newMsg = new ParsedMessage(int.Parse(args[0]),args[1].Trim(),args[2].Trim(), args[3].Trim(), int.Parse(args[4]));
+		int id;
+		if(!int.TryParse(args[0].Trim(), out id))
+			Debug.LogError("Message ID was no int! " + args[0]);
+		int predec;
+		if(!int.TryParse(args[4].Trim(), out predec))
+			Debug.LogError("Message predecessor was no int! " + args[4]);
+
+
+		ParsedMessage newMsg = new ParsedMessage(id,args[1].Trim(),args[2].Trim(), args[3].Trim(), predec);
 		parsedMessages.Add(newMsg);
 		notSentMessagesIds.Add(newMsg.ID);
 	}
@@ -140,8 +141,6 @@ public class MessageCVSParser {
 		}
 		// check if message is a follow up -> if yes, check if predecessing
 		// message was already sent; if not, send it now
-
-//		Debug.Log("MESSG: " + msg);
 
 		int listItem;
 		ParsedMessage m = FindPreceedingMessage(msg, out listItem);

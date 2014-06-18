@@ -31,6 +31,6 @@ public class GUIGameOverMenuController : GUIMenuController
 	
 	void OnGameRetry()
 	{
-		Application.LoadLevel("Main");
+		Application.LoadLevel("jpscene");
 	}
 }
