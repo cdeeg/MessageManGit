@@ -5,7 +5,10 @@ public class GUIMainMenuController : GUIMenuController
 {
 	void StartNewGame()
 	{
+<<<<<<< HEAD
 		HighscoreInformationData.GetInstance().Reset();
+=======
+>>>>>>> FETCH_HEAD
 		Application.LoadLevel("jpscene");
 	}
 	

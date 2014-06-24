@@ -1898,6 +1898,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 2
     extraExposedTransformPaths: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: female03
@@ -3789,6 +3790,9 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+=======
+    clipAnimations: []
+>>>>>>> FETCH_HEAD
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -3824,6 +3828,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< HEAD
   animationType: 1
+=======
+  animationType: 2
+>>>>>>> FETCH_HEAD
   additionalBone: 0
   userData: 

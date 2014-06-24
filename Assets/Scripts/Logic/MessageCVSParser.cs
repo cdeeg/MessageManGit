@@ -6,7 +6,7 @@ using System.Text;
 
 public class MessageCVSParser {
 
-	string RESOURCE_PATH="Assets/Resources/CSV/";
+//	string RESOURCE_PATH="InstantMessages";
 	const int WALK_THRESHOLD = 10;
 
 	delegate void ParserDelegate(string[] args);
@@ -63,13 +63,14 @@ public class MessageCVSParser {
 
 	void ReadFile(string fileName, ParserDelegate deleg)
 	{
-		string line;
 		bool firstLine = true;
-		StreamReader theReader = new StreamReader(RESOURCE_PATH + fileName, Encoding.Default);
+		TextAsset txt = Resources.Load(fileName) as TextAsset;
+		string allText = txt.text;
 
-		using (theReader)
+		string[] lines = allText.Split('\n');
+		foreach(string line in lines)
 		{
-			do
+			if(!string.IsNullOrEmpty(line))
 			{
 				line = theReader.ReadLine();
 				
@@ -83,9 +84,6 @@ public class MessageCVSParser {
 						deleg(entries);
 				}
 			}
-			while (line != null);
-			
-			theReader.Close();
 		}
 	}
 
@@ -103,7 +101,14 @@ public class MessageCVSParser {
 		if(string.IsNullOrEmpty( args[4] )) args[4] = "-1";
 		if(string.IsNullOrEmpty( args[5] )) args[5] = "-1";
 
-		ParsedMessage newMsg = new ParsedMessage(int.Parse(args[0]),args[1].Trim(),args[2].Trim(), args[3].Trim(), int.Parse(args[4]), int.Parse(args[5]));
+		int id;
+		if(!int.TryParse(args[0].Trim(), out id))
+			Debug.LogError("Message ID was no int! " + args[0]);
+		int predec;
+		if(!int.TryParse(args[4].Trim(), out predec))
+			Debug.LogError("Message predecessor was no int! " + args[4]);
+
+		ParsedMessage newMsg = new ParsedMessage(id,args[1].Trim(),args[2].Trim(), args[3].Trim(), predec);
 		parsedMessages.Add(newMsg);
 		notSentMessagesIds.Add(newMsg.ID);
 	}
