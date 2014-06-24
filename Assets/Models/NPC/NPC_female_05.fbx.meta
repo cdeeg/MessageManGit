@@ -1890,9 +1890,8 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
-<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: female05
@@ -3780,13 +3779,10 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-=======
-    clipAnimations: []
->>>>>>> FETCH_HEAD
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .25
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -3818,10 +3814,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-<<<<<<< HEAD
   animationType: 1
-=======
-  animationType: 2
->>>>>>> FETCH_HEAD
   additionalBone: 0
   userData: 

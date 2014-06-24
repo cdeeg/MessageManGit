@@ -31,10 +31,7 @@ public class GUIGameOverMenuController : GUIMenuController
 	
 	void OnGameRetry()
 	{
-<<<<<<< HEAD
 		HighscoreInformationData.GetInstance().Reset();
-=======
->>>>>>> FETCH_HEAD
 		Application.LoadLevel("jpscene");
 	}
 }

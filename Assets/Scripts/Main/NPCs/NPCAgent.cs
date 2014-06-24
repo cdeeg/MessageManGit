@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Animator))]
 public class NPCAgent : MonoBehaviour {
 
 	public float walkRadius = 5f;

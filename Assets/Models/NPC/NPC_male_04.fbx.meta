@@ -1888,9 +1888,8 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
-<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: male2
@@ -3772,9 +3771,6 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-=======
-    clipAnimations: []
->>>>>>> FETCH_HEAD
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -3782,7 +3778,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
-    swapUVChannels: 1
+    swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
@@ -3794,7 +3790,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -3810,10 +3806,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-<<<<<<< HEAD
   animationType: 1
-=======
-  animationType: 2
->>>>>>> FETCH_HEAD
   additionalBone: 0
   userData: 

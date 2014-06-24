@@ -58,7 +58,7 @@ public class MessageCVSParser {
 	void Parse()
 	{
 		queuedMessageId = -1;
-		ReadFile("InstantMessages.csv", ParseMessage);
+		ReadFile("CSV/InstantMessages", ParseMessage);
 	}
 
 	void ReadFile(string fileName, ParserDelegate deleg)
@@ -72,17 +72,12 @@ public class MessageCVSParser {
 		{
 			if(!string.IsNullOrEmpty(line))
 			{
-				line = theReader.ReadLine();
-				
-				if (line != null)
-				{
-					string[] entries = line.Split(',');				// split string and check if...
-					if(firstLine) { firstLine = false; continue; }	// ...is the first line (header)
-					if(string.IsNullOrEmpty(entries[0])) continue;	// ...the line is empty or not initialized
-					if(entries[0].StartsWith("/")) continue;		// ...commented out 
-					if (entries.Length > 0)
-						deleg(entries);
-				}
+				string[] entries = line.Split(',');				// split string and check if...
+				if(firstLine) { firstLine = false; continue; }	// ...is the first line (header)
+				if(string.IsNullOrEmpty(entries[0])) continue;	// ...the line is empty or not initialized
+				if(entries[0].StartsWith("/")) continue;		// ...commented out 
+				if (entries.Length > 0)
+					deleg(entries);
 			}
 		}
 	}
@@ -107,8 +102,11 @@ public class MessageCVSParser {
 		int predec;
 		if(!int.TryParse(args[4].Trim(), out predec))
 			Debug.LogError("Message predecessor was no int! " + args[4]);
+		int succ;
+		if(!int.TryParse(args[4].Trim(), out succ))
+			Debug.LogError("Message successor was no int! " + args[5]);
 
-		ParsedMessage newMsg = new ParsedMessage(id,args[1].Trim(),args[2].Trim(), args[3].Trim(), predec);
+		ParsedMessage newMsg = new ParsedMessage(id,args[1].Trim(),args[2].Trim(), args[3].Trim(), predec, succ);
 		parsedMessages.Add(newMsg);
 		notSentMessagesIds.Add(newMsg.ID);
 	}
