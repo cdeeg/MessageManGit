@@ -13,6 +13,12 @@ public class PauseMenuController : GUIMenuController {
 		StartCoroutine(WaitBeforeClosing());
 	}
 
+	void RestartGame()
+	{
+		HighscoreInformationData.GetInstance().Reset();
+		Application.LoadLevel("jpscene");
+	}
+
 	IEnumerator WaitBeforeClosing()
 	{
 		yield return new WaitForSeconds(0.3f);

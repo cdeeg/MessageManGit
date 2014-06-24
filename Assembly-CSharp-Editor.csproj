@@ -144,6 +144,7 @@
      <None Include="Assets\tk2dUI\Shaders\DepthMask.shader" />
      <None Include="Assets\tk2d\Shaders\LitPremulVertexColor.shader" />
      <None Include="Assets\tk2d\Shaders\PremulVertexColor.shader" />
+     <None Include="Assets\Environment\testest\Texture\UnlitAlpha.shader" />
      <None Include="Assets\tk2d\Shaders\goodies\PackedTextMesh.shader" />
      <None Include="Assets\tk2d\Shaders\Blend2TexVertexColor.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

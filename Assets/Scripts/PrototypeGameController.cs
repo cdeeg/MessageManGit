@@ -5,15 +5,22 @@ public class PrototypeGameController : MonoBehaviour {
 	
 	public float minTimeTweetWait = 2f;
 	public float maxTimeTweetWait = 10f;
+
+	public float minTimeMsgWait = 5f;
+	public float maxTimeMsgWait = 18f;
 	
 	string sender2 = "Test Tweet";
 	bool stop = false;
 	bool stopMyself = false;
 	bool msgSent = false;
 	bool allDone = false;
+	bool waitingForSendMessage=false;
 
 	float tweetWaitTime = 4f;
 	float currentTweetWaitTimePassed = 0f;
+
+	float msgWaitTime;
+	float currentMsgWaitTimePassed = 0f;
 
 	bool canPause = true;
 
@@ -51,6 +58,8 @@ public class PrototypeGameController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, GameWon);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, PauseUnPause);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
+
+		msgWaitTime = Random.Range(minTimeMsgWait, maxTimeMsgWait);
 	}
 
 	void GameWon(object sender, System.EventArgs args)
@@ -91,6 +100,7 @@ public class PrototypeGameController : MonoBehaviour {
 		stop = false;
 		stopMyself = false;
 		msgSent = false;
+		waitingForSendMessage = false;
 	}
 
 	IEnumerator WaitForSecondsPassed()
@@ -136,14 +146,30 @@ public class PrototypeGameController : MonoBehaviour {
 				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.CHEAT_PAUSE_TIME, null);
 			}
 
-			if(Input.GetKeyDown(KeyCode.M))
+//			if(Input.GetKeyDown(KeyCode.M))
+//			{
+//				currentMessage = MessageCVSParser.GetInstance().GetRandomMessage();
+//				if(currentMessage == null) return;
+//
+//				stopMyself = true;
+//				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_INCOMING, new MessageEventArgs(currentMessage.Sender, currentMessage.Message, currentMessage.Answer));
+//			}
+
+			if(currentMsgWaitTimePassed > msgWaitTime && !waitingForSendMessage)
 			{
+				waitingForSendMessage = true;
+				currentMsgWaitTimePassed = 0f;
 				currentMessage = MessageCVSParser.GetInstance().GetRandomMessage();
-				if(currentMessage == null) return;
+				if(currentMessage == null)
+				{
+					waitingForSendMessage = false;
+					return;
+				}
 
 				stopMyself = true;
 				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_INCOMING, new MessageEventArgs(currentMessage.Sender, currentMessage.Message, currentMessage.Answer));
 			}
+			else if(!waitingForSendMessage) { currentMsgWaitTimePassed += Time.deltaTime; }
 		}
 		else
 		{
@@ -155,6 +181,7 @@ public class PrototypeGameController : MonoBehaviour {
 				stop = true;
 				stopMyself = true;
 				msgSent = true;
+				msgWaitTime = Random.Range(minTimeMsgWait, maxTimeMsgWait);
 				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED, new MessageEventArgs(currentMessage.Sender,currentMessage.Message,currentMessage.Answer));
 			}
 		}

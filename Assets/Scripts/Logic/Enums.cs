@@ -37,12 +37,14 @@ public class ParsedTweet
 public class ParsedMessage : ParsedTweet
 {
 	public int Predecessor { get; private set; }
+	public int Successor { get; private set; }
 	public string Answer { get; private set; }
 
-	public ParsedMessage(int id, string send, string msg, string ans, int pred)
+	public ParsedMessage(int id, string send, string msg, string ans, int pred, int succ)
 		:base(id, send, msg)
 	{
 		Predecessor = pred;
+		Successor = succ;
 		Answer = ans;
 	}
 
@@ -57,7 +59,7 @@ public class ParsedObstacleMessage : ParsedMessage
 	public string Obstacle { get; private set; }
 
 	public ParsedObstacleMessage(int id, string send, string msg, string ans, string obstacle)
-		: base(id, send, msg, ans, -1)
+		: base(id, send, msg, ans, -1, -1)
 	{
 		Obstacle = obstacle;
 	}

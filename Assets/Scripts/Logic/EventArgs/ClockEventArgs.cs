@@ -2,10 +2,10 @@
 
 public class ClockEventArgs : EventArgs
 {
-	public int InitTime { get; set; }
+	public float InitTime { get; set; }
 	public int TimeLeft { get; set; }
 
-	public ClockEventArgs(int timeLeft, int initTime)
+	public ClockEventArgs(int timeLeft, float initTime)
 	{
 		InitTime = initTime;
 		TimeLeft = timeLeft;

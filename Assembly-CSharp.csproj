@@ -76,9 +76,12 @@
      <Compile Include="Assets\Scripts\Logic\MessageController.cs" />
      <Compile Include="Assets\Scripts\Logic\Other\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Logic\Timer.cs" />
+     <Compile Include="Assets\Scripts\Main\Compass.cs" />
      <Compile Include="Assets\Scripts\Main\FPSCharacterController.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCAgent.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCHandler.cs" />
+     <Compile Include="Assets\Scripts\Main\PlaneArrowScript.cs" />
+     <Compile Include="Assets\Scripts\Main\StartDelay.cs" />
      <Compile Include="Assets\Scripts\Main\StartEndPoints.cs" />
      <Compile Include="Assets\Scripts\Main\StartEndPosHandler.cs" />
      <Compile Include="Assets\Scripts\Main\Trigger\ObstacleTrigger.cs" />
@@ -159,6 +162,7 @@
      <None Include="Assets\tk2dUI\Shaders\DepthMask.shader" />
      <None Include="Assets\tk2d\Shaders\LitPremulVertexColor.shader" />
      <None Include="Assets\tk2d\Shaders\PremulVertexColor.shader" />
+     <None Include="Assets\Environment\testest\Texture\UnlitAlpha.shader" />
      <None Include="Assets\tk2d\Shaders\goodies\PackedTextMesh.shader" />
      <None Include="Assets\tk2d\Shaders\Blend2TexVertexColor.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

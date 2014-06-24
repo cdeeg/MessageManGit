@@ -26,4 +26,15 @@ public class HighscoreInformationData {
 
 	private HighscoreInformationData()
 	{}
+
+	public void Reset()
+	{
+		SuccessfulMessages = 0f;
+		FailedMessages = 0f;
+		LostFriends = 0f;
+		LeftFriends = 0f;
+		TimePlayed = 0f;
+		InitialTime = 0f;
+		ShovedByNpcs = 0f;
+	}
 }
