@@ -26,31 +26,28 @@ public class ParsedTweet
 	public string Sender { get; private set; }
 	public string Message { get; private set; }
 
-	public ParsedTweet(int id, string send, string msg)
+	// optional
+	public int Predecessor { get; private set; }
+	public int Successor { get; private set; }
+
+	public ParsedTweet(int id, string send, string msg, int pred = -1, int succ = -1)
 	{
 		ID = id;
 		Sender = send;
 		Message = msg;
+		Predecessor = pred;
+		Successor = succ;
 	}
 }
 
 public class ParsedMessage : ParsedTweet
 {
-	public int Predecessor { get; private set; }
-	public int Successor { get; private set; }
 	public string Answer { get; private set; }
 
 	public ParsedMessage(int id, string send, string msg, string ans, int pred, int succ)
-		:base(id, send, msg)
+		:base(id, send, msg, pred, succ)
 	{
-		Predecessor = pred;
-		Successor = succ;
 		Answer = ans;
-	}
-
-	public override string ToString ()
-	{
-		return string.Format ("[ParsedMessage: Predecessor={0}, Answer={1}]", Predecessor, Answer);
 	}
 }
 

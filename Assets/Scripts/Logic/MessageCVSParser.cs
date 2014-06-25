@@ -9,25 +9,33 @@ public class MessageCVSParser {
 //	string RESOURCE_PATH="InstantMessages";
 	const int WALK_THRESHOLD = 10;
 
-	delegate void ParserDelegate(string[] args);
+	delegate void ParserDelegate(string[] args, List<ParsedTweet> targetList);
 
-//	private List<ParsedTweet> parsedTweets;
+	private List<ParsedTweet> parsedTweets;
 	private List<ParsedMessage> parsedMessages;
 //	private List<ParsedObstacleMessage> parsedObstacleMessages;
+
+	private List<ParsedTweet> timeTweets;
+	private List<ParsedTweet> friendsTweets;
 
 	private List<ParsedMessage> sentMessages;
 	private List<int> sentMessagesIds;
 	private List<int> notSentMessagesIds;
 	private int queuedMessageId;
+	private int timeTweetQueued;
+	private int friendsTweetQueued;
 
 	private static MessageCVSParser instance;
 
 	private MessageCVSParser()
 	{
-//		parsedTweets = new List<ParsedTweet>();
+		parsedTweets = new List<ParsedTweet>();
 		parsedMessages = new List<ParsedMessage>();
 //		parsedObstacleMessages = new List<ParsedObstacleMessage>();
 
+		timeTweets = new List<ParsedTweet>();
+		friendsTweets = new List<ParsedTweet>();
+		
 		sentMessages = new List<ParsedMessage>();
 		sentMessagesIds = new List<int>();
 		notSentMessagesIds = new List<int>();
@@ -45,11 +53,16 @@ public class MessageCVSParser {
 	public void Clear()
 	{
 		queuedMessageId = -1;
-
+		timeTweetQueued = -1;
+		friendsTweetQueued = 0;
+		timeTweetQueued = 0;
+		
 		parsedMessages.Clear();
 		sentMessagesIds.Clear();
 		sentMessages.Clear();
 		notSentMessagesIds.Clear();
+
+		parsedTweets.Clear();
 
 		instance = null;
 	}
@@ -58,10 +71,17 @@ public class MessageCVSParser {
 	void Parse()
 	{
 		queuedMessageId = -1;
+		timeTweetQueued = -1;
+		friendsTweetQueued = 0;
+		timeTweetQueued = 0;
+
 		ReadFile("CSV/InstantMessages", ParseMessage);
+		ReadFile("CSV/RandomTweetsDateTweets", ParseTweet, parsedTweets);
+		ReadFile("CSV/DateTweetsTime", ParseTweet, timeTweets);
+		ReadFile("CSV/DateTweetsFriends", ParseTweet, friendsTweets);
 	}
 
-	void ReadFile(string fileName, ParserDelegate deleg)
+	void ReadFile(string fileName, ParserDelegate deleg, List<ParsedTweet> targetList = null)
 	{
 		bool firstLine = true;
 		TextAsset txt = Resources.Load(fileName) as TextAsset;
@@ -77,17 +97,41 @@ public class MessageCVSParser {
 				if(string.IsNullOrEmpty(entries[0])) continue;	// ...the line is empty or not initialized
 				if(entries[0].StartsWith("/")) continue;		// ...commented out 
 				if (entries.Length > 0)
-					deleg(entries);
+					deleg(entries, targetList);
 			}
 		}
 	}
 
-	void ParseTweet(string[] args)
+	void ParseTweet(string[] args, List<ParsedTweet> targetList)
 	{
-		if(args.Length != 2) return;
+		// not the correct number of arguments? forget it and cancel
+		if(args.Length != 5) return;
+		
+		// check for tweet predecessor/successor
+		if(string.IsNullOrEmpty( args[1] )) args[1] = "-1";
+		if(string.IsNullOrEmpty( args[2] )) args[2] = "-1";
+		
+		int id;
+		if(!int.TryParse(args[0].Trim(), out id))
+			Debug.LogError("Tweet ID was no int! " + args[0]);
+		int predec;
+		if(!int.TryParse(args[1].Trim(), out predec))
+			Debug.LogError("Tweet predecessor was no int! " + args[1]);
+		int succ;
+		if(!int.TryParse(args[2].Trim(), out succ))
+			Debug.LogError("Tweet successor was no int! " + args[2]);
+
+		ParsedTweet tweet = null;
+		if(predec > -1 || succ > -1)
+			tweet = new ParsedTweet(id, args[3].Trim(), args[4].Trim());
+		else
+			tweet = new ParsedTweet(id, args[3].Trim(), args[4].Trim(), predec, succ);
+
+		if(tweet != null)
+			targetList.Add(tweet);
 	}
 
-	void ParseMessage(string[] args)
+	void ParseMessage(string[] args, List<ParsedTweet> targetList)
 	{
 		// not the correct number of arguments? forget it and cancel
 		if(args.Length != 6) return;
@@ -111,16 +155,51 @@ public class MessageCVSParser {
 		notSentMessagesIds.Add(newMsg.ID);
 	}
 
-	void ParseObstacleMessage(string[] args)
+	void ParseObstacleMessage(string[] args, List<ParsedTweet> targetList)
 	{
 		if(args.Length != 4) return;
 	}
 	#endregion
 
 	#region Get Messages
-	ParsedTweet GetRandomTweet()
+	public ParsedTweet GetTimeUpdatedMessage()
 	{
+		if(timeTweetQueued < timeTweets.Count)
+		{
+			ParsedTweet timeTweet = timeTweets[timeTweetQueued];
+			timeTweetQueued++;
+
+			return timeTweet;
+		}
 		return null;
+	}
+
+	public ParsedTweet GetFriendsUpdatedMessage()
+	{
+		if(friendsTweetQueued < timeTweets.Count)
+		{
+			ParsedTweet timeTweet = timeTweets[friendsTweetQueued];
+			friendsTweetQueued++;
+
+			return timeTweet;
+		}
+		return null;
+	}
+
+	public ParsedTweet GetRandomTweet()
+	{
+		int rand = Random.Range(0, parsedTweets.Count);
+
+		ParsedTweet tweet = parsedTweets[rand];
+		parsedTweets.RemoveAt(rand);
+
+		if(parsedTweets.Count == 0)
+		{
+			parsedTweets.Clear();
+			ReadFile("CSV/RandomTweetsDateTweets", ParseTweet);
+		}
+
+		return tweet;
 	}
 
 	ParsedMessage GetMessageById(int id)
@@ -272,6 +351,7 @@ public class MessageCVSParser {
 
 	ParsedObstacleMessage GetRandomObstacleMessage()
 	{
+		// TODO
 		return null;
 	}
 	#endregion

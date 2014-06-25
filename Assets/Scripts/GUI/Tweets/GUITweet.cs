@@ -147,6 +147,9 @@ public class GUITweet : MonoBehaviour {
 	public void MoveToPosition(float yPos)
 	{
 		targetMovePos = yPos;
+		Vector3 myPos = transform.localPosition;
+		myPos.z = 6f;
+		transform.localPosition = myPos;
 		if(!isMoving)
 			StartCoroutine(MoveToPos());
 	}
@@ -183,6 +186,10 @@ public class GUITweet : MonoBehaviour {
 			yield return null;
 		}
 		isMoving = false;
+
+		Vector3 myPos = transform.localPosition;
+		myPos.z = 0f; //Mathf.Lerp(pos.y, targetMovePos, passed/moveTime);
+		transform.localPosition = myPos;
 	}
 
 	IEnumerator FadeMe()

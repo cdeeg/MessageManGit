@@ -9,7 +9,6 @@ public class PrototypeGameController : MonoBehaviour {
 	public float minTimeMsgWait = 5f;
 	public float maxTimeMsgWait = 18f;
 	
-	string sender2 = "Test Tweet";
 	bool stop = false;
 	bool stopMyself = false;
 	bool msgSent = false;
@@ -25,8 +24,6 @@ public class PrototypeGameController : MonoBehaviour {
 	bool canPause = true;
 
 	bool isPaused;
-
-	int indx = 0;
 
 	ParsedMessage currentMessage;
 
@@ -70,17 +67,17 @@ public class PrototypeGameController : MonoBehaviour {
 
 	void TimeUpdated (object sender, System.EventArgs args)
 	{
-		switch(indx)
+		ParsedTweet tweet = MessageCVSParser.GetInstance().GetTimeUpdatedMessage();
+		if(tweet != null)
 		{
-			case 0: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub", "Clock updated! WHOWHOWHOW",true)); break;
-			case 1: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub aonjkal eioyd", "mopmop!",true)); break;
-			case 2: GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs("Blub aonjkal eioyd", "Clock updated! slNDLJ SIKSJ CABJKW sisfa",true)); break;
-			default: break;
+			string msg = tweet.Message;
+			if(msg.Contains("{0}"))
+			{
+				float minutes = Mathf.Ceil( (HighscoreInformationData.GetInstance().InitialTime - HighscoreInformationData.GetInstance().TimePlayed)/60f);
+				msg.Replace("{0}", ((int)minutes).ToString());
+			}
+			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.SPECIAL_TWEET, new MessageEventArgs(tweet.Sender, msg, true));
 		}
-
-		indx++;
-		if(indx == 3)
-			indx = 0;
 	}
 
 	void PauseUnPause (object sender, System.EventArgs args)
@@ -132,7 +129,8 @@ public class PrototypeGameController : MonoBehaviour {
 
 		if(currentTweetWaitTimePassed > tweetWaitTime)
 		{
-			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.TWEET_INCOMING, new MessageEventArgs(sender2, "Aww man! Super hotdogs!",false));
+			ParsedTweet tweet = MessageCVSParser.GetInstance().GetRandomTweet();
+			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.TWEET_INCOMING, new MessageEventArgs(tweet.Sender, tweet.Message, false));
 			currentTweetWaitTimePassed = 0f;
 			tweetWaitTime = Random.Range(minTimeTweetWait, maxTimeTweetWait);
 		}
