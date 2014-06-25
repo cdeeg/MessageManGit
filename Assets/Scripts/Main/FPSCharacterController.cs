@@ -10,18 +10,20 @@ public class FPSCharacterController : MonoBehaviour {
 	public bool doHeadBob = false;
 	public Camera playerCamera;
 
-	public GameObject bigCollider;
-
 	public PrototypeGameController gctrl;
 
 	Vector2 input;
 	bool isMoving;
 	float stuff;
 	float origPos;
+	float origPosX;
 
 	float bobspeed = 4f;
 
 	float previous = 0f;
+
+	Compass cmp;
+	bool cmpIsHidden;
 
 	static Vector3 myForward;
 
@@ -33,12 +35,35 @@ public class FPSCharacterController : MonoBehaviour {
 	void Start()
 	{
 		isMoving = false;
-		bigCollider.SetActive(false);
+
+		cmpIsHidden = false;
+		cmp = GetComponentInChildren<Compass>();
+		if(cmp == null)
+			Debug.LogError("FPSCharacterController: No compass found!");
 		origPos = playerCamera.transform.localPosition.y;
+		origPosX = playerCamera.transform.localPosition.x;
 		if(rigidbody == null)
 		{
 			Debug.LogError("FPSCharacterController: No rigidbody found!");
 			return;
+		}
+
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+	}
+
+	void OnDestroy()
+	{
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+	}
+
+	void ToggleCompass (object sender, System.EventArgs args)
+	{
+		if(cmp != null)
+		{
+			cmp.gameObject.SetActive(cmpIsHidden);
+			cmpIsHidden = !cmpIsHidden;
 		}
 	}
 
@@ -51,9 +76,6 @@ public class FPSCharacterController : MonoBehaviour {
 		bool run = Input.GetKey(KeyCode.LeftShift);
 
 		float speed = run ? runSpeed : walkSpeed;
-
-//		if(run) bigCollider.SetActive(true);
-//		else bigCollider.SetActive(false);
 
 		input = new Vector2( rotate, forwards );
 		
@@ -74,15 +96,21 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void Update()
 	{
+		if(isMoving)
+			cmp.gameObject.SetActive(false);
+		else if(!cmpIsHidden)
+			cmp.gameObject.SetActive(true);
+
 		myForward = transform.forward;
 
 		if(!doHeadBob) return;
 
-		if(isMoving || playerCamera.transform.localPosition.y != origPos)
+		if(isMoving || playerCamera.transform.localPosition.y != origPos || playerCamera.transform.localPosition.x != origPosX)
 		{
 			stuff += Time.deltaTime*bobspeed;
 			Vector3 pos = playerCamera.transform.localPosition;
 			pos.y = origPos + Mathf.Sin(stuff) * .04f;
+			pos.x = origPosX + Mathf.Sin(stuff) * .04f;
 			if(!isMoving)
 			{
 				if(playerCamera.transform.localPosition.y+.03f >= origPos
@@ -90,6 +118,7 @@ public class FPSCharacterController : MonoBehaviour {
 				{
 					stuff = 0f;
 					pos.y = origPos;
+					pos.x = origPosX;
 					bobspeed = 4f;
 				}
 			}

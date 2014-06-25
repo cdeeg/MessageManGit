@@ -8,6 +8,8 @@ public class GUIBarsController : MonoBehaviour {
 	public GUITweenableBar timeBar;
 	public GUITweenableBar friendsBar;
 
+	public tk2dTextMesh countDown;
+
 	public float initialFriendsAmount = 10f;
 	public float initialTimeInSeconds = 180f;
 
@@ -25,9 +27,9 @@ public class GUIBarsController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
 
 		timeBar.Init(initialTimeInSeconds);
+		countDown.text = string.Format("{0:D2}:{1:D2}", (int)(timeBar.CurrentValue/60f), (int)(timeBar.CurrentValue%60f));
 		friendsBar.Init(initialFriendsAmount);
-		initMinutes = (int)(initialTimeInSeconds/60f);
-		HighscoreInformationData.GetInstance().InitialTime = initMinutes;
+		HighscoreInformationData.GetInstance().InitialTime = initialTimeInSeconds;
 
 		StartCoroutine(UpdateTime());
 	}
@@ -95,14 +97,17 @@ public class GUIBarsController : MonoBehaviour {
 			if(!isPaused)
 			{
 				timeBar.UpdateBar(-1f, true);
+				float timePlayed = Mathf.Abs(timeBar.CurrentValue-initialTimeInSeconds);
 
-				HighscoreInformationData.GetInstance().TimePlayed = Mathf.Abs(timeBar.CurrentValue-initialTimeInSeconds);
+				HighscoreInformationData.GetInstance().TimePlayed = timePlayed;
 
 				if(timeBar.CurrentValue % MODULO_THINGY == 0f)
 				{
-					ClockEventArgs args = new ClockEventArgs((int)(timeBar.CurrentValue/MODULO_THINGY), initMinutes);
+					ClockEventArgs args = new ClockEventArgs((int)(timeBar.CurrentValue/MODULO_THINGY), initialTimeInSeconds);
 					GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.UPDATE_CLOCK, args);
 				}
+
+				countDown.text = string.Format("{0:D2}:{1:D2}", (int)(timeBar.CurrentValue/60f), (int)(timeBar.CurrentValue%60f));
 			}
 			else
 			{

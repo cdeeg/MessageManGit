@@ -19,6 +19,8 @@ public class GUIPhoneController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, FocusOnPhone);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, MinimizePhone);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, GamePaused);
+
+		if(messageView == null) Debug.LogError("GUIPhoneController: Missing GUIMessageController object!");
 		
 		messageViewActive = false;
 		messageMissed = false;
@@ -74,7 +76,7 @@ public class GUIPhoneController : MonoBehaviour {
 	{
 		if(!messageMissed) return;
 		
-		messageIndicator.gameObject.SetActive(false);
+//		messageIndicator.gameObject.SetActive(false);
 		messageMissed = false;
 		ToggleMessageView();
 	}

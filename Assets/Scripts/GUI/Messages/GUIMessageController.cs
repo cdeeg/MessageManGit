@@ -8,8 +8,8 @@ using System.Text;
 public class GUIMessageController : MonoBehaviour
 {
 	public GameObject guiAnchor;
-	public float defaultAnswerTime = 8f;
 	public GameObject indicator;
+	public float secondsToReadMessage = 4f;
 
 	public tk2dTextMesh senderText;
 	public tk2dTextMesh messageText;
@@ -43,6 +43,8 @@ public class GUIMessageController : MonoBehaviour
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, SetMessage);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.SHOVED, ShovedByNpcs);
 		guiAnchor.gameObject.SetActive(false);
+
+		if(indicator == null) Debug.LogError("GUIMessageController: Missing indicator object!");
 
 		audioSour = GetComponent<AudioSource>();
 		if(audioSour == null) Debug.LogWarning("GUIMessageController: No audio source found!");
@@ -89,6 +91,9 @@ public class GUIMessageController : MonoBehaviour
 	void SetMessage (object sender, System.EventArgs args)
 	{
 		if(indicator != null && !indicator.gameObject.activeSelf) return;
+
+		indicator.gameObject.SetActive(false);
+
 		MessageEventArgs msgArgs = (MessageEventArgs)args;
 		if(msgArgs == null) return;
 
@@ -105,7 +110,9 @@ public class GUIMessageController : MonoBehaviour
 		// show big phone
 		guiAnchor.gameObject.SetActive(true);
 
-		StartCoroutine(UserTyping());
+		answerText.gameObject.SetActive(false);
+
+		StartCoroutine(WaitForPlayerReading());
 	}
 
 	void SendFinishEvent()
@@ -147,6 +154,17 @@ public class GUIMessageController : MonoBehaviour
 
 		answerText.text = tmpString.ToString();
 	}
+	
+	IEnumerator WaitForPlayerReading()
+	{
+		yield return new WaitForSeconds(secondsToReadMessage);
+		
+		answerText.gameObject.SetActive(true);
+		
+		yield return null;
+		
+		StartCoroutine(UserTyping());
+	}
 
 	IEnumerator UserTyping()
 	{
@@ -181,9 +199,6 @@ public class GUIMessageController : MonoBehaviour
 						yield return StartCoroutine(HighlightText(arrayIndex, true));
 					}
 				}
-
-				// wait two frames!
-				yield return null;
 			}
 
 			yield return null;

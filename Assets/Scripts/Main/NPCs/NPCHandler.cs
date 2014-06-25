@@ -10,8 +10,7 @@ public class NPCHandler : MonoBehaviour {
 
 	public static float maxDistancePlayer;
 
-	public NPCAgent agentPrefabMale;
-	public NPCAgent agentPrefabFemale;
+	public NPCAgent[] npcPrefabs;
 
 	static Vector3 playerPos;
 
@@ -23,13 +22,16 @@ public class NPCHandler : MonoBehaviour {
 	#region Unity functions
 	void Start ()
 	{
-		if(agentPrefabMale == null || agentPrefabFemale == null) return;
+//		if(agentPrefabMale == null || agentPrefabFemale == null) return;
+		if(npcPrefabs.Length == 0) return;
 
 		maxDistancePlayer = distanceFromPlayer;
 
+		playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
 		playerPos = playerTransform.position;
-		agentPrefabFemale.CreatePool();
-		agentPrefabMale.CreatePool();
+		for(int x=0; x<npcPrefabs.Length; x++)
+			npcPrefabs[x].CreatePool();
 
 		InitNpcs();
 	}
@@ -41,18 +43,19 @@ public class NPCHandler : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		if(agentPrefabMale == null || agentPrefabFemale == null) return;
+//		if(agentPrefabMale == null || agentPrefabFemale == null) return;
 	}
 	#endregion
 
 	#region Start/End
 	void InitNpcs()
 	{
-		maxNpcs = (int)(maxNpcs/2);
-		for(int x=0; x<maxNpcs/2; x++)
+		for(int x=0; x<maxNpcs; x++)
 		{
-			agentPrefabFemale.Spawn(transform).SeekPosition(playerTransform.position);
-//			agentPrefabMale.Spawn(transform).SeekPosition(playerTransform.position);
+			// get random NPC prefab, check if it exists, then spawn it
+			int rand = Random.Range(0, npcPrefabs.Length);
+			if(npcPrefabs[rand] != null) npcPrefabs[rand].Spawn(transform).SeekPosition(playerTransform.position);
+			else x--;
 		}
 	}
 

@@ -148,10 +148,7 @@ public class GUITweet : MonoBehaviour {
 	{
 		targetMovePos = yPos;
 		if(!isMoving)
-		{
-			Debug.Log("DIFF NEW OLD: " + (targetMovePos - transform.localPosition.y));
 			StartCoroutine(MoveToPos());
-		}
 	}
 
 	void SendEvent()
