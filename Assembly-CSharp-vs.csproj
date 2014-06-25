@@ -78,9 +78,11 @@
      <Compile Include="Assets\Scripts\Logic\MessageController.cs" />
      <Compile Include="Assets\Scripts\Logic\Other\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Logic\Timer.cs" />
+     <Compile Include="Assets\Scripts\Main\Compass.cs" />
      <Compile Include="Assets\Scripts\Main\FPSCharacterController.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCAgent.cs" />
      <Compile Include="Assets\Scripts\Main\NPCs\NPCHandler.cs" />
+     <Compile Include="Assets\Scripts\Main\PlaneArrowScript.cs" />
      <Compile Include="Assets\Scripts\Main\StartDelay.cs" />
      <Compile Include="Assets\Scripts\Main\StartEndPoints.cs" />
      <Compile Include="Assets\Scripts\Main\StartEndPosHandler.cs" />
