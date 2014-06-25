@@ -1887,8 +1887,9 @@ ModelImporter:
     4300014: shoe_left
     4300016: Face
     4300018: hair
-    7400000: Take 001
+    7400000: female04
     9500000: //RootNode
+    11100000: //RootNode
     13700000: arm_right
     13700002: Face
     13700004: hair
@@ -1907,13 +1908,1913 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: female04
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Body_female
+        weight: 1
+      - path: Body_female/Face
+        weight: 1
+      - path: Body_female/hair
+        weight: 1
+      - path: Body_female/hands
+        weight: 1
+      - path: Body_female/hands/arm_right
+        weight: 1
+      - path: Body_female/hands/hand_left
+        weight: 1
+      - path: Body_female/leggins
+        weight: 1
+      - path: Body_female/legs
+        weight: 1
+      - path: Body_female/legs/left 1
+        weight: 1
+      - path: Body_female/legs/left 1/leg_left
+        weight: 1
+      - path: Body_female/legs/left 1/shoe_left
+        weight: 1
+      - path: Body_female/legs/right
+        weight: 1
+      - path: Body_female/legs/right/leg_right
+        weight: 1
+      - path: Body_female/legs/right/shoe_right
+        weight: 1
+      - path: Body_female/T_shirt
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: front1
+        weight: 1
+      - path: front2
+        weight: 1
+      - path: front3
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Rig
+        weight: 1
+      - path: Rig/Geometry
+        weight: 1
+      - path: Rig/Main
+        weight: 1
+      - path: Rig/Main/DeformationSystem
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart1_M_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Eye_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Eye_L/Eye1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Eye_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Eye_R/Eye1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Hair_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Jaw_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/Head_M/Jaw_M/JawEnd_M
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Neck_M/NeckPart1_M/NeckPart2_M/NeckPart2_M_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart1_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart1_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/ElbowPart2_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/PinkyFinger1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/PinkyFinger1_L/PinkyFinger2_L/PinkyFinger3_L/PinkyFinger4_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/RingFinger1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/Cup_L/RingFinger1_L/RingFinger2_L/RingFinger3_L/RingFinger4_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/IndexFinger1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/IndexFinger1_L/IndexFinger2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/IndexFinger1_L/IndexFinger2_L/IndexFinger3_L/IndexFinger4_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/MiddleFinger1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/MiddleFinger1_L/MiddleFinger2_L/MiddleFinger3_L/MiddleFinger4_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/ThumbFinger1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/Elbow_L/ElbowPart1_L/ElbowPart2_L/Wrist_L/ThumbFinger1_L/ThumbFinger2_L/ThumbFinger3_L/ThumbFinger4_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_L/Shoulder_L/ShoulderPart1_L/ShoulderPart2_L/ShoulderPart2_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart1_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart1_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/ElbowPart2_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/PinkyFinger1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/PinkyFinger1_R/PinkyFinger2_R/PinkyFinger3_R/PinkyFinger4_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/RingFinger1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/Cup_R/RingFinger1_R/RingFinger2_R/RingFinger3_R/RingFinger4_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/IndexFinger1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R/IndexFinger4_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/MiddleFinger1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R/MiddleFinger3_R/MiddleFinger4_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/ThumbFinger1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/Elbow_R/ElbowPart1_R/ElbowPart2_R/Wrist_R/ThumbFinger1_R/ThumbFinger2_R/ThumbFinger3_R/ThumbFinger4_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/BackA_M/BackB_M/Chest_M/Scapula_R/Shoulder_R/ShoulderPart1_R/ShoulderPart2_R/ShoulderPart2_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart1_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/HipPart2_L_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L/Ankle_L/MiddleToe1_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L/Ankle_L/MiddleToe1_L/BigToe_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L/Ankle_L/MiddleToe1_L/MiddleToe2_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_L/HipPart1_L/HipPart2_L/Knee_L/Ankle_L/MiddleToe1_L/PinkyToe_L
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart1_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/HipPart2_R_tangentConstraint1
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R/Ankle_R/MiddleToe1_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R/Ankle_R/MiddleToe1_R/BigToe_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R/Ankle_R/MiddleToe1_R/MiddleToe2_R
+        weight: 1
+      - path: Rig/Main/DeformationSystem/Root_M/Hip_R/HipPart1_R/HipPart2_R/Knee_R/Ankle_R/MiddleToe1_R/PinkyToe_R
+        weight: 1
+      - path: Rig/Main/FitSkeleton
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Eye
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Eye/Eye1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Hair
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Head_globalLocator
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Head/Jaw/JawEnd
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator5
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator6
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator7
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator8
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator9
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Neck/Neck_twistJointsLocator10
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator5
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator6
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator7
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator8
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator9
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistJointsLocator10
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator5
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator6
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator7
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator8
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator9
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Elbow_twistLocator10
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/PinkyFinger1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/PinkyFinger1/PinkyFinger2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/PinkyFinger1/PinkyFinger2/PinkyFinger3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/PinkyFinger1/PinkyFinger2/PinkyFinger3/PinkyFinger4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/RingFinger1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/RingFinger1/RingFinger2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/RingFinger1/RingFinger2/RingFinger3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Cup/RingFinger1/RingFinger2/RingFinger3/RingFinger4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Fingers
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/IndexFinger1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/IndexFinger1/IndexFinger2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/IndexFinger1/IndexFinger2/IndexFinger3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/IndexFinger1/IndexFinger2/IndexFinger3/IndexFinger4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/MiddleFinger1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/MiddleFinger1/MiddleFinger2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/MiddleFinger1/MiddleFinger2/MiddleFinger3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/MiddleFinger1/MiddleFinger2/MiddleFinger3/MiddleFinger4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/ThumbFinger1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/ThumbFinger1/ThumbFinger2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/ThumbFinger1/ThumbFinger2/ThumbFinger3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/ThumbFinger1/ThumbFinger2/ThumbFinger3/ThumbFinger4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Elbow/Wrist/Wrist_globalLocator
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_globalLocator
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator5
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator6
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator7
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator8
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator9
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/BackA/BackB/Chest/Scapula/Shoulder/Shoulder_twistJointsLocator10
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator3
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator4
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator5
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator6
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator7
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator8
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator9
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Hip_twistJointsLocator10
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle/Heel
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle/MiddleToe1
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle/MiddleToe1/BigToe
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle/MiddleToe1/MiddleToe2
+        weight: 1
+      - path: Rig/Main/FitSkeleton/FitSkeletonOffset/Root/Hip/Knee/Ankle/MiddleToe1/PinkyToe
+        weight: 1
+      - path: Rig/Main/MotionSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M/AimEye_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M/AimEye_M/AimReverseAimConstraintEye_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M/AimEye_M/AimReverseAimConstraintEye_M/AimCrossEye_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M/AimEye_M/AimReverseAimConstraintEye_M/AimCrossEye_M/AimEyeLocatorChild_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/AimParentConstraintEye_M/AimEye_M/AimReverseAimConstraintEye_M/AimCrossEye_M/AimEyeLocatorChild_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_L/AimEyeLocatorVisualCenter_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_L/AimEyeLocatorVisualCenter_L/AimEyeLocatorPupil_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_R/AimEyeLocatorVisualCenter_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/AimSystem/VisualTrim/AimEyeVisualCenter_R/AimEyeLocatorVisualCenter_R/AimEyeLocatorPupil_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/Bend0OffsetElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/Bend0OffsetElbow_L/Bend0ExtraElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/Bend0OffsetElbow_L/Bend0ExtraElbow_L/Bend0Elbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/Bend0OffsetElbow_L/Bend0ExtraElbow_L/Bend0Elbow_L/ElbowBendCurveStart_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/Bend0OffsetElbow_L/Bend0ExtraElbow_L/Bend0Elbow_L/ShoulderBendCurveEnd_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/BendAimerAtElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/BendExtraElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/BendExtraElbow_L/BendElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_L/BendExtraElbow_L/BendElbow_L/ElbowBendCurveMid_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/Bend0OffsetElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/Bend0OffsetElbow_R/Bend0ExtraElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/Bend0OffsetElbow_R/Bend0ExtraElbow_R/Bend0Elbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/Bend0OffsetElbow_R/Bend0ExtraElbow_R/Bend0Elbow_R/ElbowBendCurveStart_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/Bend0OffsetElbow_R/Bend0ExtraElbow_R/Bend0Elbow_R/ShoulderBendCurveEnd_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/BendAimerAtElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/BendExtraElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/BendExtraElbow_R/BendElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintElbow_R/BendExtraElbow_R/BendElbow_R/ElbowBendCurveMid_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_L/BendAimerAtHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_L/BendExtraHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_L/BendExtraHip_L/BendHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_L/BendExtraHip_L/BendHip_L/HipBendCurveMid_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_R/BendAimerAtHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_R/BendExtraHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_R/BendExtraHip_R/BendHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintHip_R/BendExtraHip_R/BendHip_R/HipBendCurveMid_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintNeck_M/BendAimerAtNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintNeck_M/BendExtraNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintNeck_M/BendExtraNeck_M/BendNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintNeck_M/BendExtraNeck_M/BendNeck_M/NeckBendCurveMid_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_L/BendAimerAtShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_L/BendExtraShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_L/BendExtraShoulder_L/BendShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_L/BendExtraShoulder_L/BendShoulder_L/ShoulderBendCurveMid_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_R/BendAimerAtShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_R/BendExtraShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_R/BendExtraShoulder_R/BendShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/BendParentConstraintShoulder_R/BendExtraShoulder_R/BendShoulder_R/ShoulderBendCurveMid_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowBendCurve_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowBendCurve_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowBendCurveEnd_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowBendCurveEnd_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowPointOnCurveXform1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowPointOnCurveXform1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowPointOnCurveXform2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ElbowPointOnCurveXform2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurve_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurve_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurveEnd_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurveEnd_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurveStart_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipBendCurveStart_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipPointOnCurveXform1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipPointOnCurveXform1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipPointOnCurveXform2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/HipPointOnCurveXform2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/NeckBendCurve_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/NeckBendCurveEnd_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/NeckBendCurveStart_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/NeckPointOnCurveXform1_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/NeckPointOnCurveXform2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderBendCurve_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderBendCurve_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderBendCurveStart_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderBendCurveStart_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderPointOnCurveXform1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderPointOnCurveXform1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderPointOnCurveXform2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/BendSystem/ShoulderPointOnCurveXform2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/DynamicSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintArm_L/FKIKArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintArm_R/FKIKArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintLeg_L/FKIKLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintLeg_R/FKIKLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKIKSystem/FKIKParentConstraintSpine_M/FKIKSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_L/FKOffsetFingers_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_L/FKOffsetFingers_L/Fingers_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_R/FKOffsetFingers_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintFingers_R/FKOffsetFingers_R/Fingers_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L/FKMiddleToe1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L/FKMiddleToe1_L/FKXMiddleToe1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L/FKMiddleToe1_L/FKXMiddleToe1_L/FKXBigToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L/FKMiddleToe1_L/FKXMiddleToe1_L/FKXMiddleToe2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_L/FKOffsetMiddleToe1_L/FKExtraMiddleToe1_L/FKMiddleToe1_L/FKXMiddleToe1_L/FKXPinkyToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R/FKMiddleToe1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R/FKMiddleToe1_R/FKXMiddleToe1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R/FKMiddleToe1_R/FKXMiddleToe1_R/FKXBigToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R/FKMiddleToe1_R/FKXMiddleToe1_R/FKXMiddleToe2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToAnkle_R/FKOffsetMiddleToe1_R/FKExtraMiddleToe1_R/FKMiddleToe1_R/FKXMiddleToe1_R/FKXPinkyToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L/FKExtraEye_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L/FKExtraEye_L/FKEye_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L/FKExtraEye_L/FKEye_L/FKXEye_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L/FKExtraEye_L/FKEye_L/FKXEye_L/AimAnnotationEye_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_L/FKExtraEye_L/FKEye_L/FKXEye_L/FKXEye1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R/FKExtraEye_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R/FKExtraEye_R/FKEye_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R/FKExtraEye_R/FKEye_R/FKXEye_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R/FKExtraEye_R/FKEye_R/FKXEye_R/AimAnnotationEye_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetEye_R/FKExtraEye_R/FKEye_R/FKXEye_R/FKXEye1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetJaw_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetJaw_M/FKExtraJaw_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetJaw_M/FKExtraJaw_M/FKJaw_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetJaw_M/FKExtraJaw_M/FKJaw_M/FKXJaw_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKOffsetJaw_M/FKExtraJaw_M/FKJaw_M/FKXJaw_M/FKXJawEnd_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetNeck_M/FKExtraNeck_M/FKNeck_M/FKXNeck_M/FKOffsetHead_M/FKGlobalStaticHead_M/FKGlobalHead_M/FKExtraHead_M/FKHead_M/FKXHead_M/FKXHair_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L/FKGlobalWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L/FKGlobalWrist_L/FKExtraWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L/FKGlobalWrist_L/FKExtraWrist_L/FKWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L/FKGlobalWrist_L/FKExtraWrist_L/FKWrist_L/FKXWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_L/FKExtraScapula_L/FKScapula_L/FKXScapula_L/FKOffsetShoulder_L/FKGlobalStaticShoulder_L/FKGlobalShoulder_L/FKExtraShoulder_L/FKShoulder_L/FKXShoulder_L/FKOffsetElbow_L/FKExtraElbow_L/FKElbow_L/FKXElbow_L/FKOffsetWrist_L/FKGlobalStaticWrist_L/FKGlobalWrist_L/FKExtraWrist_L/FKWrist_L/FKXWrist_L/AlignIKToWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R/FKGlobalWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R/FKGlobalWrist_R/FKExtraWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R/FKGlobalWrist_R/FKExtraWrist_R/FKWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R/FKGlobalWrist_R/FKExtraWrist_R/FKWrist_R/FKXWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToChest_M/FKOffsetScapula_R/FKExtraScapula_R/FKScapula_R/FKXScapula_R/FKOffsetShoulder_R/FKGlobalStaticShoulder_R/FKGlobalShoulder_R/FKExtraShoulder_R/FKShoulder_R/FKXShoulder_R/FKOffsetElbow_R/FKExtraElbow_R/FKElbow_R/FKXElbow_R/FKOffsetWrist_R/FKGlobalStaticWrist_R/FKGlobalWrist_R/FKExtraWrist_R/FKWrist_R/FKXWrist_R/AlignIKToWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L/FKExtraAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L/FKExtraAnkle_L/FKAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L/FKExtraAnkle_L/FKAnkle_L/FKXAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L/FKExtraAnkle_L/FKAnkle_L/FKXAnkle_L/AlignIKToAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_L/FKExtraHip_L/FKHip_L/FKXHip_L/FKOffsetKnee_L/FKExtraKnee_L/FKKnee_L/FKXKnee_L/FKOffsetAnkle_L/FKExtraAnkle_L/FKAnkle_L/FKXAnkle_L/FKXHeel_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R/FKExtraAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R/FKExtraAnkle_R/FKAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R/FKExtraAnkle_R/FKAnkle_R/FKXAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R/FKExtraAnkle_R/FKAnkle_R/FKXAnkle_R/AlignIKToAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToRoot_M/FKOffsetHip_R/FKExtraHip_R/FKHip_R/FKXHip_R/FKOffsetKnee_R/FKExtraKnee_R/FKKnee_R/FKXKnee_R/FKOffsetAnkle_R/FKExtraAnkle_R/FKAnkle_R/FKXAnkle_R/FKXHeel_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L/FKOffsetPinkyFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L/FKOffsetPinkyFinger3_L/FKExtraPinkyFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L/FKOffsetPinkyFinger3_L/FKExtraPinkyFinger3_L/FKPinkyFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L/FKOffsetPinkyFinger3_L/FKExtraPinkyFinger3_L/FKPinkyFinger3_L/FKXPinkyFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetPinkyFinger1_L/FKExtraPinkyFinger1_L/FKPinkyFinger1_L/FKXPinkyFinger1_L/FKOffsetPinkyFinger2_L/FKExtraPinkyFinger2_L/FKPinkyFinger2_L/FKXPinkyFinger2_L/FKOffsetPinkyFinger3_L/FKExtraPinkyFinger3_L/FKPinkyFinger3_L/FKXPinkyFinger3_L/FKXPinkyFinger4_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L/FKOffsetRingFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L/FKOffsetRingFinger3_L/FKExtraRingFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L/FKOffsetRingFinger3_L/FKExtraRingFinger3_L/FKRingFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L/FKOffsetRingFinger3_L/FKExtraRingFinger3_L/FKRingFinger3_L/FKXRingFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetCup_L/FKExtraCup_L/FKCup_L/FKXCup_L/FKOffsetRingFinger1_L/FKExtraRingFinger1_L/FKRingFinger1_L/FKXRingFinger1_L/FKOffsetRingFinger2_L/FKExtraRingFinger2_L/FKRingFinger2_L/FKXRingFinger2_L/FKOffsetRingFinger3_L/FKExtraRingFinger3_L/FKRingFinger3_L/FKXRingFinger3_L/FKXRingFinger4_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L/FKOffsetIndexFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L/FKOffsetIndexFinger3_L/FKExtraIndexFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L/FKOffsetIndexFinger3_L/FKExtraIndexFinger3_L/FKIndexFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L/FKOffsetIndexFinger3_L/FKExtraIndexFinger3_L/FKIndexFinger3_L/FKXIndexFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetIndexFinger1_L/FKExtraIndexFinger1_L/FKIndexFinger1_L/FKXIndexFinger1_L/FKOffsetIndexFinger2_L/FKExtraIndexFinger2_L/FKIndexFinger2_L/FKXIndexFinger2_L/FKOffsetIndexFinger3_L/FKExtraIndexFinger3_L/FKIndexFinger3_L/FKXIndexFinger3_L/FKXIndexFinger4_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L/FKOffsetMiddleFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L/FKOffsetMiddleFinger3_L/FKExtraMiddleFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L/FKOffsetMiddleFinger3_L/FKExtraMiddleFinger3_L/FKMiddleFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L/FKOffsetMiddleFinger3_L/FKExtraMiddleFinger3_L/FKMiddleFinger3_L/FKXMiddleFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetMiddleFinger1_L/FKExtraMiddleFinger1_L/FKMiddleFinger1_L/FKXMiddleFinger1_L/FKOffsetMiddleFinger2_L/FKExtraMiddleFinger2_L/FKMiddleFinger2_L/FKXMiddleFinger2_L/FKOffsetMiddleFinger3_L/FKExtraMiddleFinger3_L/FKMiddleFinger3_L/FKXMiddleFinger3_L/FKXMiddleFinger4_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L/FKOffsetThumbFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L/FKOffsetThumbFinger3_L/FKExtraThumbFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L/FKOffsetThumbFinger3_L/FKExtraThumbFinger3_L/FKThumbFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L/FKOffsetThumbFinger3_L/FKExtraThumbFinger3_L/FKThumbFinger3_L/FKXThumbFinger3_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_L/FKOffsetThumbFinger1_L/FKExtraThumbFinger1_L/FKThumbFinger1_L/FKXThumbFinger1_L/FKOffsetThumbFinger2_L/FKExtraThumbFinger2_L/FKThumbFinger2_L/FKXThumbFinger2_L/FKOffsetThumbFinger3_L/FKExtraThumbFinger3_L/FKThumbFinger3_L/FKXThumbFinger3_L/FKXThumbFinger4_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R/FKOffsetPinkyFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R/FKOffsetPinkyFinger3_R/FKExtraPinkyFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R/FKOffsetPinkyFinger3_R/FKExtraPinkyFinger3_R/FKPinkyFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R/FKOffsetPinkyFinger3_R/FKExtraPinkyFinger3_R/FKPinkyFinger3_R/FKXPinkyFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetPinkyFinger1_R/FKExtraPinkyFinger1_R/FKPinkyFinger1_R/FKXPinkyFinger1_R/FKOffsetPinkyFinger2_R/FKExtraPinkyFinger2_R/FKPinkyFinger2_R/FKXPinkyFinger2_R/FKOffsetPinkyFinger3_R/FKExtraPinkyFinger3_R/FKPinkyFinger3_R/FKXPinkyFinger3_R/FKXPinkyFinger4_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R/FKOffsetRingFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R/FKOffsetRingFinger3_R/FKExtraRingFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R/FKOffsetRingFinger3_R/FKExtraRingFinger3_R/FKRingFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R/FKOffsetRingFinger3_R/FKExtraRingFinger3_R/FKRingFinger3_R/FKXRingFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetCup_R/FKExtraCup_R/FKCup_R/FKXCup_R/FKOffsetRingFinger1_R/FKExtraRingFinger1_R/FKRingFinger1_R/FKXRingFinger1_R/FKOffsetRingFinger2_R/FKExtraRingFinger2_R/FKRingFinger2_R/FKXRingFinger2_R/FKOffsetRingFinger3_R/FKExtraRingFinger3_R/FKRingFinger3_R/FKXRingFinger3_R/FKXRingFinger4_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R/FKOffsetIndexFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R/FKOffsetIndexFinger3_R/FKExtraIndexFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R/FKOffsetIndexFinger3_R/FKExtraIndexFinger3_R/FKIndexFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R/FKOffsetIndexFinger3_R/FKExtraIndexFinger3_R/FKIndexFinger3_R/FKXIndexFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetIndexFinger1_R/FKExtraIndexFinger1_R/FKIndexFinger1_R/FKXIndexFinger1_R/FKOffsetIndexFinger2_R/FKExtraIndexFinger2_R/FKIndexFinger2_R/FKXIndexFinger2_R/FKOffsetIndexFinger3_R/FKExtraIndexFinger3_R/FKIndexFinger3_R/FKXIndexFinger3_R/FKXIndexFinger4_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R/FKOffsetMiddleFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R/FKOffsetMiddleFinger3_R/FKExtraMiddleFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R/FKOffsetMiddleFinger3_R/FKExtraMiddleFinger3_R/FKMiddleFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R/FKOffsetMiddleFinger3_R/FKExtraMiddleFinger3_R/FKMiddleFinger3_R/FKXMiddleFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetMiddleFinger1_R/FKExtraMiddleFinger1_R/FKMiddleFinger1_R/FKXMiddleFinger1_R/FKOffsetMiddleFinger2_R/FKExtraMiddleFinger2_R/FKMiddleFinger2_R/FKXMiddleFinger2_R/FKOffsetMiddleFinger3_R/FKExtraMiddleFinger3_R/FKMiddleFinger3_R/FKXMiddleFinger3_R/FKXMiddleFinger4_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R/FKOffsetThumbFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R/FKOffsetThumbFinger3_R/FKExtraThumbFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R/FKOffsetThumbFinger3_R/FKExtraThumbFinger3_R/FKThumbFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R/FKOffsetThumbFinger3_R/FKExtraThumbFinger3_R/FKThumbFinger3_R/FKXThumbFinger3_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/FKParentConstraintToWrist_R/FKOffsetThumbFinger1_R/FKExtraThumbFinger1_R/FKThumbFinger1_R/FKXThumbFinger1_R/FKOffsetThumbFinger2_R/FKExtraThumbFinger2_R/FKThumbFinger2_R/FKXThumbFinger2_R/FKOffsetThumbFinger3_R/FKExtraThumbFinger3_R/FKThumbFinger3_R/FKXThumbFinger3_R/FKXThumbFinger4_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M/FKOffsetChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M/FKOffsetChest_M/FKExtraChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M/FKOffsetChest_M/FKExtraChest_M/FKChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M/FKOffsetChest_M/FKExtraChest_M/FKChest_M/FKXChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/FKOffsetRoot_M/FKExtraRoot_M/FKRoot_M/HipSwingerGroupRoot_M/FKXRoot_M/HipSwingerStabalizeRoot_M/FKOffsetBackA_M/FKExtraBackA_M/FKBackA_M/FKXBackA_M/FKOffsetBackB_M/FKExtraBackB_M/FKBackB_M/FKXBackB_M/FKOffsetChest_M/FKExtraChest_M/FKChest_M/FKXChest_M/AlignIKToChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/HipSwingerOffsetRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/FKSystem/RootCenterBtwLegsBlended_M/CenterOffset_M/CenterExtra_M/Center_M/HipSwingerOffsetRoot_M/HipSwingerRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetHead_M/GlobalHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetShoulder_L/GlobalShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetShoulder_R/GlobalShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetWrist_L/GlobalWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/GlobalSystem/GlobalOffsetWrist_R/GlobalWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKCrv
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKCrv/IKXSpineCurve_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_L/IKExtraArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_L/IKExtraArm_L/IKArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_L/IKExtraArm_L/IKArm_L/IKmessureConstrainToArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_L/IKExtraArm_L/IKArm_L/IKXArmHandle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_R/IKExtraArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_R/IKExtraArm_R/IKArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_R/IKExtraArm_R/IKArm_R/IKmessureConstrainToArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintArm_R/IKExtraArm_R/IKArm_R/IKXArmHandle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKLiftToeLegToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKLiftToeLegToe_L/IKXLegHandleToe_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L/IKLegBall_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L/IKLegBall_L/IKFootPivotBallReverseLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L/IKLegBall_L/IKFootPivotBallReverseLeg_L/IKmessureConstrainToLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L/IKLegBall_L/IKFootPivotBallReverseLeg_L/IKXLegHandle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_L/IKExtraLeg_L/IKLeg_L/IKFootIndexPivotLeg_L/IKFootPinkyPivotLeg_L/IKFootRollLeg_L/IKRollLegHeel_L/IKExtraLegHeel_L/IKLegHeel_L/IKRollLegToe_L/IKExtraLegToe_L/IKLegToe_L/IKRollLegBall_L/IKExtraLegBall_L/IKLegBall_L/IKFootPivotBallReverseLeg_L/IKXLegHandleBall_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKLiftToeLegToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKLiftToeLegToe_R/IKXLegHandleToe_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R/IKLegBall_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R/IKLegBall_R/IKFootPivotBallReverseLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R/IKLegBall_R/IKFootPivotBallReverseLeg_R/IKmessureConstrainToLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R/IKLegBall_R/IKFootPivotBallReverseLeg_R/IKXLegHandle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintLeg_R/IKExtraLeg_R/IKLeg_R/IKFootIndexPivotLeg_R/IKFootPinkyPivotLeg_R/IKFootRollLeg_R/IKRollLegHeel_R/IKExtraLegHeel_R/IKLegHeel_R/IKRollLegToe_R/IKExtraLegToe_R/IKLegToe_R/IKRollLegBall_R/IKExtraLegBall_R/IKLegBall_R/IKFootPivotBallReverseLeg_R/IKXLegHandleBall_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M/IKOrientToSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M/IKSpine0AlignTo_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M/IKStiffStartOrientSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M/IKStiffStartOrientSpine_M/IKXSpineLocator1_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine0_M/IKExtraSpine0_M/IKSpine0_M/IKXSpineLocator0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine2_M/IKExtraSpine2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine2_M/IKExtraSpine2_M/IKSpine2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine2_M/IKExtraSpine2_M/IKSpine2_M/IKXSpineLocator2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKEndJointOrientToSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKSpine4AlignTo_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKSpine4AlignUnTwistToOffset_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKSpine4AlignUnTwistToOffset_M/IKSpine4AlignUnTwistTo_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKStiffEndOrientSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKStiffEndOrientSpine_M/IKXSpineLocator3_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKXSpineHandle_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/IKParentConstraintSpine4_M/IKExtraSpine4_M/IKSpine4_M/IKXSpineLocator4_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleAimLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleAimLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_L/PoleExtraArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_L/PoleExtraArm_L/PoleArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_R/PoleExtraArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintArm_R/PoleExtraArm_R/PoleArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_L/PoleExtraLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_L/PoleExtraLeg_L/PoleLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_R/PoleExtraLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKHandle/PoleParentConstraintLeg_R/PoleExtraLeg_R/PoleLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKdistanceArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKdistanceArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKdistanceLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKdistanceLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Arm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Arm_L/IKmessureLoc2Arm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Arm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Arm_R/IKmessureLoc2Arm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Leg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Leg_L/IKmessureLoc2Leg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Leg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKMessure/IKmessureLoc1Leg_R/IKmessureLoc2Leg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L/IKXAnkle_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L/IKXAnkle_L/IKFKAlignedLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L/IKXAnkle_L/IKXMiddleToe1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L/IKXAnkle_L/IKXMiddleToe1_L/IKXMiddleToe2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_L/IKOffsetHip_L/IKXHip_L/IKXKnee_L/PoleAnnotationLeg_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R/IKXAnkle_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R/IKXAnkle_R/IKFKAlignedLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R/IKXAnkle_R/IKXMiddleToe1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R/IKXAnkle_R/IKXMiddleToe1_R/IKXMiddleToe2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintHip_R/IKOffsetHip_R/IKXHip_R/IKXKnee_R/PoleAnnotationLeg_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKfake1Spine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKfake1Spine_M/IKFake1UpLocSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKfake1Spine_M/IKfake2Spine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKXBackB_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKXBackB_M/IKXChest_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintRoot_M/IKOffsetRoot_M/IKXRoot_M/IKXBackA_M/IKXBackB_M/IKXChest_M/IKFKAlignedSpine_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L/IKXShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L/IKXShoulder_L/IKXElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L/IKXShoulder_L/IKXElbow_L/IKXWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L/IKXShoulder_L/IKXElbow_L/IKXWrist_L/IKFKAlignedArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_L/IKOffsetShoulder_L/IKXShoulder_L/IKXElbow_L/PoleAnnotationArm_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R/IKXShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R/IKXShoulder_R/IKXElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R/IKXShoulder_R/IKXElbow_R/IKXWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R/IKXShoulder_R/IKXElbow_R/IKXWrist_R/IKFKAlignedArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKParentConstraint/IKParentConstraintShoulder_R/IKOffsetShoulder_R/IKXShoulder_R/IKXElbow_R/PoleAnnotationArm_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/AimParentConstraintEye_MStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/IKParentConstraintArm_LStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/IKParentConstraintArm_RStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/PoleParentConstraintArm_LStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/PoleParentConstraintArm_RStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/PoleParentConstraintLeg_LStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/IKSystem/IKStatic/PoleParentConstraintLeg_RStatic
+        weight: 1
+      - path: Rig/Main/MotionSystem/RootSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/RootSystem/RootCenter_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/RootSystem/RootCenterBtwLegs_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/RootSystem/RootCenterBtwLegs_M/RootCenterBtwLegsOffset_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowElbow_L/UnTwistIKElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowElbow_R/UnTwistIKElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHead_M/UnTwistIKHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHip_L/UnTwistIKHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowHip_R/UnTwistIKHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowKnee_L/UnTwistIKKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowKnee_R/UnTwistIKKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowNeck_M/UnTwistIKNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/FKIKMixOffsetElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/FKIKMixOffsetElbow_L/FKIKMixElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/FKIKMixOffsetElbow_L/FKIKMixElbow_L/TwisterElbow0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/FKIKMixOffsetElbow_L/FKIKMixElbow_L/TwisterElbow1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/FKIKMixOffsetElbow_L/FKIKMixElbow_L/TwisterElbow2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/UnTwistElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/UnTwistElbow_L/AimerElbow0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/UnTwistElbow_L/TwistBalancerElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/UnTwistElbow_L/UnTwistEndElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_L/UnTwistPoleVectorElbow_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/FKIKMixOffsetElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/FKIKMixOffsetElbow_R/FKIKMixElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/FKIKMixOffsetElbow_R/FKIKMixElbow_R/TwisterElbow0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/FKIKMixOffsetElbow_R/FKIKMixElbow_R/TwisterElbow1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/FKIKMixOffsetElbow_R/FKIKMixElbow_R/TwisterElbow2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/UnTwistElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/UnTwistElbow_R/AimerElbow0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/UnTwistElbow_R/TwistBalancerElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/UnTwistElbow_R/UnTwistEndElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentElbow_R/UnTwistPoleVectorElbow_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/FKIKMixOffsetHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/FKIKMixOffsetHead_M/FKIKMixHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/UnTwistHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/UnTwistHead_M/TwistBalancerHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/UnTwistHead_M/UnTwistEndHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHead_M/UnTwistPoleVectorHead_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/FKIKMixOffsetHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/FKIKMixOffsetHip_L/FKIKMixHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/AimerHip0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/TwistBalancerHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/TwisterHip0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/TwisterHip1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/TwisterHip2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistHip_L/UnTwistEndHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_L/UnTwistPoleVectorHip_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/FKIKMixOffsetHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/FKIKMixOffsetHip_R/FKIKMixHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/AimerHip0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/TwistBalancerHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/TwisterHip0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/TwisterHip1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/TwisterHip2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistHip_R/UnTwistEndHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentHip_R/UnTwistPoleVectorHip_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/FKIKMixOffsetKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/FKIKMixOffsetKnee_L/FKIKMixKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/UnTwistKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/UnTwistKnee_L/TwistBalancerKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/UnTwistKnee_L/UnTwistEndKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_L/UnTwistPoleVectorKnee_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/FKIKMixOffsetKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/FKIKMixOffsetKnee_R/FKIKMixKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/UnTwistKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/UnTwistKnee_R/TwistBalancerKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/UnTwistKnee_R/UnTwistEndKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentKnee_R/UnTwistPoleVectorKnee_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/FKIKMixOffsetNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/FKIKMixOffsetNeck_M/FKIKMixNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/AimerNeck0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/TwistBalancerNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/TwisterNeck0_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/TwisterNeck1_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/TwisterNeck2_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistNeck_M/UnTwistEndNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentNeck_M/UnTwistPoleVectorNeck_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/FKIKMixOffsetShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/FKIKMixOffsetShoulder_L/FKIKMixShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistPoleVectorShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/AimerShoulder0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/TwistBalancerShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/TwisterShoulder0_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/TwisterShoulder1_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/TwisterShoulder2_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_L/UnTwistShoulder_L/UnTwistEndShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/FKIKMixOffsetShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/FKIKMixOffsetShoulder_R/FKIKMixShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistPoleVectorShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/AimerShoulder0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/TwistBalancerShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/TwisterShoulder0_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/TwisterShoulder1_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/TwisterShoulder2_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentShoulder_R/UnTwistShoulder_R/UnTwistEndShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/FKIKMixOffsetWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/FKIKMixOffsetWrist_L/FKIKMixWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/UnTwistPoleVectorWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/UnTwistWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/UnTwistWrist_L/TwistBalancerWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_L/UnTwistWrist_L/UnTwistEndWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/FKIKMixOffsetWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/FKIKMixOffsetWrist_R/FKIKMixWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/UnTwistPoleVectorWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/UnTwistWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/UnTwistWrist_R/TwistBalancerWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowParentWrist_R/UnTwistWrist_R/UnTwistEndWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowRoot_M/UnTwistIKRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowRoot_M/UnTwistRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowRoot_M/UnTwistRoot_M/UnTwistEndRoot_M
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowShoulder_L/UnTwistIKShoulder_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowShoulder_R/UnTwistIKShoulder_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowWrist_L/UnTwistIKWrist_L
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/TwistSystem/TwistFollowWrist_R/UnTwistIKWrist_R
+        weight: 1
+      - path: Rig/Main/MotionSystem/WagSystem
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -1949,6 +3850,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
