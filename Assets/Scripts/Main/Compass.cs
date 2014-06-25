@@ -27,8 +27,8 @@ public class Compass : MonoBehaviour{
 
 		Quaternion newRotation = Quaternion.LookRotation (RPos);
 		Vector3 eul = newRotation.eulerAngles;
-		eul.y = 0f;
-		newRotation.eulerAngles = eul;
+//		eul.y = 0f;
+//		newRotation.eulerAngles = eul;
 		transform.rotation = newRotation;
 	}
 	
