@@ -1,81 +1,82 @@
-ID,sender,message from sender,answer,previous ID
-1,Tim,My xBox broke. :(,I know how to fix it,
-2,Tim,How?!?!,walk up to your xBox. Feel around for the cord.,1
-3,Tim,Ok?,Plug it in.,2
-4,Chantal,Hey did my makeup look good today?,Um...,
-5,Chantal,Well..?,YOU LOOK LIKE YOU GOT RAPED BY A FREAKING CRAYON,4
-6,Arthur,Nothing is impossible.,Eat a spoon of Nutella per day.,
-7,Arthur,That's it?,ONLY one spoon.,6
-8,Arthur,...Shit.,;),7
-9,Ex,You're stupid,Pssh I've been called worse ,
-10,Ex,Like what?,Your boyfriend,9
-11,Albert,Hi! wana go out tonight? :),Uh sure! How about chillis?,
-12,Albert,Ok can u pick me up at about 8:30?,I don't have a car...,11
-13,Albert,WAIT WAIT WAIT !!!!!!! DANGIT that was meant for my girlfriend! :(,MWAHAHAHAHA now I shall stalk u at chillis!!!!,12
-14,Albert,I hate u.,:D,13
-15,Sabrina,What does brb mean,Be right back,
-16,Sabrina,Ok but when you're back can you tell me what it means,*facepalm*,15
-17,Bill,I wasn't that drunk!,"You went into the mini mart, picked up a mexican girl and screamed ""Dora I need your help!!!""",
-18,Tim,Roses are red. Violets are blue. Your selfies are ugly. And so is your poo.,Roses are red. Violets are blue. Your windows are open. I'm coming for you.,
-19,James,I went to the diner and they asked if I wanted a super salad. ,So?,
-20,James,I didn't know what it was so I sai yes and they just gave me a weird look o.o,James?,19
-21,James,Yes?,"Are you sure they didn't say ""soup or salad""?",20
-22,Benjamin,My dog just ate my penis...,WHAT?! O_O,
-23,Benjamin,SHIT! FUCK AUTO-CORRECT! *peanuts,You just made my day XD XD ,22
-24,Jessica,If you have 10 chocolate cakes and you give someone 2 how many do you have left?,10! I'm not gonna let someone take my chocolate cakes!,
-25,Jessica,"Fine.. If someone FORCEABLY takes the 2 cakes from you, what do you have left?",10 and a dead body :),24
-26,Jessica,Wow you really like cakes...,...well duh!,23
-27,John,"Watche doing, bro? :D",Your mom,
-28,John,I hacked your World of Warcraft account,NOOO! I'M SO GONNA KILL YOU,27
-29,Mom,You should think about what you did last night.,"Yes, mom. I should. I'm so sorry, I didn't mean to break your glass.",
-30,Mom,"This text was meant for Janet, she slept with some random guy last night.","Oh, then...",29
-31,Mom,YOU BROKE MY GLASS?,"...Pssh, no! Who told you that??",30
-32,Unknown Number,I'm pregnant with twins.,Congrats! Wait who are you?,
-33,Unknown Number,I just typed in a random number into my phone to practice telling people.,Well good luck :D,32
-34,Nico,Did we go drinking last night?,"Yeah, where the hell are you?",
-35,Nico,"A forest... can you pick me up, I think you have a car",Where is this forest?,34
-36,Nico,"I dunno, can you bring me some clothing, too?",I am never drinking with you again.,35
-37,Olivia,Can't hangout for a while... I got grounded.,Wtf why?,
-38,Olivia,Well u know how old ppl at weddings always say you're next?,Yeah so?,37
-39,Olivia,I started saying that to them at a funeral,LMAO,38
-40,Cindy,"If Carly Rae Jepson dropped her phone in the pool again, how will we call her maybe?",We'll have to borrow Maroon 5's payphone,
-41,Jennifer,Hey what does STFU mean?,Shut The Fuck Up,
-42,Jennifer,"whoa Dude, I was just asking. You're so rude ","-.-",41
-43,Jill,Hey I fell off a 50ft latter today.,OMG ARE YOU OK??,
-44,Jill,Yeah...luckily I was on the first step,-_-,43
-45,Brandon,Dude I just saw the most amazing movie EVER!,What was it about?,
-46,Brandon,"A man's wife was brutally murdered and years later his son is kidnapped, so he goes on a mission with a mentally ill woman to save him",That sounds awesome! What is it called?,45
-47,Brandon,Finding Nemo :),xD,46
-48,Tanisha,OMG I love Eminem!,I prefer Skittles :D,
-49,Dad,"Son, what does IDK, LY and TTYL mean?","I don't know, love you, Talk to you later",
-50,Dad,"OK, I'll ask someone else",-.-,49
-51,Sis,"Hey big brother there is a moth in the bathroom, can you come get it?? >.<","Your big brother is dead now. You are next. Love, Moth",
-52,Vanessa,:(,Turn that smile upside down!,
-53,Vanessa,):,...,52
-54,James,I know you're on a date but could you please respond as fast as you can?? Please bro it's really serious!!,What's up? :S,
-55,James,Do you know the muffin man?,Srsly?,54
-56,Bestie,"Hey dude!! I know what we can do on random days!! Go to a furniture store and hide in the closet and wait till someone walks past and say 'I'm back from Narnia!!'",Yes. See this is why you're my best friend.,
-57,Ex,I listened to our song today on the radio and it reminded me of you :),I stood next to a pile of dog shit and it reminded me of you :),
-58,Dad,"Son, I think it's time we had a talk...","Dad, I already know about sex",
-59,Dad,"What? No, I was talking about COD.",you're the best :D,59
-60,Dave,Dude today was a very wonderful day for me... I got kissed by a very beautiful girl and she said she loves me,Yeah... dude aren't moms great?,
-61,BFF,I'm going to name my dog naked,why?,
-62,BFF,Because when my friends ask what I'm doing I'm going to say I'm walking naken in the street,No wonder you're my bff,61
-63,BFF,"Bigbang Theory, How I Met Your Mother and Two & A Half Men combined?",how I banged your mother with two and a half men,
-64,BFF,This is why you're my Best friend,;),63
-65,Sis,Texting while driving? YOLO,Forever alone? SOLO,
-66,,,,
-67,,,,
-68,,,,
-69,,,,
-70,,,,
-71,,,,
-72,,,,
-73,,,,
-74,,,,
-75,,,,
-76,,,,
-77,,,,
-78,,,,
-79,,,,
-80,,,,
+//ID,sender,message from sender,answer,previous ID,following ID
+1,Tim,My xBox broke. :(,I know how to fix it,,2
+2,Tim,How?!?!,walk up to your xBox. Feel around for the cord.,1,3
+3,Tim,Ok?,Plug it in.,2,
+4,Chantal,Hey did my makeup look good today?,Um...,,5
+5,Chantal,Well..?,YOU LOOK LIKE YOU GOT RAPED BY A FREAKING CRAYON,4,
+6,Arthur,Nothing is impossible.,Eat a spoon of Nutella per day.,,7
+7,Arthur,That's it?,ONLY one spoon.,6,8
+8,Arthur,...Shit.,;),7,
+9,Ex,You're stupid,Pssh I've been called worse ,,10
+10,Ex,Like what?,Your boyfriend,9,
+11,Albert,Hi! wana go out tonight? :),Uh sure! How about chillis?,,12
+12,Albert,Ok can u pick me up at about 8:30?,I don't have a car...,11,13
+13,Albert,WAIT WAIT WAIT !!!!!!! DANGIT that was meant for my girlfriend! :(,MWAHAHAHAHA now I shall stalk u at chillis!!!!,12,14
+14,Albert,I hate u.,:D,13,
+15,Sabrina,What does brb mean,Be right back,,16
+16,Sabrina,Ok but when you're back can you tell me what it means,*facepalm*,15,
+17,Bill,I wasn't that drunk!,"You went into the mini mart, picked up a mexican girl and screamed ""Dora I need your help!!!""",,
+18,Tim,Roses are red. Violets are blue. Your selfies are ugly. And so is your poo.,Roses are red. Violets are blue. Your windows are open. I'm coming for you.,,
+19,James,I went to the diner and they asked if I wanted a super salad. ,So?,,20
+20,James,I didn't know what it was so I sai yes and they just gave me a weird look o.o,James?,19,21
+21,James,Yes?,"Are you sure they didn't say ""soup or salad""?",20,
+22,Benjamin,My dog just ate my penis...,WHAT?! O_O,,23
+23,Benjamin,SHIT! FUCK AUTO-CORRECT! *peanuts,You just made my day XD XD ,22,
+24,Jessica,If you have 10 chocolate cakes and you give someone 2 how many do you have left?,10! I'm not gonna let someone take my chocolate cakes!,,25
+25,Jessica,"Fine.. If someone FORCEABLY takes the 2 cakes from you, what do you have left?",10 and a dead body :),24,26
+26,Jessica,Wow you really like cakes...,...well duh!,23,
+27,John,"Watche doing, bro? :D",Your mom,,28
+28,John,I hacked your World of Warcraft account,NOOO! I'M SO GONNA KILL YOU,27,
+29,Mom,You should think about what you did last night.,"Yes, mom. I should. I'm so sorry, I didn't mean to break your glass.",,30
+30,Mom,"This text was meant for Janet, she slept with some random guy last night.","Oh, then...",29,31
+31,Mom,YOU BROKE MY GLASS?,"...Pssh, no! Who told you that??",30,
+32,Unknown Number,I'm pregnant with twins.,Congrats! Wait who are you?,,33
+33,Unknown Number,I just typed in a random number into my phone to practice telling people.,Well good luck :D,32,
+34,Nico,Did we go drinking last night?,"Yeah, where the hell are you?",,35
+35,Nico,"A forest... can you pick me up, I think you have a car",Where is this forest?,34,36
+36,Nico,"I dunno, can you bring me some clothing, too?",I am never drinking with you again.,35,
+37,Olivia,Can't hangout for a while... I got grounded.,Wtf why?,,38
+38,Olivia,Well u know how old ppl at weddings always say you're next?,Yeah so?,37,39
+39,Olivia,I started saying that to them at a funeral,LMAO,38,
+40,Cindy,"If Carly Rae Jepson dropped her phone in the pool again, how will we call her maybe?",We'll have to borrow Maroon 5's payphone,,
+41,Jennifer,Hey what does STFU mean?,Shut The Fuck Up,,42
+42,Jennifer,"whoa Dude, I was just asking. You're so rude ","-.-""",41,
+43,Jill,Hey I fell off a 50ft latter today.,OMG ARE YOU OK??,,45
+44,Jill,Yeah...luckily I was on the first step,-_-,44,
+45,Brandon,Dude I just saw the most amazing movie EVER!,What was it about?,,46
+46,Brandon,"A man's wife was brutally murdered and years later his son is kidnapped, so he goes on a mission with a mentally ill woman to save him",That sounds awesome! What is it called?,45,47
+47,Brandon,Finding Nemo :),xD,46,
+48,Tanisha,OMG I love Eminem!,I prefer Skittles :D,,
+49,Dad,"Son, what does IDK, LY and TTYL mean?","I don't know, love you, Talk to you later",,50
+50,Dad,"OK, I'll ask someone else",-.-,49,51
+51,Sis,"Hey big brother there is a moth in the bathroom, can you come get it?? >.<","Your big brother is dead now. You are next. Love, Moth",,
+52,Vanessa,:(,Turn that smile upside down!,,53
+53,Vanessa,):,...,53,
+54,James,I know you're on a date but could you please respond as fast as you can?? Please bro it's really serious!!,What's up? :S,,55
+55,James,Do you know the muffin man?,Srsly?,55,
+56,Bestie,"Hey dude!! I know what we can do on random days!! Go to a furniture store and hide in the closet and wait till someone walks past and say ""I'm back from Narnia!!""",Yes. See this is why you're my best friend.,,
+57,Ex,I listened to our song today on the radio and it reminded me of you :),I stood next to a pile of dog shit and it reminded me of you :),,
+58,Dad,"Son, I think it's time we had a talk...","Dad, I already know about sex",,59
+59,Dad,"What? No, I was talking about COD.",you're the best :D,58,60
+60,Dave,Dude today was a very wonderful day for me... I got kissed by a very beautiful girl and she said she loves me,Yeah... dude aren't moms great?,,
+61,BFF,I'm going to name my dog naked,why?,,62
+62,BFF,Because when my friends ask what I'm doing I'm going to say I'm walking naken in the street,No wonder you're my bff,61,63
+63,BFF,"Bigbang Theory, How I Met Your Mother and Two & A Half Men combined?",how I banged your mother with two and a half men,,64
+64,BFF,This is why you're my Best friend,;),63,
+65,Sis,Texting while driving? YOLO,Forever alone? SOLO,,
+,,,,,
+66,Grandpa,"I wipp my hair back and fourth, I wipp my hair back and fourth!",u don't have any hair grandpa :P,,67
+67,Grandpa,"Oh then, I wipp my chair back and fourth, I wipp my chair back and fourth!",o.o,66,
+68,Ex,Just listened to a song and it reminded me of you ;),You remind me of mondays,,69
+69,Ex,Why? :o,No one likes you,68,
+70,,,,,
+,,obstacles left side,,,
+71,BFF,"Look dude the street to your left is blocked, I wouldn't go there",Thanks man,,
+72,Dad,I arrived late at my job because of barriers blocking the way. Don't go left or you'll be late for your date,Thanks dad...,,
+73,Jennifer,Ugh! This construction site to the right is blocking my way! You better find a way around it,"I will, thanks!",,
+74,Benjamin,This huge truck has been blocking the damn street to your right for hours now,I'll take another route,,
+,,obstacles right side,,,
+75,James,"Look dude the street to your right is blocked, I wouldn't do there",Thanks man,,
+76,Arthur,This huge truck has been blocking the damn street to your right for hours now,I'll take another route,,
+77,Dad,I arrived late at my job because of barriers blocking the way. Don't go right or you'll be late for your date,Thanks dad...,,
+78,Cindy,Ugh! This construction site to the right is blocking my way! You better find a way around it,"I will, thanks!",,

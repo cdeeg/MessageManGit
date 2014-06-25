@@ -10,8 +10,6 @@ public class FPSCharacterController : MonoBehaviour {
 	public bool doHeadBob = false;
 	public Camera playerCamera;
 
-	public GameObject bigCollider;
-
 	public PrototypeGameController gctrl;
 
 	Vector2 input;
@@ -24,6 +22,9 @@ public class FPSCharacterController : MonoBehaviour {
 
 	float previous = 0f;
 
+	Compass cmp;
+	bool cmpIsHidden;
+
 	static Vector3 myForward;
 
 	public static Vector3 MyForward
@@ -34,13 +35,35 @@ public class FPSCharacterController : MonoBehaviour {
 	void Start()
 	{
 		isMoving = false;
-		bigCollider.SetActive(false);
+
+		cmpIsHidden = false;
+		cmp = GetComponentInChildren<Compass>();
+		if(cmp == null)
+			Debug.LogError("FPSCharacterController: No compass found!");
 		origPos = playerCamera.transform.localPosition.y;
 		origPosX = playerCamera.transform.localPosition.x;
 		if(rigidbody == null)
 		{
 			Debug.LogError("FPSCharacterController: No rigidbody found!");
 			return;
+		}
+
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+	}
+
+	void OnDestroy()
+	{
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+	}
+
+	void ToggleCompass (object sender, System.EventArgs args)
+	{
+		if(cmp != null)
+		{
+			cmp.gameObject.SetActive(cmpIsHidden);
+			cmpIsHidden = !cmpIsHidden;
 		}
 	}
 
@@ -53,9 +76,6 @@ public class FPSCharacterController : MonoBehaviour {
 		bool run = Input.GetKey(KeyCode.LeftShift);
 
 		float speed = run ? runSpeed : walkSpeed;
-
-//		if(run) bigCollider.SetActive(true);
-//		else bigCollider.SetActive(false);
 
 		input = new Vector2( rotate, forwards );
 		
@@ -76,6 +96,11 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void Update()
 	{
+		if(isMoving)
+			cmp.gameObject.SetActive(false);
+		else if(!cmpIsHidden)
+			cmp.gameObject.SetActive(true);
+
 		myForward = transform.forward;
 
 		if(!doHeadBob) return;

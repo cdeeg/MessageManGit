@@ -11,8 +11,10 @@ public class GUIHighscoreController : MonoBehaviour {
 
 		int minutes = (int)(HighscoreInformationData.GetInstance().TimePlayed/60f);
 		int seconds = (int)(HighscoreInformationData.GetInstance().TimePlayed % 60f);
-		string timeString = string.Format("{0}:{1}", minutes, seconds);
-		string initTimeString = string.Format("{0}:00", HighscoreInformationData.GetInstance().InitialTime);
+		string timeString = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+		int iniMinutes = (int)(HighscoreInformationData.GetInstance().InitialTime/60f);
+		int iniSeconds = (int)(HighscoreInformationData.GetInstance().InitialTime % 60f);
+		string initTimeString = string.Format("{0:D2}:{1:D2}", iniMinutes, iniSeconds);
 
 		rows[0].Init("Friends Left", HighscoreInformationData.GetInstance().LeftFriends);
 		rows[1].Init("Friends Lost", HighscoreInformationData.GetInstance().LostFriends);
@@ -20,9 +22,11 @@ public class GUIHighscoreController : MonoBehaviour {
 		rows[3].Init("Missed Messages", HighscoreInformationData.GetInstance().FailedMessages);
 		rows[4].Init("Sent Messages", HighscoreInformationData.GetInstance().SuccessfulMessages);
 
-		float scoreOverall = HighscoreInformationData.GetInstance().LeftFriends * (HighscoreInformationData.GetInstance().InitialTime*60 - HighscoreInformationData.GetInstance().TimePlayed);
+		float scoreOverall = HighscoreInformationData.GetInstance().LeftFriends * (HighscoreInformationData.GetInstance().InitialTime - HighscoreInformationData.GetInstance().TimePlayed);
 //		scoreOverall -= HighscoreInformationData.GetInstance().FailedMessages * HighscoreInformationData.GetInstance().ShovedByNpcs;
 
 		rows[5].Init("Score", scoreOverall);
+
+		HighscoreInformationData.GetInstance().Reset();
 	}
 }

@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Animator))]
 public class NPCAgent : MonoBehaviour {
 
-	public Animator animator;
 	public float walkRadius = 5f;
 
 	public float maxDistanceRespawn = 10f;
@@ -13,8 +11,16 @@ public class NPCAgent : MonoBehaviour {
 	
 	int failedTimes = 5;
 	int failedYet = 0;
+//	Animator anim;
 	
 	Vector3 finalPosition;
+
+	void Start()
+	{
+//		anim = GetComponent<Animator>();
+//		anim.Play(Animator.StringToHash("Take 001"));
+//		Debug.Log("STATE: "+anim.GetCurrentAnimatorStateInfo(0).IsName("Take 001"));
+	}
 	
 	void GetRandomPointOnNavMesh()
 	{

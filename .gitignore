@@ -15,3 +15,7 @@ Assets/Editor/
 /*.pidb
 /*.booproj
 *.dwlt
+
+*.meta
+
+*.meta

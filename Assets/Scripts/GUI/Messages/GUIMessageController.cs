@@ -9,6 +9,7 @@ public class GUIMessageController : MonoBehaviour
 {
 	public GameObject guiAnchor;
 	public GameObject indicator;
+	public float secondsToReadMessage = 4f;
 
 	public tk2dTextMesh senderText;
 	public tk2dTextMesh messageText;
@@ -109,7 +110,9 @@ public class GUIMessageController : MonoBehaviour
 		// show big phone
 		guiAnchor.gameObject.SetActive(true);
 
-		StartCoroutine(UserTyping());
+		answerText.gameObject.SetActive(false);
+
+		StartCoroutine(WaitForPlayerReading());
 	}
 
 	void SendFinishEvent()
@@ -151,6 +154,17 @@ public class GUIMessageController : MonoBehaviour
 
 		answerText.text = tmpString.ToString();
 	}
+	
+	IEnumerator WaitForPlayerReading()
+	{
+		yield return new WaitForSeconds(secondsToReadMessage);
+		
+		answerText.gameObject.SetActive(true);
+		
+		yield return null;
+		
+		StartCoroutine(UserTyping());
+	}
 
 	IEnumerator UserTyping()
 	{
@@ -185,8 +199,6 @@ public class GUIMessageController : MonoBehaviour
 						yield return StartCoroutine(HighlightText(arrayIndex, true));
 					}
 				}
-
-//				yield return null;
 			}
 
 			yield return null;

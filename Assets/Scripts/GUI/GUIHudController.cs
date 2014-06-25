@@ -7,8 +7,6 @@ public class GUIHudController : MonoBehaviour {
 	public GUIMenuController pauseMenu;
 	public tk2dCamera hudCamera;
 
-	public PrototypeGameController ctrl;
-
 	bool isPaused;
 
 	void Start()
@@ -33,7 +31,6 @@ public class GUIHudController : MonoBehaviour {
 			pauseMenu.ResetAllItems();
 			pauseMenu.Init();
 		}
-		//hudCamera.gameObject.SetActive(isPaused);
 		isPaused = !isPaused;
 	}
 }
