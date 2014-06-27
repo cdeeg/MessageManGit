@@ -1,0 +1,681 @@
+fileFormatVersion: 2
+guid: 009cfff5ede880547829b1a353794c71
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: arm_left_ikHandle
+    100002: belly_curve
+    100004: belly_joint
+    100006: belly_joint 1
+    100008: bottom
+    100010: //RootNode
+    100012: chest_curve
+    100014: chest_joint
+    100016: chest_joint 1
+    100018: ellbow_left_control
+    100020: ellbow_left_joint
+    100022: ellbow_left_joint 1
+    100024: ellbow_right_control
+    100026: ellbow_right_curve
+    100028: ellbow_right_joint
+    100030: ellbow_right_joint 1
+    100032: fingfinger_left_d
+    100034: fingfinger_right_d
+    100036: hand_right_joint
+    100038: ikHandle2
+    100040: index_left_a
+    100042: index_left_b
+    100044: index_left_c
+    100046: index_left_d
+    100048: index_right_a
+    100050: index_right_b
+    100052: index_right_c
+    100054: index_right_d
+    100056: indexfinger_right_a_cuve
+    100058: indexfinger_right_control
+    100060: joint1
+    100062: joint10
+    100064: joint11
+    100066: joint12
+    100068: joint13
+    100070: joint14
+    100072: joint15
+    100074: joint16
+    100076: joint17
+    100078: joint18
+    100080: joint19
+    100082: joint2
+    100084: joint20
+    100086: joint21
+    100088: joint22
+    100090: joint23
+    100092: joint24
+    100094: joint3
+    100096: joint4
+    100098: joint5
+    100100: joint6
+    100102: joint7
+    100104: joint8
+    100106: joint9
+    100108: left
+    100110: middlefinger_left_a
+    100112: middlefinger_left_b
+    100114: middlefinger_left_c
+    100116: middlefinger_left_d
+    100118: middlefinger_right_a
+    100120: middlefinger_right_a_control
+    100122: middlefinger_right_a_curve
+    100124: middlefinger_right_b
+    100126: middlefinger_right_c
+    100128: middlefinger_right_d
+    100130: neck_curve
+    100132: neck_end_joint
+    100134: neck_end_joint 1
+    100136: neck_joint
+    100138: neck_joint 1
+    100140: nurbsCircle1
+    100142: nurbsCircle2
+    100144: nurbsCircle3
+    100146: nurbsCircle4
+    100148: nurbsCircle6
+    100150: persp1
+    100152: pinky_left_a
+    100154: pinky_left_b
+    100156: pinky_left_c
+    100158: pinky_left_d
+    100160: pinky_right_a
+    100162: pinky_right_a_control
+    100164: pinky_right_a_curve
+    100166: pinky_right_b
+    100168: pinky_right_c
+    100170: pinky_right_d
+    100172: ringfinger_left_a
+    100174: ringfinger_left_b
+    100176: ringfinger_left_c
+    100178: ringfinger_right_a
+    100180: ringfinger_right_a_control
+    100182: ringfinger_right_a_curve
+    100184: ringfinger_right_b
+    100186: ringfinger_right_c
+    100188: root_curve
+    100190: root_joint
+    100192: root_joint 1
+    100194: shoulder_left_joint
+    100196: shoulder_left_joint 1
+    100198: shoulder_right_joint
+    100200: shoulder_right_joint 1
+    100202: thumb_left_a
+    100204: thumb_left_b
+    100206: thumb_left_c
+    100208: thumb_left_d
+    100210: thumb_right_a
+    100212: thumb_right_b
+    100214: thumb_right_c
+    100216: thumb_right_d
+    100218: Torso
+    100220: transform1
+    100222: wrist_control
+    100224: wrist_curve
+    100226: wrist_left_joint
+    100228: wrist_left_joint 1
+    100230: wrist_right_joint
+    100232: wrist_right_joint 1
+    400000: arm_left_ikHandle
+    400002: belly_curve
+    400004: belly_joint
+    400006: belly_joint 1
+    400008: bottom
+    400010: //RootNode
+    400012: chest_curve
+    400014: chest_joint
+    400016: chest_joint 1
+    400018: ellbow_left_control
+    400020: ellbow_left_joint
+    400022: ellbow_left_joint 1
+    400024: ellbow_right_control
+    400026: ellbow_right_curve
+    400028: ellbow_right_joint
+    400030: ellbow_right_joint 1
+    400032: fingfinger_left_d
+    400034: fingfinger_right_d
+    400036: hand_right_joint
+    400038: ikHandle2
+    400040: index_left_a
+    400042: index_left_b
+    400044: index_left_c
+    400046: index_left_d
+    400048: index_right_a
+    400050: index_right_b
+    400052: index_right_c
+    400054: index_right_d
+    400056: indexfinger_right_a_cuve
+    400058: indexfinger_right_control
+    400060: joint1
+    400062: joint10
+    400064: joint11
+    400066: joint12
+    400068: joint13
+    400070: joint14
+    400072: joint15
+    400074: joint16
+    400076: joint17
+    400078: joint18
+    400080: joint19
+    400082: joint2
+    400084: joint20
+    400086: joint21
+    400088: joint22
+    400090: joint23
+    400092: joint24
+    400094: joint3
+    400096: joint4
+    400098: joint5
+    400100: joint6
+    400102: joint7
+    400104: joint8
+    400106: joint9
+    400108: left
+    400110: middlefinger_left_a
+    400112: middlefinger_left_b
+    400114: middlefinger_left_c
+    400116: middlefinger_left_d
+    400118: middlefinger_right_a
+    400120: middlefinger_right_a_control
+    400122: middlefinger_right_a_curve
+    400124: middlefinger_right_b
+    400126: middlefinger_right_c
+    400128: middlefinger_right_d
+    400130: neck_curve
+    400132: neck_end_joint
+    400134: neck_end_joint 1
+    400136: neck_joint
+    400138: neck_joint 1
+    400140: nurbsCircle1
+    400142: nurbsCircle2
+    400144: nurbsCircle3
+    400146: nurbsCircle4
+    400148: nurbsCircle6
+    400150: persp1
+    400152: pinky_left_a
+    400154: pinky_left_b
+    400156: pinky_left_c
+    400158: pinky_left_d
+    400160: pinky_right_a
+    400162: pinky_right_a_control
+    400164: pinky_right_a_curve
+    400166: pinky_right_b
+    400168: pinky_right_c
+    400170: pinky_right_d
+    400172: ringfinger_left_a
+    400174: ringfinger_left_b
+    400176: ringfinger_left_c
+    400178: ringfinger_right_a
+    400180: ringfinger_right_a_control
+    400182: ringfinger_right_a_curve
+    400184: ringfinger_right_b
+    400186: ringfinger_right_c
+    400188: root_curve
+    400190: root_joint
+    400192: root_joint 1
+    400194: shoulder_left_joint
+    400196: shoulder_left_joint 1
+    400198: shoulder_right_joint
+    400200: shoulder_right_joint 1
+    400202: thumb_left_a
+    400204: thumb_left_b
+    400206: thumb_left_c
+    400208: thumb_left_d
+    400210: thumb_right_a
+    400212: thumb_right_b
+    400214: thumb_right_c
+    400216: thumb_right_d
+    400218: Torso
+    400220: transform1
+    400222: wrist_control
+    400224: wrist_curve
+    400226: wrist_left_joint
+    400228: wrist_left_joint 1
+    400230: wrist_right_joint
+    400232: wrist_right_joint 1
+    4300000: Torso
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Torso
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_left_ikHandle
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: ellbow_left_control
+        weight: 1
+      - path: ellbow_right_control
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: left
+        weight: 1
+      - path: persp1
+        weight: 1
+      - path: root_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/neck_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/neck_curve/nurbsCircle4
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/neck_curve/nurbsCircle4/neck_joint
+          1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/neck_curve/nurbsCircle4/neck_joint
+          1/neck_end_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/index_left_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/index_left_a/index_left_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/index_left_a/index_left_b/index_left_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/index_left_a/index_left_b/index_left_c/index_left_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/middlefinger_left_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/middlefinger_left_a/middlefinger_left_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/middlefinger_left_a/middlefinger_left_b/middlefinger_left_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/middlefinger_left_a/middlefinger_left_b/middlefinger_left_c/middlefinger_left_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/pinky_left_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/pinky_left_a/pinky_left_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/pinky_left_a/pinky_left_b/pinky_left_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/pinky_left_a/pinky_left_b/pinky_left_c/pinky_left_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/ringfinger_left_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/ringfinger_left_a/ringfinger_left_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/ringfinger_left_a/ringfinger_left_b/ringfinger_left_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/ringfinger_left_a/ringfinger_left_b/ringfinger_left_c/fingfinger_left_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/thumb_left_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/thumb_left_a/thumb_left_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/thumb_left_a/thumb_left_b/thumb_left_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_left_joint 1/ellbow_left_joint
+          1/wrist_left_joint 1/thumb_left_a/thumb_left_b/thumb_left_c/thumb_left_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control/transform1
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control/transform1/index_right_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control/transform1/index_right_a/index_right_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control/transform1/index_right_a/index_right_b/index_right_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/indexfinger_right_a_cuve/indexfinger_right_control/transform1/index_right_a/index_right_b/index_right_c/index_right_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve/middlefinger_right_a_control
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve/middlefinger_right_a_control/middlefinger_right_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve/middlefinger_right_a_control/middlefinger_right_a/middlefinger_right_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve/middlefinger_right_a_control/middlefinger_right_a/middlefinger_right_b/middlefinger_right_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/middlefinger_right_a_curve/middlefinger_right_a_control/middlefinger_right_a/middlefinger_right_b/middlefinger_right_c/middlefinger_right_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve/pinky_right_a_control
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve/pinky_right_a_control/pinky_right_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve/pinky_right_a_control/pinky_right_a/pinky_right_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve/pinky_right_a_control/pinky_right_a/pinky_right_b/pinky_right_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/pinky_right_a_curve/pinky_right_a_control/pinky_right_a/pinky_right_b/pinky_right_c/pinky_right_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve/ringfinger_right_a_control
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve/ringfinger_right_a_control/ringfinger_right_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve/ringfinger_right_a_control/ringfinger_right_a/ringfinger_right_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve/ringfinger_right_a_control/ringfinger_right_a/ringfinger_right_b/ringfinger_right_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/ringfinger_right_a_curve/ringfinger_right_a_control/ringfinger_right_a/ringfinger_right_b/ringfinger_right_c/fingfinger_right_d
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/thumb_right_a
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/thumb_right_a/thumb_right_b
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/thumb_right_a/thumb_right_b/thumb_right_c
+        weight: 1
+      - path: root_curve/nurbsCircle1/root_joint 1/belly_curve/nurbsCircle2/belly_joint
+          1/chest_curve/nurbsCircle3/chest_joint 1/shoulder_right_joint 1/ellbow_right_curve/nurbsCircle6/ellbow_right_joint
+          1/wrist_curve/wrist_control/wrist_right_joint 1/thumb_right_a/thumb_right_b/thumb_right_c/thumb_right_d
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/belly_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/neck_joint/neck_end_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_left_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_left_joint/ellbow_left_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_left_joint/ellbow_left_joint/wrist_left_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/hand_right_joint
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/hand_right_joint/joint1
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/hand_right_joint/joint1/joint2
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/hand_right_joint/joint1/joint2/joint3
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/hand_right_joint/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint5
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint5/joint6
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint5/joint6/joint7
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint10
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint10/joint11
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint10/joint11/joint12
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint10/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint15
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint15/joint16
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint15/joint16/joint17
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint20
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint20/joint21
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint20/joint21/joint22
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint20/joint21/joint22/joint23
+        weight: 1
+      - path: root_joint/belly_joint/chest_joint/shoulder_right_joint/ellbow_right_joint/wrist_right_joint/joint20/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: Torso
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: root_joint
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

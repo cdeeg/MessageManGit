@@ -12,8 +12,11 @@ public class FPSCharacterController : MonoBehaviour {
 
 	public PrototypeGameController gctrl;
 
+	public float animationSpeed = 1f;
+
 	Vector2 input;
 	bool isMoving;
+	bool wasMoving;
 	float stuff;
 	float origPos;
 	float origPosX;
@@ -23,6 +26,7 @@ public class FPSCharacterController : MonoBehaviour {
 	float previous = 0f;
 
 	Compass cmp;
+	Animation handsDownAnim;
 	bool cmpIsHidden;
 
 	static Vector3 myForward;
@@ -40,6 +44,10 @@ public class FPSCharacterController : MonoBehaviour {
 		cmp = GetComponentInChildren<Compass>();
 		if(cmp == null)
 			Debug.LogError("FPSCharacterController: No compass found!");
+		handsDownAnim = GetComponentInChildren<Animation>();
+		if(handsDownAnim == null)
+			Debug.LogError("FPSCharacterController: No animation for character found!");
+
 		origPos = playerCamera.transform.localPosition.y;
 		origPosX = playerCamera.transform.localPosition.x;
 		if(rigidbody == null)
@@ -96,21 +104,46 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void Update()
 	{
+		// show/hide compass
 		if(isMoving)
 			cmp.gameObject.SetActive(false);
 		else if(!cmpIsHidden)
 			cmp.gameObject.SetActive(true);
 
+		// play animation if possible
+		if(isMoving != wasMoving && handsDownAnim != null)
+		{
+			if(isMoving)
+			{
+				handsDownAnim.Play();
+				handsDownAnim["Take 001"].speed = animationSpeed;
+			}
+			else
+			{
+				handsDownAnim.Play();
+				handsDownAnim["Take 001"].speed = -animationSpeed;
+			}
+
+			wasMoving = isMoving;
+		}
+
+		// set variable for external scripts
 		myForward = transform.forward;
 
+		// no head bob? don't calculate anything
 		if(!doHeadBob) return;
 
+		// do bobbing if...
+		// 1. character is moving OR
+		// 2. the camera has not its original height OR
+		// 3. the camera has not its original horizontal position
 		if(isMoving || playerCamera.transform.localPosition.y != origPos || playerCamera.transform.localPosition.x != origPosX)
 		{
 			stuff += Time.deltaTime*bobspeed;
 			Vector3 pos = playerCamera.transform.localPosition;
 			pos.y = origPos + Mathf.Sin(stuff) * .04f;
 			pos.x = origPosX + Mathf.Sin(stuff) * .04f;
+			// reset hand position if necessary
 			if(!isMoving)
 			{
 				if(playerCamera.transform.localPosition.y+.03f >= origPos
@@ -122,9 +155,12 @@ public class FPSCharacterController : MonoBehaviour {
 					bobspeed = 4f;
 				}
 			}
+			// reset (probably) overflowing float
 			if(Mathf.Sin(stuff) == 0f) stuff = 0f;
+			// add some randomness to the bobbing
 			if(Mathf.Sin(stuff) < 0f && previous >= 0f || Mathf.Sin(stuff) >= 0f && previous < 0f)
 				bobspeed = Random.Range(3f, 6f);
+			// set "previous" value
 			previous = Mathf.Sin(stuff);
 			playerCamera.transform.localPosition = pos;
 		}

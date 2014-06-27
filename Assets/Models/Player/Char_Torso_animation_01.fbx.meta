@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: 5c5068ed66fd14512ad29a64f595744b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: arm_left_ikHandle
+    100002: belly_curve
+    100004: belly_joint
+    100006: belly_joint 1
+    100008: bottom
+    100010: //RootNode
+    100012: chest_curve
+    100014: chest_joint
+    100016: chest_joint 1
+    100018: ellbow_left_control
+    100020: ellbow_left_joint
+    100022: ellbow_left_joint 1
+    100024: ellbow_right_control
+    100026: ellbow_right_curve
+    100028: ellbow_right_joint
+    100030: ellbow_right_joint 1
+    100032: fingfinger_left_d
+    100034: fingfinger_right_d
+    100036: group1
+    100038: hand_right_joint
+    100040: ikHandle2
+    100042: index_left_a
+    100044: index_left_b
+    100046: index_left_c
+    100048: index_left_d
+    100050: index_right_a
+    100052: index_right_b
+    100054: index_right_c
+    100056: index_right_d
+    100058: indexfinger_right_a_cuve
+    100060: indexfinger_right_control
+    100062: joint1
+    100064: joint10
+    100066: joint11
+    100068: joint12
+    100070: joint13
+    100072: joint14
+    100074: joint15
+    100076: joint16
+    100078: joint17
+    100080: joint18
+    100082: joint19
+    100084: joint2
+    100086: joint20
+    100088: joint21
+    100090: joint22
+    100092: joint23
+    100094: joint24
+    100096: joint3
+    100098: joint4
+    100100: joint5
+    100102: joint6
+    100104: joint7
+    100106: joint8
+    100108: joint9
+    100110: left
+    100112: middlefinger_left_a
+    100114: middlefinger_left_b
+    100116: middlefinger_left_c
+    100118: middlefinger_left_d
+    100120: middlefinger_right_a
+    100122: middlefinger_right_a_control
+    100124: middlefinger_right_a_curve
+    100126: middlefinger_right_b
+    100128: middlefinger_right_c
+    100130: middlefinger_right_d
+    100132: MobilePhone_02:pCube1
+    100134: neck_curve
+    100136: neck_end_joint
+    100138: neck_end_joint 1
+    100140: neck_joint
+    100142: neck_joint 1
+    100144: nurbsCircle1
+    100146: nurbsCircle2
+    100148: nurbsCircle3
+    100150: nurbsCircle4
+    100152: nurbsCircle6
+    100154: persp1
+    100156: pinky_left_a
+    100158: pinky_left_b
+    100160: pinky_left_c
+    100162: pinky_left_d
+    100164: pinky_right_a
+    100166: pinky_right_a_control
+    100168: pinky_right_a_curve
+    100170: pinky_right_b
+    100172: pinky_right_c
+    100174: pinky_right_d
+    100176: ringfinger_left_a
+    100178: ringfinger_left_b
+    100180: ringfinger_left_c
+    100182: ringfinger_right_a
+    100184: ringfinger_right_a_control
+    100186: ringfinger_right_a_curve
+    100188: ringfinger_right_b
+    100190: ringfinger_right_c
+    100192: root_curve
+    100194: root_joint
+    100196: root_joint 1
+    100198: shoulder_left_joint
+    100200: shoulder_left_joint 1
+    100202: shoulder_right_joint
+    100204: shoulder_right_joint 1
+    100206: thumb_left_a
+    100208: thumb_left_b
+    100210: thumb_left_c
+    100212: thumb_left_d
+    100214: thumb_right_a
+    100216: thumb_right_b
+    100218: thumb_right_c
+    100220: thumb_right_d
+    100222: Torso
+    100224: transform1
+    100226: wrist_control
+    100228: wrist_curve
+    100230: wrist_left_joint
+    100232: wrist_left_joint 1
+    100234: wrist_right_joint
+    100236: wrist_right_joint 1
+    400000: arm_left_ikHandle
+    400002: belly_curve
+    400004: belly_joint
+    400006: belly_joint 1
+    400008: bottom
+    400010: //RootNode
+    400012: chest_curve
+    400014: chest_joint
+    400016: chest_joint 1
+    400018: ellbow_left_control
+    400020: ellbow_left_joint
+    400022: ellbow_left_joint 1
+    400024: ellbow_right_control
+    400026: ellbow_right_curve
+    400028: ellbow_right_joint
+    400030: ellbow_right_joint 1
+    400032: fingfinger_left_d
+    400034: fingfinger_right_d
+    400036: group1
+    400038: hand_right_joint
+    400040: ikHandle2
+    400042: index_left_a
+    400044: index_left_b
+    400046: index_left_c
+    400048: index_left_d
+    400050: index_right_a
+    400052: index_right_b
+    400054: index_right_c
+    400056: index_right_d
+    400058: indexfinger_right_a_cuve
+    400060: indexfinger_right_control
+    400062: joint1
+    400064: joint10
+    400066: joint11
+    400068: joint12
+    400070: joint13
+    400072: joint14
+    400074: joint15
+    400076: joint16
+    400078: joint17
+    400080: joint18
+    400082: joint19
+    400084: joint2
+    400086: joint20
+    400088: joint21
+    400090: joint22
+    400092: joint23
+    400094: joint24
+    400096: joint3
+    400098: joint4
+    400100: joint5
+    400102: joint6
+    400104: joint7
+    400106: joint8
+    400108: joint9
+    400110: left
+    400112: middlefinger_left_a
+    400114: middlefinger_left_b
+    400116: middlefinger_left_c
+    400118: middlefinger_left_d
+    400120: middlefinger_right_a
+    400122: middlefinger_right_a_control
+    400124: middlefinger_right_a_curve
+    400126: middlefinger_right_b
+    400128: middlefinger_right_c
+    400130: middlefinger_right_d
+    400132: MobilePhone_02:pCube1
+    400134: neck_curve
+    400136: neck_end_joint
+    400138: neck_end_joint 1
+    400140: neck_joint
+    400142: neck_joint 1
+    400144: nurbsCircle1
+    400146: nurbsCircle2
+    400148: nurbsCircle3
+    400150: nurbsCircle4
+    400152: nurbsCircle6
+    400154: persp1
+    400156: pinky_left_a
+    400158: pinky_left_b
+    400160: pinky_left_c
+    400162: pinky_left_d
+    400164: pinky_right_a
+    400166: pinky_right_a_control
+    400168: pinky_right_a_curve
+    400170: pinky_right_b
+    400172: pinky_right_c
+    400174: pinky_right_d
+    400176: ringfinger_left_a
+    400178: ringfinger_left_b
+    400180: ringfinger_left_c
+    400182: ringfinger_right_a
+    400184: ringfinger_right_a_control
+    400186: ringfinger_right_a_curve
+    400188: ringfinger_right_b
+    400190: ringfinger_right_c
+    400192: root_curve
+    400194: root_joint
+    400196: root_joint 1
+    400198: shoulder_left_joint
+    400200: shoulder_left_joint 1
+    400202: shoulder_right_joint
+    400204: shoulder_right_joint 1
+    400206: thumb_left_a
+    400208: thumb_left_b
+    400210: thumb_left_c
+    400212: thumb_left_d
+    400214: thumb_right_a
+    400216: thumb_right_b
+    400218: thumb_right_c
+    400220: thumb_right_d
+    400222: Torso
+    400224: transform1
+    400226: wrist_control
+    400228: wrist_curve
+    400230: wrist_left_joint
+    400232: wrist_left_joint 1
+    400234: wrist_right_joint
+    400236: wrist_right_joint 1
+    2300000: MobilePhone_02:pCube1
+    2300002: Torso
+    3300000: MobilePhone_02:pCube1
+    3300002: Torso
+    4300000: MobilePhone_02:pCube1
+    4300002: Torso
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: root_joint
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
