@@ -47,6 +47,11 @@ public class FPSCharacterController : MonoBehaviour {
 		handsDownAnim = GetComponentInChildren<Animation>();
 		if(handsDownAnim == null)
 			Debug.LogError("FPSCharacterController: No animation for character found!");
+		else
+		{
+			handsDownAnim.Play();
+			handsDownAnim["Take 001"].speed = -animationSpeed;
+		}
 
 		origPos = playerCamera.transform.localPosition.y;
 		origPosX = playerCamera.transform.localPosition.x;
@@ -110,7 +115,7 @@ public class FPSCharacterController : MonoBehaviour {
 		else if(!cmpIsHidden)
 			cmp.gameObject.SetActive(true);
 
-		// play animation if possible
+		// play "phone down/phone up" animation if possible
 		if(isMoving != wasMoving && handsDownAnim != null)
 		{
 			if(isMoving)
