@@ -18,7 +18,7 @@ public class GUIMainMenuController : GUIMenuController
 #endif
 	}
 	
-	void ViewHighscores()
+	void ShowCredits()
 	{
 	}
 }
