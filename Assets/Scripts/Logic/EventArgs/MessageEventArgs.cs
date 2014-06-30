@@ -42,3 +42,14 @@ public class SuccessMessageEventArgs : MessageEventArgs
 		Success = success;
 	}
 }
+
+public class TempMessageEventArgs : MessageEventArgs
+{
+	public ParsedMessage Message {get; private set;}
+
+	public TempMessageEventArgs(ParsedMessage tmp)
+		:base()
+	{
+		Message = tmp;
+	}
+}
