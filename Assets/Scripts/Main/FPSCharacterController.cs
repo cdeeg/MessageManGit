@@ -15,6 +15,7 @@ public class FPSCharacterController : MonoBehaviour {
 	public PrototypeGameController gctrl;
 
 	public float animationSpeed = 1f;
+	public float lookAtPhoneRotationDuration = 1f;
 
 	Vector2 input;
 	bool isMoving;
@@ -32,6 +33,12 @@ public class FPSCharacterController : MonoBehaviour {
 	bool cmpIsHidden;
 	bool msgIsActive;
 	bool msgWasActive;
+
+	Quaternion originalRotation;
+	GameObject lookAtPhoneTarget;
+	Quaternion targetRotation;
+	bool isLookingAtPhone = false;
+	ParsedMessage msg;
 
 	static Vector3 myForward;
 
@@ -58,9 +65,20 @@ public class FPSCharacterController : MonoBehaviour {
 			handsDownAnim.Play();
 			handsDownAnim["Take 001"].speed = -animationSpeed;
 		}
+		
+		originalRotation = Quaternion.identity; //playerCamera.transform.rotation;
+		GUIPhoneController playerPhoneCtrl = GetComponentInChildren<GUIPhoneController>();
+		if(playerPhoneCtrl != null)
+		{
+			lookAtPhoneTarget = playerPhoneCtrl.gameObject;
+//			targetRotation = Quaternion.LookRotation( lookAtPhoneTarget - playerCamera.transform.position);
+		}
+		else
+			Debug.LogError("FPSCharacterController: No phone to look at!");
 
 		origPos = playerCamera.transform.localPosition.y;
 		origPosX = playerCamera.transform.localPosition.x;
+
 		if(rigidbody == null)
 		{
 			Debug.LogError("FPSCharacterController: No rigidbody found!");
@@ -69,6 +87,7 @@ public class FPSCharacterController : MonoBehaviour {
 
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, MsgDone);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, LookTowardsPhone);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, MsgActivated);
 	}
 
@@ -76,12 +95,69 @@ public class FPSCharacterController : MonoBehaviour {
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, MsgDone);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, LookTowardsPhone);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED, MsgActivated);
+	}
+
+	void LookTowardsPhone (object sender, System.EventArgs args)
+	{
+		originalRotation = playerCamera.transform.rotation; //lookAt ? playerCamera.transform.rotation : Quaternion.identity;
+		msg = ((TempMessageEventArgs)args).Message;
+		StartCoroutine(LookAtPhone(true));
+	}
+
+	IEnumerator LookAtPhone(bool lookAt)
+	{
+		isLookingAtPhone = true;
+		float timeElapsed = 0f;
+
+		Vector3 rot = lookAtPhoneTarget.transform.position - playerCamera.transform.position;
+		Quaternion target = Quaternion.LookRotation(rot, Vector3.up);
+
+		while(timeElapsed < lookAtPhoneRotationDuration)
+		{
+			Quaternion current = Quaternion.identity;
+
+			// rotate towards phone
+			if(lookAt)
+			{
+				current = Quaternion.Slerp(originalRotation, target, timeElapsed/lookAtPhoneRotationDuration);
+			}
+			else // rotate to original rotation
+			{
+				current = Quaternion.Slerp(target, originalRotation, timeElapsed/lookAtPhoneRotationDuration);
+			}
+
+			playerCamera.transform.rotation = current;
+
+			timeElapsed += Time.deltaTime;
+
+			yield return null;
+		}
+
+		if(lookAt)
+		{
+			playerCamera.transform.rotation = target;
+			SendActivateEvent();
+		}
+		else
+		{
+			playerCamera.transform.rotation = originalRotation;
+		}
+
+		yield return null;
+	}
+
+	void SendActivateEvent()
+	{
+		GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED, new MessageEventArgs(msg.Sender,msg.Message,msg.Answer));
 	}
 
 	void MsgActivated (object sender, System.EventArgs args)
 	{
 		msgIsActive = true;
+		StartCoroutine(LookAtPhone(false));
+		isLookingAtPhone = false;
 	}
 
 	void MsgDone (object sender, System.EventArgs args)
@@ -100,7 +176,7 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		if(gctrl.StopGame || gctrl.GamePaused) return;
+		if(gctrl.StopGame || gctrl.GamePaused || isLookingAtPhone) return;
 
 		float forwards = Input.GetAxis("Vertical");
 		float rotate = Input.GetAxis("Horizontal");
@@ -127,6 +203,8 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void Update()
 	{
+		if(isLookingAtPhone) return;
+
 		if(handsDownAnim.isPlaying && handsDownAnim["Take 001"].time >= (TIME_STOP_ANIM * (1f / animationSpeed))
 		   && ( msgIsActive && msgIsActive == msgWasActive || Input.GetKey(KeyCode.LeftShift) ))
 		{

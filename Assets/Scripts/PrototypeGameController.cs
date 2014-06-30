@@ -180,7 +180,7 @@ public class PrototypeGameController : MonoBehaviour {
 				stopMyself = true;
 				msgSent = true;
 				msgWaitTime = Random.Range(minTimeMsgWait, maxTimeMsgWait);
-				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED, new MessageEventArgs(currentMessage.Sender,currentMessage.Message,currentMessage.Answer));
+				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_ACTIVATED_PLAYER, new TempMessageEventArgs(currentMessage));
 			}
 		}
 	}
