@@ -112,11 +112,18 @@ public class GUIMessageController : MonoBehaviour
 
 		answerText.gameObject.SetActive(false);
 
-		StartCoroutine(WaitForPlayerReading());
+		if(answerText.text.Length > 0)
+			StartCoroutine(WaitForPlayerReading());
+		else
+		{
+			Debug.LogError("GUIMessageController: Found empty message!");
+			SendFinishEvent();
+		}
 	}
 
 	void SendFinishEvent()
 	{
+		MessageCVSParser.GetInstance().SentMessageCorrectly(messageAnswered);
 		if(audioSour != null) audioSour.PlayOneShot(messageDone);
 		GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(messageAnswered));
 		guiAnchor.gameObject.SetActive(false);

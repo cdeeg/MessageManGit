@@ -67,7 +67,10 @@ public class GUIPhoneController : MonoBehaviour {
 		
 		messageIndicator.gameObject.SetActive(false);
 		if(messageMissed)
+		{
+			MessageCVSParser.GetInstance().SentMessageCorrectly(false);
 			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(false));
+		}
 	}
 	#endregion
 	
@@ -76,7 +79,6 @@ public class GUIPhoneController : MonoBehaviour {
 	{
 		if(!messageMissed) return;
 		
-//		messageIndicator.gameObject.SetActive(false);
 		messageMissed = false;
 		ToggleMessageView();
 	}

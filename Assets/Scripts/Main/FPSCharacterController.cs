@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FPSCharacterController : MonoBehaviour {
 
+	const float TIME_STOP_ANIM = 0.09f;
+
 	public float walkSpeed;
 	public float runSpeed;
 	public float rotateSpeed = 4f;
@@ -28,6 +30,8 @@ public class FPSCharacterController : MonoBehaviour {
 	Compass cmp;
 	Animation handsDownAnim;
 	bool cmpIsHidden;
+	bool msgIsActive;
+	bool msgWasActive;
 
 	static Vector3 myForward;
 
@@ -39,8 +43,10 @@ public class FPSCharacterController : MonoBehaviour {
 	void Start()
 	{
 		isMoving = false;
-
+		msgIsActive = false;
+		msgWasActive = false;
 		cmpIsHidden = false;
+
 		cmp = GetComponentInChildren<Compass>();
 		if(cmp == null)
 			Debug.LogError("FPSCharacterController: No compass found!");
@@ -62,13 +68,25 @@ public class FPSCharacterController : MonoBehaviour {
 		}
 
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
-		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, MsgDone);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, MsgActivated);
 	}
 
 	void OnDestroy()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ToggleCompass);
-		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, ToggleCompass);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, MsgDone);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED, MsgActivated);
+	}
+
+	void MsgActivated (object sender, System.EventArgs args)
+	{
+		msgIsActive = true;
+	}
+
+	void MsgDone (object sender, System.EventArgs args)
+	{
+		msgIsActive = false;
 	}
 
 	void ToggleCompass (object sender, System.EventArgs args)
@@ -109,6 +127,11 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void Update()
 	{
+		if(handsDownAnim.isPlaying && handsDownAnim["Take 001"].time >= (TIME_STOP_ANIM * (1f / animationSpeed))
+		   && ( msgIsActive && msgIsActive == msgWasActive || Input.GetKey(KeyCode.LeftShift) ))
+		{
+			handsDownAnim["Take 001"].speed = 0.0f;
+		}
 		// show/hide compass
 		if(isMoving)
 			cmp.gameObject.SetActive(false);
@@ -116,20 +139,15 @@ public class FPSCharacterController : MonoBehaviour {
 			cmp.gameObject.SetActive(true);
 
 		// play "phone down/phone up" animation if possible
-		if(isMoving != wasMoving && handsDownAnim != null)
+		if(Input.GetKey(KeyCode.LeftShift) != wasMoving && handsDownAnim != null
+		   || msgIsActive != msgWasActive)
 		{
-			if(isMoving)
-			{
-				handsDownAnim.Play();
-				handsDownAnim["Take 001"].speed = animationSpeed;
-			}
-			else
-			{
-				handsDownAnim.Play();
-				handsDownAnim["Take 001"].speed = -animationSpeed;
-			}
+			if(msgIsActive != msgWasActive) msgWasActive = msgIsActive;
 
-			wasMoving = isMoving;
+			handsDownAnim.Play();
+			handsDownAnim["Take 001"].speed = animationSpeed;
+
+			wasMoving = Input.GetKey(KeyCode.LeftShift);
 		}
 
 		// set variable for external scripts

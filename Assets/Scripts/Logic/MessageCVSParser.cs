@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
 using System.Text;
+//using System;
+using UnityEngine;
 
 public class MessageCVSParser {
 
@@ -25,7 +26,12 @@ public class MessageCVSParser {
 	private int timeTweetQueued;
 	private int friendsTweetQueued;
 
+	private int prevSentId;
+	private ParsedMessage prevSentMessage;
+
 	private static MessageCVSParser instance;
+
+	System.Random rani;
 
 	private MessageCVSParser()
 	{
@@ -50,6 +56,21 @@ public class MessageCVSParser {
 		return instance;
 	}
 
+	public void SentMessageCorrectly(bool success)
+	{
+		if(success)
+		{
+			queuedMessageId = -1;
+			notSentMessagesIds.Add(prevSentId);
+			parsedMessages.Add(prevSentMessage);
+		}
+		else
+		{
+			sentMessagesIds.Add(prevSentId);
+			sentMessages.Add(prevSentMessage);
+		}
+	}
+
 	public void Clear()
 	{
 		queuedMessageId = -1;
@@ -70,6 +91,8 @@ public class MessageCVSParser {
 	#region Initialization
 	void Parse()
 	{
+		rani = new System.Random( (int)UnityEngine.Time.time );
+
 		queuedMessageId = -1;
 		timeTweetQueued = -1;
 		friendsTweetQueued = 0;
@@ -147,7 +170,7 @@ public class MessageCVSParser {
 		if(!int.TryParse(args[4].Trim(), out predec))
 			Debug.LogError("Message predecessor was no int! " + args[4]);
 		int succ;
-		if(!int.TryParse(args[4].Trim(), out succ))
+		if(!int.TryParse(args[5].Trim(), out succ))
 			Debug.LogError("Message successor was no int! " + args[5]);
 
 		ParsedMessage newMsg = new ParsedMessage(id,args[1].Trim(),args[2].Trim(), args[3].Trim(), predec, succ);
@@ -188,7 +211,7 @@ public class MessageCVSParser {
 
 	public ParsedTweet GetRandomTweet()
 	{
-		int rand = Random.Range(0, parsedTweets.Count);
+		int rand = rani.Next(0, parsedTweets.Count);
 
 		ParsedTweet tweet = parsedTweets[rand];
 		parsedTweets.RemoveAt(rand);
@@ -232,7 +255,10 @@ public class MessageCVSParser {
 		if(idxRem > -1)
 			notSentMessagesIds.RemoveAt(idxRem);
 
-		sentMessages.Add(msg);
+		//sentMessages.Add(msg);
+		//sentMessagesIds.Add(msg.ID);
+		prevSentMessage = msg;
+		prevSentId = msg.ID;
 
 		if(parsedMessages.Count == 0)
 		{
@@ -262,7 +288,7 @@ public class MessageCVSParser {
 		if(queuedMessageId > -1)
 			return GetMessageById(queuedMessageId);
 
-		int ran = Random.Range(0, notSentMessagesIds.Count);
+		int ran = rani.Next(0, notSentMessagesIds.Count);
 		int unsent = notSentMessagesIds[ran];
 		notSentMessagesIds.RemoveAt(ran);
 		int count = -1;
@@ -296,8 +322,10 @@ public class MessageCVSParser {
 		}
 		if(listItem == -1) listItem = count;
 
-		sentMessages.Add(m);
-		sentMessagesIds.Add(m.ID);
+//		sentMessages.Add(m);
+//		sentMessagesIds.Add(m.ID);
+		prevSentId = m.ID;
+		prevSentMessage = m;
 		parsedMessages.RemoveAt(listItem);
 
 		if(parsedMessages.Count == 0)

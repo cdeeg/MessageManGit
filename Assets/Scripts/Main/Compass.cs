@@ -15,7 +15,7 @@ public class Compass : MonoBehaviour{
 			doLoop = false;
 		}
 
-		target = StartEndPosHandler.CurrentEndPoint;
+		target = StartEndPosHandler.CurrentData.endPosition;
 		
 	}
 	

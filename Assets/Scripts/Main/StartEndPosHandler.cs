@@ -10,14 +10,14 @@ public class StartEndPosHandler : MonoBehaviour {
 	public StartEndPoints[] points;
 
 	static bool finished;
-	static Transform currentEndPoint;
+	static StartEndPoints currentData;
 
 	public static bool IsFinished
 	{ get { return finished; }}
 
-	public static Transform CurrentEndPoint
+	public static StartEndPoints CurrentData
 	{
-		get { return currentEndPoint; }
+		get { return currentData; }
 	}
 
 	void Awake()
@@ -61,12 +61,9 @@ public class StartEndPosHandler : MonoBehaviour {
 	void SetStartEndPoints()
 	{
 		int rand = Random.Range(0, points.Length);
-		StartEndPoints myPoints = points[rand];
+		currentData = points[rand];
 
-		GameObject dest = (GameObject)Instantiate(destinationPrefab, myPoints.endPosition.position, Quaternion.identity);
-		currentEndPoint = dest.transform;
-
-		Vector3 pos = myPoints.startPosition.position;
+		Vector3 pos = currentData.startPosition.position;
 		pos.y = player.transform.position.y;
 		player.transform.position = pos;
 

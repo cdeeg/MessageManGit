@@ -10,25 +10,21 @@ public class GUIBarsController : MonoBehaviour {
 
 	public tk2dTextMesh countDown;
 
-	public float initialFriendsAmount = 10f;
-	public float initialTimeInSeconds = 180f;
-
+	float initialTimeInSeconds;
 	bool isPaused = false;
-
 	bool allDone = false;
-
 	int initMinutes;
 
 	void Start()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
-//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_WON, DoNotUpdate);
-//		GlobalEventHandler.GetInstance().RegisterListener(EEventType.GAME_OVER, DoNotUpdate);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
+
+		initialTimeInSeconds = StartEndPosHandler.CurrentData.timeLimit;
 
 		timeBar.Init(initialTimeInSeconds);
 		countDown.text = string.Format("{0:D2}:{1:D2}", (int)(timeBar.CurrentValue/60f), (int)(timeBar.CurrentValue%60f));
-		friendsBar.Init(initialFriendsAmount);
+		friendsBar.Init(StartEndPosHandler.CurrentData.friends);
 		HighscoreInformationData.GetInstance().InitialTime = initialTimeInSeconds;
 
 		StartCoroutine(UpdateTime());
@@ -37,8 +33,6 @@ public class GUIBarsController : MonoBehaviour {
 	void OnDestroy()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
-//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_WON, DoNotUpdate);
-//		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.GAME_OVER, DoNotUpdate);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
 	}
 
@@ -71,7 +65,7 @@ public class GUIBarsController : MonoBehaviour {
 
 
 		HighscoreInformationData.GetInstance().LeftFriends = friendsBar.CurrentValue;
-		HighscoreInformationData.GetInstance().LostFriends = initialFriendsAmount-friendsBar.CurrentValue;
+		HighscoreInformationData.GetInstance().LostFriends = StartEndPosHandler.CurrentData.friends-friendsBar.CurrentValue;
 	}
 
 	void UpdateFriends(float value, bool isDelta)
