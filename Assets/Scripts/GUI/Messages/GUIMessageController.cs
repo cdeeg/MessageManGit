@@ -21,6 +21,9 @@ public class GUIMessageController : MonoBehaviour
 	public Color colorWrong = Color.red;
 	public string colorPrefix = "^g";
 
+	public GameObject answerComponents;
+	public GUIMenuTinyController tinyMenu;
+
 	public AudioClip hitKey;
 	public AudioClip messageDone;
 
@@ -110,8 +113,26 @@ public class GUIMessageController : MonoBehaviour
 		// show big phone
 		guiAnchor.gameObject.SetActive(true);
 
-		answerText.gameObject.SetActive(false);
+		tinyMenu.gameObject.SetActive(true);
+		answerComponents.SetActive(false);
 
+		tinyMenu.AnswerMessage += SetRestOfMessage;
+		tinyMenu.DeclineMessage += MessageDeclined;
+	}
+
+	void MessageDeclined(object sender, EventArgs args)
+	{
+		messageAnswered = false;
+		SendFinishEvent();
+	}
+
+	void SetRestOfMessage(object sender, EventArgs args)
+	{
+		tinyMenu.gameObject.SetActive(false);
+		answerComponents.SetActive(true);
+
+		answerText.gameObject.SetActive(false);
+		
 		if(answerText.text.Length > 0)
 			StartCoroutine(WaitForPlayerReading());
 		else

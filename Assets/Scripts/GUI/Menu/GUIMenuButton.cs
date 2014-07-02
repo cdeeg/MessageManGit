@@ -19,6 +19,7 @@ public class GUIMenuButton : IHoverable
 	public Color disabledColorText = new Color(.3f, .3f, .3f);
 
 	public bool isActive = true;
+	public bool tweenOnHover = true;
 
 	bool isDoneTweening = true;
 	bool tweening = false;
@@ -105,7 +106,7 @@ public class GUIMenuButton : IHoverable
 			hovered = isHovered;
 			indicator.gameObject.SetActive(hovered);
 			isDoneTweening = false;
-			if(!tweening)
+			if(!tweening && tweenOnHover)
 			{
 				StartCoroutine(OnHoverTween());
 			}

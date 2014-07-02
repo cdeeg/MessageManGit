@@ -58,7 +58,7 @@ public class MessageCVSParser {
 
 	public void SentMessageCorrectly(bool success)
 	{
-		if(success)
+		if(!success)
 		{
 			queuedMessageId = -1;
 			notSentMessagesIds.Add(prevSentId);

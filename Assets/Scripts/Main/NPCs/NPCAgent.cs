@@ -11,7 +11,6 @@ public class NPCAgent : MonoBehaviour {
 	
 	int failedTimes = 5;
 	int failedYet = 0;
-//	Animator anim;
 	
 	Vector3 finalPosition;
 
