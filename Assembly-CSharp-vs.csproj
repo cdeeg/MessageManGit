@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMainMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuButton.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuController.cs" />
+     <Compile Include="Assets\Scripts\GUI\Menu\GUIMenuTinyController.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\PauseMenuController.cs" />
      <Compile Include="Assets\Scripts\GUI\Messages\GUIMessage.cs" />
      <Compile Include="Assets\Scripts\GUI\Messages\GUIMessageController.cs" />
