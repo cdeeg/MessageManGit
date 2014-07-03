@@ -9,7 +9,6 @@ public class GUIMessageController : MonoBehaviour
 {
 	public GameObject guiAnchor;
 	public GameObject indicator;
-	public float secondsToReadMessage = 4f;
 
 	public tk2dTextMesh senderText;
 	public tk2dTextMesh messageText;
@@ -36,6 +35,7 @@ public class GUIMessageController : MonoBehaviour
 	string unformattedText = "";
 	bool messageAnswered;
 	bool stopCoroutines;
+	bool allClear=false;
 
 	AudioSource audioSour;
 
@@ -44,6 +44,7 @@ public class GUIMessageController : MonoBehaviour
 	void Start()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, SetMessage);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, ShowAll);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.SHOVED, ShovedByNpcs);
 		guiAnchor.gameObject.SetActive(false);
 
@@ -62,6 +63,7 @@ public class GUIMessageController : MonoBehaviour
 	void OnDestroy()
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED, SetMessage);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, ShowAll);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.SHOVED, ShovedByNpcs);
 	}
 
@@ -91,12 +93,15 @@ public class GUIMessageController : MonoBehaviour
 		HighscoreInformationData.GetInstance().FailedMessages++;
 	}
 
+	void ShowAll (object sender, EventArgs args)
+	{
+		allClear = true;
+	}
+
 	void SetMessage (object sender, System.EventArgs args)
 	{
-		if(indicator != null && !indicator.gameObject.activeSelf) return;
-
-		indicator.gameObject.SetActive(false);
-
+		if(indicator != null && !indicator.gameObject.activeSelf && !allClear) return;
+		allClear = false;
 		MessageEventArgs msgArgs = (MessageEventArgs)args;
 		if(msgArgs == null) return;
 
@@ -104,18 +109,25 @@ public class GUIMessageController : MonoBehaviour
 		stopCoroutines = false;
 
 		senderText.text = colorCodeSenderName + msgArgs.Sender;
-		messageText.text = colorCodeCorrect + msgArgs.Text;
+//		messageText.text = colorCodeCorrect + msgArgs.Text;
+		messageText.text = "";
 		answerText.text = colorCodeOpaque + msgArgs.Answer;
 
 		unformattedText = msgArgs.Answer;
 		currentMessage = msgArgs.Answer.ToCharArray();
-
+		
 		// show big phone
 		guiAnchor.gameObject.SetActive(true);
-
-		tinyMenu.gameObject.SetActive(true);
 		answerComponents.SetActive(false);
+		tinyMenu.gameObject.SetActive(false);
 
+		StartCoroutine(SenderTypesMessage(msgArgs.Text));
+	}
+	
+	void DisplayAllComponents()
+	{
+		tinyMenu.gameObject.SetActive(true);
+		
 		tinyMenu.AnswerMessage += SetRestOfMessage;
 		tinyMenu.DeclineMessage += MessageDeclined;
 	}
@@ -123,18 +135,24 @@ public class GUIMessageController : MonoBehaviour
 	void MessageDeclined(object sender, EventArgs args)
 	{
 		messageAnswered = false;
+		tinyMenu.AnswerMessage -= SetRestOfMessage;
+		tinyMenu.DeclineMessage -= MessageDeclined;
+
 		SendFinishEvent();
 	}
 
 	void SetRestOfMessage(object sender, EventArgs args)
 	{
+		tinyMenu.AnswerMessage -= SetRestOfMessage;
+		tinyMenu.DeclineMessage -= MessageDeclined;
+
 		tinyMenu.gameObject.SetActive(false);
 		answerComponents.SetActive(true);
 
-		answerText.gameObject.SetActive(false);
-		
 		if(answerText.text.Length > 0)
-			StartCoroutine(WaitForPlayerReading());
+		{
+			StartCoroutine(UserTyping());
+		}
 		else
 		{
 			Debug.LogError("GUIMessageController: Found empty message!");
@@ -183,15 +201,46 @@ public class GUIMessageController : MonoBehaviour
 		answerText.text = tmpString.ToString();
 	}
 	
-	IEnumerator WaitForPlayerReading()
+	IEnumerator SenderTypesMessage(string msg)
 	{
-		yield return new WaitForSeconds(secondsToReadMessage);
+		System.Random rani = new System.Random();
+		char[] senderMsg = msg.ToCharArray();
+		StringBuilder currentMessage = new StringBuilder(colorCodeCorrect);
+		bool doneTyping = false;
+		int currentIndex = 0;
+
+		float timePassed = 0f;
+//		float randVari = 1f/(float)rani.Next(50, 80);
 		
-		answerText.gameObject.SetActive(true);
-		
+		while(!doneTyping)
+		{
+//			if(timePassed > randVari)
+//			{
+//				randVari = 1f/(float)rani.Next(50, 80);
+//				timePassed = 0f;
+				currentMessage.Append(senderMsg[currentIndex]);
+				messageText.text = currentMessage.ToString();
+				
+				// check for end of text
+				if(currentIndex == senderMsg.Length-1)
+					doneTyping = true;
+				
+				currentIndex++;
+
+				yield return null;
+//			}
+//			else
+//			{
+//				timePassed+=Time.deltaTime;
+//
+//				yield return null;
+//			}
+			
+		}
+
 		yield return null;
-		
-		StartCoroutine(UserTyping());
+
+		DisplayAllComponents();
 	}
 
 	IEnumerator UserTyping()

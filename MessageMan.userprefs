@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Main/NPCs/NPCAgent.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Logic/MessageCVSParser.cs">
     <Files>
-      <File FileName="Assets/Scripts/GUI/Menu/GUIGameOverMenuController.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/Logic/MessageCVSParser.cs" Line="68" Column="1" />
-      <File FileName="Assets/Scripts/GUI/Messages/GUIMessageController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/Bars/GUIBarsController.cs" Line="116" Column="4" />
-      <File FileName="Assets/Scripts/GUI/Menu/GUIMainMenuController.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/Main/Compass.cs" Line="11" Column="16" />
-      <File FileName="Assets/Resources/CSV/InstantMessages.csv" Line="26" Column="47" />
-      <File FileName="Assets/Scripts/Main/NPCs/NPCAgent.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/GUI/Messages/GUIMessageController.cs" Line="213" Column="18" />
+      <File FileName="Assets/Scripts/GUI/GUIPhoneController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Logic/EventArgs/MessageEventArgs.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Main/FPSCharacterController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PrototypeGameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/CSV/InstantMessages.csv" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Logic/MessageCVSParser.cs" Line="86" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
