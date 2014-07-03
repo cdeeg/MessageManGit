@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class MessageCVSParser {
 
-//	string RESOURCE_PATH="InstantMessages";
 	const int WALK_THRESHOLD = 10;
 
 	delegate void ParserDelegate(string[] args, List<ParsedTweet> targetList);
@@ -160,8 +159,8 @@ public class MessageCVSParser {
 		if(args.Length != 6) return;
 
 		// check for message predecessor/successor
-		if(string.IsNullOrEmpty( args[4] )) args[4] = "-1";
-		if(string.IsNullOrEmpty( args[5] )) args[5] = "-1";
+		if(string.IsNullOrEmpty( args[4].Trim() )) args[4] = "-1";
+		if(string.IsNullOrEmpty( args[5].Trim() )) args[5] = "-1";
 
 		int id;
 		if(!int.TryParse(args[0].Trim(), out id))
@@ -255,8 +254,6 @@ public class MessageCVSParser {
 		if(idxRem > -1)
 			notSentMessagesIds.RemoveAt(idxRem);
 
-		//sentMessages.Add(msg);
-		//sentMessagesIds.Add(msg.ID);
 		prevSentMessage = msg;
 		prevSentId = msg.ID;
 
@@ -288,7 +285,7 @@ public class MessageCVSParser {
 		if(queuedMessageId > -1)
 			return GetMessageById(queuedMessageId);
 
-		int ran = rani.Next(0, notSentMessagesIds.Count);
+		int ran = Random.Range(0, notSentMessagesIds.Count); //rani.Next(0, notSentMessagesIds.Count);
 		int unsent = notSentMessagesIds[ran];
 		notSentMessagesIds.RemoveAt(ran);
 		int count = -1;
@@ -322,8 +319,6 @@ public class MessageCVSParser {
 		}
 		if(listItem == -1) listItem = count;
 
-//		sentMessages.Add(m);
-//		sentMessagesIds.Add(m.ID);
 		prevSentId = m.ID;
 		prevSentMessage = m;
 		parsedMessages.RemoveAt(listItem);
