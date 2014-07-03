@@ -91,7 +91,7 @@ public class MessageCVSParser {
 	#region Initialization
 	void Parse()
 	{
-		rani = new System.Random( (int)UnityEngine.Time.time );
+		rani = new System.Random( System.DateTime.Now.Second );
 
 		queuedMessageId = -1;
 		timeTweetQueued = -1;

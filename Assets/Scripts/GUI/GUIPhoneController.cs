@@ -12,11 +12,13 @@ public class GUIPhoneController : MonoBehaviour {
 	bool messageViewActive;
 	bool messageMissed;
 	bool pause;
+	bool waitForAnim;
 	
 	void Start ()
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_INCOMING, ShowMessageIndicator);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED, FocusOnPhone);
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, WaitForAnimation);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, MinimizePhone);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, GamePaused);
 
@@ -24,6 +26,7 @@ public class GUIPhoneController : MonoBehaviour {
 		
 		messageViewActive = false;
 		messageMissed = false;
+		waitForAnim = false;
 		pause = false;
 		messageIndicator.gameObject.SetActive(false);
 	}
@@ -32,6 +35,7 @@ public class GUIPhoneController : MonoBehaviour {
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_INCOMING, ShowMessageIndicator);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED, FocusOnPhone);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_ACTIVATED_PLAYER, WaitForAnimation);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, MinimizePhone);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, GamePaused);
 	}
@@ -40,6 +44,11 @@ public class GUIPhoneController : MonoBehaviour {
 	void GamePaused (object sender, System.EventArgs args)
 	{
 		pause = !pause;
+	}
+
+	void WaitForAnimation (object sender, System.EventArgs args)
+	{
+		waitForAnim = true;
 	}
 
 	void ShowMessageIndicator (object sender, System.EventArgs args)
@@ -64,12 +73,15 @@ public class GUIPhoneController : MonoBehaviour {
 			
 			yield return null;
 		}
-		
-		messageIndicator.gameObject.SetActive(false);
-		if(messageMissed)
+
+		if(!waitForAnim)
 		{
-			MessageCVSParser.GetInstance().SentMessageCorrectly(false);
-			GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(false));
+			messageIndicator.gameObject.SetActive(false);
+			if(messageMissed)
+			{
+				MessageCVSParser.GetInstance().SentMessageCorrectly(false);
+				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(false));
+			}
 		}
 	}
 	#endregion
@@ -78,7 +90,8 @@ public class GUIPhoneController : MonoBehaviour {
 	void FocusOnPhone (object sender, System.EventArgs args)
 	{
 		if(!messageMissed) return;
-		
+
+		waitForAnim = false;
 		messageMissed = false;
 		ToggleMessageView();
 	}
@@ -88,6 +101,9 @@ public class GUIPhoneController : MonoBehaviour {
 		if(sender == this) return;
 		
 		ToggleMessageView();
+
+		if(messageIndicator.gameObject.activeSelf)
+			messageIndicator.gameObject.SetActive(false);
 	}
 	
 	void ToggleMessageView()

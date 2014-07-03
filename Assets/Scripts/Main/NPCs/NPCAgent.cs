@@ -13,13 +13,6 @@ public class NPCAgent : MonoBehaviour {
 	int failedYet = 0;
 	
 	Vector3 finalPosition;
-
-	void Start()
-	{
-//		anim = GetComponent<Animator>();
-//		anim.Play(Animator.StringToHash("Take 001"));
-//		Debug.Log("STATE: "+anim.GetCurrentAnimatorStateInfo(0).IsName("Take 001"));
-	}
 	
 	void GetRandomPointOnNavMesh()
 	{
