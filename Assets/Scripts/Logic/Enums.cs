@@ -50,6 +50,11 @@ public class ParsedMessage : ParsedTweet
 	{
 		Answer = ans;
 	}
+	
+	public override string ToString ()
+	{
+		return string.Format ("[ParsedMessage: ID={0} Sender={1} Message={2} Answer={3} Pred={4} Succ={5}]", ID, Sender, Message, Answer, Predecessor, Successor);
+	}
 }
 
 public class ParsedObstacleMessage : ParsedMessage

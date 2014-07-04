@@ -57,6 +57,8 @@ public class PrototypeGameController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.UPDATE_CLOCK, TimeUpdated);
 
 		msgWaitTime = Random.Range(minTimeMsgWait, maxTimeMsgWait);
+
+		MessageCVSParser.GetInstance().Init();
 	}
 
 	void GameWon(object sender, System.EventArgs args)

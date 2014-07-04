@@ -13,6 +13,30 @@ public class NPCAgent : MonoBehaviour {
 	int failedYet = 0;
 	
 	Vector3 finalPosition;
+	Animation anim;
+
+	bool gamePaused;
+
+	void Start()
+	{
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, StopAnimation);
+		gamePaused = false;
+		anim = GetComponent<Animation>();
+		if(anim == null)
+		{
+			Debug.LogError("NPCAgent: No Animation component found! Animation won't stop if game is paused!");
+		}
+	}
+
+	void OnDestroy()
+	{
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, StopAnimation);
+	}
+
+	void StopAnimation (object sender, System.EventArgs args)
+	{
+		gamePaused = !gamePaused;
+	}
 	
 	void GetRandomPointOnNavMesh()
 	{
@@ -60,6 +84,19 @@ public class NPCAgent : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if(gamePaused)
+		{
+			if(anim.isPlaying)
+				anim.Stop();
+
+			return;
+		}
+		else
+		{
+			if(!anim.isPlaying)
+				anim.Play();
+		}
+
 		if(Vector3.Distance(transform.position, finalPosition) <= 3f)
 		{
 			GetRandomPointOnNavMesh();

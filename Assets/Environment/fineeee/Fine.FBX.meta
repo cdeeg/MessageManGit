@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: f5b325be6f0b33445a4647a925a4a872
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Hero_Backpack
+    100004: Hero_Backpack_AttachmentPoint_
+    100006: Hero_Backpack_High_
+    100008: Hero_Backpack_Low_
+    100010: Hero_Body
+    100012: Hero_Chest_
+    100014: Hero_Eye
+    100016: Hero_EyeCtrl_
+    100018: Hero_Head_
+    100020: Hero_LArm1
+    100022: Hero_LArm2
+    100024: Hero_LArmCollarbone
+    100026: Hero_LArmPalm
+    100028: Hero_LipLeft
+    100030: Hero_LippLow
+    100032: Hero_LipRight
+    100034: Hero_LLeg1
+    100036: Hero_LLeg2
+    100038: Hero_LLegAnkle
+    100040: Hero_PalmBone001
+    100042: Hero_PalmBone001 1
+    100044: Hero_PalmBone002
+    100046: Hero_PalmBone002 1
+    100048: Hero_PalmBone003
+    100050: Hero_PalmBone003 1
+    100052: Hero_Pelvis_
+    100054: Hero_RArm1
+    100056: Hero_RArm2
+    100058: Hero_RArmCollarbone
+    100060: Hero_RArmPalm
+    100062: Hero_RLeg1
+    100064: Hero_RLeg2
+    100066: Hero_RLegAnkle
+    100068: Hero_Scarf
+    100070: Hero_Scarf 1
+    100072: Hero_Spine1
+    100074: Hero_Spine1 1
+    100076: Hero_Spine2
+    100078: Hero_Spine2 1
+    100080: Hero_Spine3
+    100082: Hero_Spine3 1
+    400000: //RootNode
+    400002: Hero_Backpack
+    400004: Hero_Backpack_AttachmentPoint_
+    400006: Hero_Backpack_High_
+    400008: Hero_Backpack_Low_
+    400010: Hero_Body
+    400012: Hero_Chest_
+    400014: Hero_Eye
+    400016: Hero_EyeCtrl_
+    400018: Hero_Head_
+    400020: Hero_LArm1
+    400022: Hero_LArm2
+    400024: Hero_LArmCollarbone
+    400026: Hero_LArmPalm
+    400028: Hero_LipLeft
+    400030: Hero_LippLow
+    400032: Hero_LipRight
+    400034: Hero_LLeg1
+    400036: Hero_LLeg2
+    400038: Hero_LLegAnkle
+    400040: Hero_PalmBone001
+    400042: Hero_PalmBone001 1
+    400044: Hero_PalmBone002
+    400046: Hero_PalmBone002 1
+    400048: Hero_PalmBone003
+    400050: Hero_PalmBone003 1
+    400052: Hero_Pelvis_
+    400054: Hero_RArm1
+    400056: Hero_RArm2
+    400058: Hero_RArmCollarbone
+    400060: Hero_RArmPalm
+    400062: Hero_RLeg1
+    400064: Hero_RLeg2
+    400066: Hero_RLegAnkle
+    400068: Hero_Scarf
+    400070: Hero_Scarf 1
+    400072: Hero_Spine1
+    400074: Hero_Spine1 1
+    400076: Hero_Spine2
+    400078: Hero_Spine2 1
+    400080: Hero_Spine3
+    400082: Hero_Spine3 1
+    2300000: Hero_Eye
+    3300000: Hero_Eye
+    4300000: Hero_Scarf
+    4300002: Hero_Backpack
+    4300004: Hero_Body
+    4300006: Hero_Eye
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hero_Backpack
+    13700002: Hero_Body
+    13700004: Hero_Scarf
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .800000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

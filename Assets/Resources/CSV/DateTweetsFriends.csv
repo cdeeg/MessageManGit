@@ -1,5 +1,5 @@
-//,,,,Depending on amount of friends left
-//,,,,
-1,,2,@CarrieOki,The number of his friends are decreasing... not a good sign :( #datingaloner
-2,1,3,@CarrieOki,Wow this guy I'm supposed to meet only has like {0} friends left. He must be likea super weirdo or so :/ #yikes
-3,2,,@CarrieOki,"He doesn't have a single friend left. That's alarming, I'm not going to meet this social loner -.- #wasteoftime"
+//,,Depending on amount of friends left,Placeholder,,
+,,,,,
+1,@CarrieOki,The number of his friends are decreasing... not a good sign :( #datingaloner,,,2
+2,@CarrieOki,Wow this guy I'm supposed to meet only has like {  } friends left. He must be likea super weirdo or so :/ #yikes,,1,3
+3,@CarrieOki,"He doesn't have a single friend left. That's alarming, I'm not going to meet this social loner -.- #wasteoftime",,2,

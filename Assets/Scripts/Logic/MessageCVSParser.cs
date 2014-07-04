@@ -30,7 +30,7 @@ public class MessageCVSParser {
 
 	private static MessageCVSParser instance;
 
-	System.Random rani;
+//	System.Random rani;
 
 	private MessageCVSParser()
 	{
@@ -45,7 +45,7 @@ public class MessageCVSParser {
 		sentMessagesIds = new List<int>();
 		notSentMessagesIds = new List<int>();
 
-		Parse();
+//		Parse();
 	}
 
 	public static MessageCVSParser GetInstance()
@@ -70,6 +70,11 @@ public class MessageCVSParser {
 		}
 	}
 
+	public void Init()
+	{
+		Parse();
+	}
+
 	public void Clear()
 	{
 		queuedMessageId = -1;
@@ -90,22 +95,24 @@ public class MessageCVSParser {
 	#region Initialization
 	void Parse()
 	{
-		rani = new System.Random( System.DateTime.Now.Second );
+//		rani = new System.Random( System.DateTime.Now.Second );
 
 		queuedMessageId = -1;
 		timeTweetQueued = -1;
 		friendsTweetQueued = 0;
 		timeTweetQueued = 0;
 
-		ReadFile("CSV/InstantMessages", ParseMessage);
+		ReadFile("CSV/InstantMessagesTest", ParseMessage);
 		ReadFile("CSV/RandomTweetsDateTweets", ParseTweet, parsedTweets);
 		ReadFile("CSV/DateTweetsTime", ParseTweet, timeTweets);
 		ReadFile("CSV/DateTweetsFriends", ParseTweet, friendsTweets);
+
+		Debug.Log("LEN: "+parsedTweets.Count);
 	}
 
 	void ReadFile(string fileName, ParserDelegate deleg, List<ParsedTweet> targetList = null)
 	{
-		bool firstLine = true;
+//		bool firstLine = true;
 		TextAsset txt = Resources.Load(fileName) as TextAsset;
 		string allText = txt.text;
 
@@ -114,40 +121,86 @@ public class MessageCVSParser {
 		{
 			if(!string.IsNullOrEmpty(line))
 			{
-				string[] entries = line.Split(',');				// split string and check if...
-				if(firstLine) { firstLine = false; continue; }	// ...is the first line (header)
+				string[] entries = null;						// split string and check if...
+				if(line.Contains("\"")) entries = IntelliSplit(line);
+				else entries = line.Split(',');
 				if(string.IsNullOrEmpty(entries[0])) continue;	// ...the line is empty or not initialized
-				if(entries[0].StartsWith("/")) continue;		// ...commented out 
+				if(entries[0].StartsWith("/")) continue;		// ...commented out
 				if (entries.Length > 0)
 					deleg(entries, targetList);
 			}
 		}
 	}
 
+	string[] IntelliSplit(string line)
+	{
+		Debug.Log("LINE: " + line);
+		string[] split = line.Split('"');
+		string[] append = new string[6];
+
+		string[] firstPart = split[0].Split(',');
+		append[0] = firstPart[0];
+		append[1] = firstPart[1];
+
+		string[] secondPart = null;
+		if(split.Length == 3) // either answer or message have one or more commas
+		{
+			if(firstPart.Length == 4) // answer has commas
+			{
+				append[2] = firstPart[2];
+				append[3] = split[1];
+				secondPart = split[2].Split(',');
+				append[4] = secondPart[1];
+				append[5] = secondPart[2];
+			}
+			else // message has commas
+			{
+				append[2] = split[1];
+				secondPart = split[2].Split(',');
+				append[3] = secondPart[1];
+				append[4] = secondPart[2];
+				append[5] = secondPart[3];
+			}
+		}
+		else if(split.Length == 5) // both answer and message have one or more commas
+		{
+			append[2] = split[1];
+			append[3] = split[3];
+			secondPart = split[4].Split(',');
+			append[4] = secondPart[1];
+			append[5] = secondPart[2];
+		}
+
+		foreach(string s in append)
+			Debug.Log(s);
+
+		return append;
+	}
+
 	void ParseTweet(string[] args, List<ParsedTweet> targetList)
 	{
 		// not the correct number of arguments? forget it and cancel
-		if(args.Length != 5) return;
+		if(args.Length != 6) return;
 		
 		// check for tweet predecessor/successor
-		if(string.IsNullOrEmpty( args[1] )) args[1] = "-1";
-		if(string.IsNullOrEmpty( args[2] )) args[2] = "-1";
+		if(string.IsNullOrEmpty( args[4] )) args[4] = "-1";
+		if(string.IsNullOrEmpty( args[5] )) args[5] = "-1";
 		
 		int id;
 		if(!int.TryParse(args[0].Trim(), out id))
 			Debug.LogError("Tweet ID was no int! " + args[0]);
 		int predec;
-		if(!int.TryParse(args[1].Trim(), out predec))
-			Debug.LogError("Tweet predecessor was no int! " + args[1]);
+		if(!int.TryParse(args[4].Trim(), out predec))
+			Debug.LogError("Tweet predecessor was no int! " + args[4]);
 		int succ;
-		if(!int.TryParse(args[2].Trim(), out succ))
-			Debug.LogError("Tweet successor was no int! " + args[2]);
+		if(!int.TryParse(args[5].Trim(), out succ))
+			Debug.LogError("Tweet successor was no int! " + args[5]);
 
 		ParsedTweet tweet = null;
 		if(predec > -1 || succ > -1)
-			tweet = new ParsedTweet(id, args[3].Trim(), args[4].Trim());
+			tweet = new ParsedTweet(id, args[1].Trim(), args[2].Trim());
 		else
-			tweet = new ParsedTweet(id, args[3].Trim(), args[4].Trim(), predec, succ);
+			tweet = new ParsedTweet(id, args[1].Trim(), args[2].Trim(), predec, succ);
 
 		if(tweet != null)
 			targetList.Add(tweet);
@@ -210,7 +263,7 @@ public class MessageCVSParser {
 
 	public ParsedTweet GetRandomTweet()
 	{
-		int rand = rani.Next(0, parsedTweets.Count);
+		int rand = Random.Range(0, parsedTweets.Count);
 
 		ParsedTweet tweet = parsedTweets[rand];
 		parsedTweets.RemoveAt(rand);

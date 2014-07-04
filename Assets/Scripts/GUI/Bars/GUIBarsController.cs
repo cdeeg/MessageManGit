@@ -19,7 +19,8 @@ public class GUIBarsController : MonoBehaviour {
 	{
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
-
+		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, PauseGame);
+		
 		initialTimeInSeconds = StartEndPosHandler.CurrentData.timeLimit;
 
 		timeBar.Init(initialTimeInSeconds);
@@ -34,6 +35,7 @@ public class GUIBarsController : MonoBehaviour {
 	{
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.MESSAGE_OUTGOING, EvaluateSuccess);
 		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.CHEAT_PAUSE_TIME, PauseGame);
+		GlobalEventHandler.GetInstance().UnregisterListener(EEventType.PAUSE_GAME, PauseGame);
 	}
 
 	void PauseGame (object sender, System.EventArgs args)
