@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 0b866aa37471f1045a5f84c0819098d6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: imagePlane1
+    100002: imagePlane2
+    100004: //RootNode
+    100006: Inky_body
+    100008: Inky_feathers
+    100010: Inky_wings
+    100012: pCube1_004
+    100014: Sphere
+    100016: Armature
+    100018: Beak
+    100020: Head
+    100022: Neck
+    100024: origin
+    100026: Shoulder_R
+    100028: ShoulderL
+    100030: Spine_l
+    100032: Spine_u
+    100034: Wing_LL
+    100036: Wing_LR
+    100038: Wing_UL
+    100040: WIng_UR
+    100042: Beak_lower
+    100044: Beak_upper
+    100046: Jaw
+    400000: imagePlane1
+    400002: imagePlane2
+    400004: //RootNode
+    400006: Inky_body
+    400008: Inky_feathers
+    400010: Inky_wings
+    400012: pCube1_004
+    400014: Sphere
+    400016: Armature
+    400018: Beak
+    400020: Head
+    400022: Neck
+    400024: origin
+    400026: Shoulder_R
+    400028: ShoulderL
+    400030: Spine_l
+    400032: Spine_u
+    400034: Wing_LL
+    400036: Wing_LR
+    400038: Wing_UL
+    400040: WIng_UR
+    400042: Beak_lower
+    400044: Beak_upper
+    400046: Jaw
+    2300000: Inky_body
+    2300002: Inky_feathers
+    2300004: Inky_wings
+    2300006: pCube1_004
+    2300008: Sphere
+    3300000: Inky_body
+    3300002: Inky_feathers
+    3300004: Inky_wings
+    3300006: pCube1_004
+    3300008: Sphere
+    4300000: Inky_wings
+    4300002: Sphere
+    4300004: Inky_feathers
+    4300008: Inky_body
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Inky_body
+    13700002: Inky_feathers
+    13700004: Inky_wings
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 200
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/origin
+        weight: 1
+      - path: Armature/origin/Neck
+        weight: 1
+      - path: Armature/origin/Neck/Head
+        weight: 1
+      - path: Armature/origin/Neck/Head/Beak_upper
+        weight: 1
+      - path: Armature/origin/Neck/Head/Jaw
+        weight: 1
+      - path: Armature/origin/Neck/Head/Jaw/Beak_lower
+        weight: 1
+      - path: Armature/origin/Shoulder_R
+        weight: 1
+      - path: Armature/origin/Shoulder_R/WIng_UR
+        weight: 1
+      - path: Armature/origin/Shoulder_R/WIng_UR/Wing_LR
+        weight: 1
+      - path: Armature/origin/ShoulderL
+        weight: 1
+      - path: Armature/origin/ShoulderL/Wing_UL
+        weight: 1
+      - path: Armature/origin/ShoulderL/Wing_UL/Wing_LL
+        weight: 1
+      - path: Armature/origin/Spine_u
+        weight: 1
+      - path: Armature/origin/Spine_u/Spine_l
+        weight: 1
+      - path: Inky_body
+        weight: 1
+      - path: Inky_feathers
+        weight: 1
+      - path: Inky_wings
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
