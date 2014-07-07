@@ -1,12 +1,12 @@
-//,,,,Date Tweets depending on Time
-//,,,,
-//ID,Previous ID,Following ID,Name,Messages
-1,,2,@CarrieOki,Sitting in my favourite Cafe waiting for my blind date :) SO EXCITED xx
-2,1,3,@CarrieOki,"Sitting on my own in a Cafe is, like,  awkward :/"
-3,2,4,@CarrieOki,pretending to write something important so I don't look like a total loner :(
-4,3,5,@CarrieOki,"*looks at watch* come on, I gotta get back to browsing the same 4 websites over and over.."
-5,4,6,@CarrieOki,"My phone's at 14%. If I don't make it to the end of the day, tell my friends ""Not much u?""  #ilovemyphone"
-6,5,7,@CarrieOki,Seriously where is that guy?! If he doesn't arrive in time I'm srsly gona be mad. #forreal
-7,6,8,@CarrieOki,I give him like 3 more minutes... #furious #got2bkidding
-8,7,9,@CarrieOki,I'm about to leave -_- #aintnobodygottimeforthat
-9,8,,@CarrieOki,"That's it, I'm leaving #yolo"
+//,,Date Tweets depending on Time,,,
+//,,,,,
+//ID,Name,Messages,Placeholder,Previous ID,Following ID
+1,@CarrieOki,Sitting in my favourite Cafe waiting for my blind date :) SO EXCITED xx,,,2
+2,@CarrieOki,"Sitting on my own in a Cafe is, like,  awkward :/",,1,3
+3,@CarrieOki,pretending to write something important so I don't look like a total loner :(,,2,4
+4,@CarrieOki,"*looks at watch* come on, I gotta get back to browsing the same 4 websites over and over..",,3,5
+5,@CarrieOki,"My phone's at 14%. If I don't make it to the end of the day, tell my friends 'Not much u?'  #ilovemyphone",,4,6
+6,@CarrieOki,Seriously where is that guy?! If he doesn't arrive in time I'm srsly gona be mad. #forreal,,5,7
+7,@CarrieOki,I give him like 3 more minutes... #furious #got2bkidding,,6,8
+8,@CarrieOki,I'm about to leave -_- #aintnobodygottimeforthat,,7,9
+9,@CarrieOki,"That's it, I'm leaving #yolo",,8,

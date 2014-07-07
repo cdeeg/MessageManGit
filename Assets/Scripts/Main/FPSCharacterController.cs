@@ -15,6 +15,7 @@ public class FPSCharacterController : MonoBehaviour {
 	public PrototypeGameController gctrl;
 
 	public float animationSpeed = 1f;
+	float fastAnimationSpeed = 2f;
 	public float lookAtPhoneRotationDuration = 1f;
 
 	Vector2 input;
@@ -66,13 +67,10 @@ public class FPSCharacterController : MonoBehaviour {
 			handsDownAnim["Take 001"].speed = -animationSpeed;
 		}
 		
-		originalRotation = Quaternion.identity; //playerCamera.transform.rotation;
+		originalRotation = Quaternion.identity;
 		GUIPhoneController playerPhoneCtrl = GetComponentInChildren<GUIPhoneController>();
 		if(playerPhoneCtrl != null)
-		{
 			lookAtPhoneTarget = playerPhoneCtrl.gameObject;
-//			targetRotation = Quaternion.LookRotation( lookAtPhoneTarget - playerCamera.transform.position);
-		}
 		else
 			Debug.LogError("FPSCharacterController: No phone to look at!");
 
@@ -101,7 +99,7 @@ public class FPSCharacterController : MonoBehaviour {
 
 	void LookTowardsPhone (object sender, System.EventArgs args)
 	{
-		originalRotation = playerCamera.transform.rotation; //lookAt ? playerCamera.transform.rotation : Quaternion.identity;
+		originalRotation = playerCamera.transform.rotation;
 		msg = ((TempMessageEventArgs)args).Message;
 		StartCoroutine(LookAtPhone(true));
 	}
@@ -220,10 +218,14 @@ public class FPSCharacterController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.LeftShift) != wasMoving && handsDownAnim != null
 		   || msgIsActive != msgWasActive)
 		{
+			float handUpSpeed = 0f;
+			if(!Input.GetKey(KeyCode.LeftShift)) handUpSpeed = fastAnimationSpeed;
+			else handUpSpeed = animationSpeed;
+
 			if(msgIsActive != msgWasActive) msgWasActive = msgIsActive;
 
 			handsDownAnim.Play();
-			handsDownAnim["Take 001"].speed = animationSpeed;
+			handsDownAnim["Take 001"].speed = handUpSpeed;
 
 			wasMoving = Input.GetKey(KeyCode.LeftShift);
 		}
