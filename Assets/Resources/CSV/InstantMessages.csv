@@ -1,4 +1,4 @@
-ID,sender,message from sender,answer,previous ID,following ID
+//ID,sender,message from sender,answer,previous ID,following ID
 1,Tim,My xBox broke. :(,I know how to fix it,,2
 2,Tim,How?!?!,walk up to your xBox. Feel around for the cord.,1,3
 3,Tim,Ok?,Plug it in.,2,
@@ -51,7 +51,7 @@ ID,sender,message from sender,answer,previous ID,following ID
 50,Dad,"OK, I'll ask someone else",-.-,49,51
 51,Sis,"Hey big brother there is a moth in the bathroom, can you come get it?? >.<","Your big brother is dead now. You are next. Love, Moth",,
 52,Vanessa,:(,Turn that smile upside down!,,53
-53,Vanessa,):,...,53,
+53,Vanessa,):,...,52,
 54,James,I know you're on a date but could you please respond as fast as you can?? Please bro it's really serious!!,What's up? :S,,55
 55,James,Do you know the muffin man?,Srsly?,55,
 56,Bestie,"Hey dude!! I know what we can do on random days!! Go to a furniture store and hide in the closet and wait till someone walks past and say 'I'm back from Narnia!!'",Yes. See this is why you're my best friend.,,
@@ -64,18 +64,16 @@ ID,sender,message from sender,answer,previous ID,following ID
 63,BFF,"Bigbang Theory, How I Met Your Mother and Two & A Half Men combined?",how I banged your mother with two and a half men,,64
 64,BFF,This is why you're my Best friend,;),63,
 65,Sis,Texting while driving? YOLO,Forever alone? SOLO,,
-,,,,,
 66,Grandpa,"I wipp my hair back and fourth, I wipp my hair back and fourth!",u don't have any hair grandpa :P,,67
 67,Grandpa,"Oh then, I wipp my chair back and fourth, I wipp my chair back and fourth!",o.o,66,
 68,Ex,Just listened to a song and it reminded me of you ;),You remind me of mondays,,69
 69,Ex,Why? :o,No one likes you,68,
-,,,,,
-,,obstacles left side,,,
+//,,obstacles left side,,,
 71,BFF,"Look dude the street to your left is blocked, I wouldn't go there",Thanks man,,
 72,Dad,I arrived late at my job because of barriers blocking the way. Don't go left or you'll be late for your date,Thanks dad...,,
 73,Jennifer,Ugh! This construction site to the right is blocking my way! You better find a way around it,"I will, thanks!",,
 74,Benjamin,This huge truck has been blocking the damn street to your right for hours now,I'll take another route,,
-,,obstacles right side,,,
+//,,obstacles right side,,,
 75,James,"Look dude the street to your right is blocked, I wouldn't do there",Thanks man,,
 76,Arthur,This huge truck has been blocking the damn street to your right for hours now,I'll take another route,,
 77,Dad,I arrived late at my job because of barriers blocking the way. Don't go right or you'll be late for your date,Thanks dad...,,
