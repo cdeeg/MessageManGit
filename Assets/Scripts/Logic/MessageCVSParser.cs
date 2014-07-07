@@ -95,14 +95,12 @@ public class MessageCVSParser {
 	#region Initialization
 	void Parse()
 	{
-//		rani = new System.Random( System.DateTime.Now.Second );
-
 		queuedMessageId = -1;
 		timeTweetQueued = -1;
 		friendsTweetQueued = 0;
 		timeTweetQueued = 0;
 
-		ReadFile("CSV/InstantMessagesTest", ParseMessage);
+		ReadFile("CSV/InstantMessages", ParseMessage);
 		ReadFile("CSV/RandomTweetsDateTweets", ParseTweet, parsedTweets);
 		ReadFile("CSV/DateTweetsTime", ParseTweet, timeTweets);
 		ReadFile("CSV/DateTweetsFriends", ParseTweet, friendsTweets);

@@ -108,6 +108,10 @@ public class FPSCharacterController : MonoBehaviour {
 	{
 		isLookingAtPhone = true;
 		float timeElapsed = 0f;
+		while(handsDownAnim.isPlaying || Input.GetKey(KeyCode.LeftShift))
+		{
+			yield return null;
+		}
 
 		Vector3 rot = lookAtPhoneTarget.transform.position - playerCamera.transform.position;
 		Quaternion target = Quaternion.LookRotation(rot, Vector3.up);
