@@ -13,12 +13,13 @@ public class GUITweet : MonoBehaviour {
 	public float stayTime = 3f;
 	public float fadeTime = 2f;
 
-	public Color specialTweetColor = new Color(1f,1f,1f);
+	public string specialTweetBackground = "bubble_red";
 	public tk2dSprite defaultPicture;
 	
 	public event EventHandler DoneFading;
 
 	tk2dSpriteCollection myCollection;
+	string normalTweetBackground;
 	float height;
 	float width;
 	float moveTime = 1f;
@@ -52,6 +53,7 @@ public class GUITweet : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, PauseFading);
 
 		pause = false;
+		normalTweetBackground = background.CurrentSprite.name;
 	}
 
 	void OnDestroy()
@@ -109,10 +111,11 @@ public class GUITweet : MonoBehaviour {
 			icon.spriteId = icon.GetSpriteIdByName(pictureName);
 
 		Color col = background.color;
-		if(useSpecialColor) col = specialTweetColor;
-		else col = Color.white;
 		col.a = 1f;
 		background.color = col;
+
+		if(useSpecialColor) background.SetSprite(specialTweetBackground);
+		else background.SetSprite(normalTweetBackground);
 
 		col = senderName.color;
 		col.a = 1f;
@@ -188,7 +191,7 @@ public class GUITweet : MonoBehaviour {
 		isMoving = false;
 
 		Vector3 myPos = transform.localPosition;
-		myPos.z = 0f; //Mathf.Lerp(pos.y, targetMovePos, passed/moveTime);
+		myPos.z = 0f;
 		transform.localPosition = myPos;
 	}
 

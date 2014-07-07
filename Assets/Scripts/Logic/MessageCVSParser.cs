@@ -104,8 +104,6 @@ public class MessageCVSParser {
 		ReadFile("CSV/RandomTweetsDateTweets", ParseTweet, parsedTweets);
 		ReadFile("CSV/DateTweetsTime", ParseTweet, timeTweets);
 		ReadFile("CSV/DateTweetsFriends", ParseTweet, friendsTweets);
-
-		Debug.Log("LEN: "+parsedTweets.Count);
 	}
 
 	void ReadFile(string fileName, ParserDelegate deleg, List<ParsedTweet> targetList = null)
@@ -132,7 +130,6 @@ public class MessageCVSParser {
 
 	string[] IntelliSplit(string line)
 	{
-		Debug.Log("LINE: " + line);
 		string[] split = line.Split('"');
 		string[] append = new string[6];
 
@@ -168,9 +165,6 @@ public class MessageCVSParser {
 			append[4] = secondPart[1];
 			append[5] = secondPart[2];
 		}
-
-		foreach(string s in append)
-			Debug.Log(s);
 
 		return append;
 	}
