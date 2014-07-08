@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tutorial/TutorialController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/Messages/GUIMessageController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Tutorial/TutorialController.cs" Line="27" Column="1" />
-      <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="111" Column="56" />
-      <File FileName="Assets/Scripts/GUI/Tweets/GUITweetController.cs" Line="89" Column="24" />
+      <File FileName="Assets/Scripts/Tutorial/TutorialController.cs" Line="40" Column="15" />
+      <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="110" Column="3" />
+      <File FileName="Assets/Scripts/GUI/Tweets/GUITweetController.cs" Line="111" Column="26" />
+      <File FileName="Assets/Scripts/GUI/Menu/GUIMainMenuController.cs" Line="8" Column="46" />
+      <File FileName="Assets/Scripts/GUI/Messages/GUIMessageController.cs" Line="134" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -108,8 +108,11 @@ public class GUITweet : MonoBehaviour {
 			height = minBgSize;
 		}
 
+		icon.gameObject.SetActive(true);
 		if(alwaysUseDefaultIcon && !String.IsNullOrEmpty(defaultIcon)) icon.SetSprite(defaultIcon);
-		else if(!String.IsNullOrEmpty(pictureName)) icon.SetSprite(pictureName);
+		else if(!String.IsNullOrEmpty(pictureName) && icon.Collection.GetSpriteDefinition(pictureName) != null) icon.SetSprite(pictureName);
+		else if(!String.IsNullOrEmpty(defaultIcon)) icon.SetSprite(defaultIcon);
+		else icon.gameObject.SetActive(false);
 
 		Color col = background.color;
 		col.a = 1f;
