@@ -8,6 +8,7 @@ public class NPCAgent : MonoBehaviour {
 	public float maxDistanceRespawn = 10f;
 	
 	public float speed = 4f;
+	public float rotateSpeed = 4f;
 	
 	int failedTimes = 5;
 	int failedYet = 0;
@@ -16,6 +17,26 @@ public class NPCAgent : MonoBehaviour {
 	Animation anim;
 
 	bool gamePaused;
+
+	void Awake()
+	{
+		if(rigidbody == null)
+			gameObject.AddComponent<Rigidbody>();
+
+		Rigidbody rig = GetComponent<Rigidbody>();
+
+		// don't do weird stuff with rotation (also, no flying!)
+		rig.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+		if(collider == null)
+			gameObject.AddComponent<CapsuleCollider>();
+
+		CapsuleCollider coll = GetComponent<CapsuleCollider>();
+		if(coll != null)
+		{
+			coll.radius = 1.2f;
+		}
+	}
 
 	void Start()
 	{
@@ -82,7 +103,7 @@ public class NPCAgent : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 		if(gamePaused)
 		{
@@ -97,13 +118,20 @@ public class NPCAgent : MonoBehaviour {
 				anim.Play();
 		}
 
-		if(Vector3.Distance(transform.position, finalPosition) <= 3f)
+		if(Vector3.Distance(transform.position, finalPosition) <= 4f)
 		{
 			GetRandomPointOnNavMesh();
 		}
 		else
 		{
-			transform.position = Vector3.MoveTowards(transform.position, finalPosition, speed * Time.deltaTime);
+			Vector3 pos = Vector3.MoveTowards(transform.position, finalPosition, speed * Time.deltaTime);
+			Vector2 input = new Vector2( pos.z, pos.x );
+			if (input.sqrMagnitude > 1) input.Normalize();
+			
+			Vector3 desiredMove = transform.forward * input.y * speed;
+			float yv = rigidbody.velocity.y;
+			rigidbody.velocity = desiredMove + Vector3.up * yv;
+			transform.RotateAround(transform.position, Vector3.up, 0.1f * input.x * rotateSpeed);
 		}
 
 		if(Vector3.Distance( NPCHandler.PlayerPos, transform.position) >= NPCHandler.maxDistancePlayer)
