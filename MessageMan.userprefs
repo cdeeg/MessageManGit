@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/Tweets/GUITweet.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tutorial/TutorialController.cs">
     <Files>
+      <File FileName="Assets/Scripts/Tutorial/TutorialController.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="111" Column="56" />
       <File FileName="Assets/Scripts/GUI/Tweets/GUITweetController.cs" Line="89" Column="24" />
     </Files>

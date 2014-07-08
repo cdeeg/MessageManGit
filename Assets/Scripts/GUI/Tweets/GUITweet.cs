@@ -14,7 +14,8 @@ public class GUITweet : MonoBehaviour {
 	public float fadeTime = 2f;
 
 	public string specialTweetBackground = "bubble_red";
-	public tk2dSprite defaultPicture;
+	public string defaultIcon = "";
+	public bool alwaysUseDefaultIcon = false;
 	
 	public event EventHandler DoneFading;
 
@@ -107,8 +108,8 @@ public class GUITweet : MonoBehaviour {
 			height = minBgSize;
 		}
 
-		if(!String.IsNullOrEmpty(pictureName))
-			icon.spriteId = icon.GetSpriteIdByName(pictureName);
+		if(alwaysUseDefaultIcon && !String.IsNullOrEmpty(defaultIcon)) icon.SetSprite(defaultIcon);
+		else if(!String.IsNullOrEmpty(pictureName)) icon.SetSprite(pictureName);
 
 		Color col = background.color;
 		col.a = 1f;

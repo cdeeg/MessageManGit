@@ -107,10 +107,12 @@ public class GUITweetController : MonoBehaviour {
 		existingTweets = GetComponentsInChildren<GUITweet>();
 
 		GUITweet tweet = tweetPrefab.Spawn(transform);
+		string senName = msgArgs.Sender;
+		if(senName.StartsWith("@")) senName = senName.Substring(1);
 		if(isNotificationAnchor)
-			tweet.Activate(msgArgs.Sender, msgArgs.Sender.Substring(1));
+			tweet.Activate(msgArgs.Sender, senName);
 		else
-			tweet.Activate(msgArgs.Sender, msgArgs.Sender.Substring(1), msgArgs.Text, msgArgs.IsSpecial);
+			tweet.Activate(msgArgs.Sender, senName, msgArgs.Text, msgArgs.IsSpecial);
 
 		Vector3 spawnPos;
 		if(!orientationDown)

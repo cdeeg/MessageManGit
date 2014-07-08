@@ -6,7 +6,7 @@ public class GUIMainMenuController : GUIMenuController
 	void StartNewGame()
 	{
 		HighscoreInformationData.GetInstance().Reset();
-		Application.LoadLevel("jpscene");
+		Application.LoadLevel("TutorialScene");
 	}
 	
 	void QuitGame()
