@@ -7,9 +7,9 @@ public class GUIPhoneController : MonoBehaviour {
 	public tk2dSlicedSprite messageIndicator;
 	public float defaultMessageOnDisplayTime;
 	
-//	public GUIMessageController messageView;
+	public GUIMessageController messageView;
 	
-//	bool messageViewActive;
+	bool messageViewActive;
 	bool messageMissed;
 	bool pause;
 	bool waitForAnim;
@@ -22,9 +22,9 @@ public class GUIPhoneController : MonoBehaviour {
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.MESSAGE_OUTGOING, MinimizePhone);
 		GlobalEventHandler.GetInstance().RegisterListener(EEventType.PAUSE_GAME, GamePaused);
 
-//		if(messageView == null) Debug.LogError("GUIPhoneController: Missing GUIMessageController object!");
+		if(messageView == null) Debug.LogError("GUIPhoneController: Missing GUIMessageController object!");
 		
-//		messageViewActive = false;
+		messageViewActive = false;
 		messageMissed = false;
 		waitForAnim = false;
 		pause = false;
@@ -57,12 +57,6 @@ public class GUIPhoneController : MonoBehaviour {
 		messageMissed = true;
 		StartCoroutine(ShowIndicatorOnDisplay());
 	}
-
-	void SendFinishEvent()
-	{
-		MessageCVSParser.GetInstance().SentMessageCorrectly(false);
-		GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(false));
-	}
 	
 	IEnumerator ShowIndicatorOnDisplay()
 	{
@@ -83,7 +77,11 @@ public class GUIPhoneController : MonoBehaviour {
 		if(!waitForAnim)
 		{
 			messageIndicator.gameObject.SetActive(false);
-			if(messageMissed) SendFinishEvent();
+			if(messageMissed)
+			{
+				MessageCVSParser.GetInstance().SentMessageCorrectly(false);
+				GlobalEventHandler.GetInstance().ThrowEvent(this, EEventType.MESSAGE_OUTGOING, new SuccessMessageEventArgs(false));
+			}
 		}
 	}
 	#endregion
@@ -95,24 +93,23 @@ public class GUIPhoneController : MonoBehaviour {
 
 		waitForAnim = false;
 		messageMissed = false;
-//		ToggleMessageView();
+		ToggleMessageView();
 	}
 	
 	void MinimizePhone (object sender, System.EventArgs args)
 	{
-		if(sender is GUIPhoneController) return;
-//		if(!(sender is GUIMessageController)) ToggleMessageView();;
+		if(sender == this) return;
 		
+		ToggleMessageView();
+
 		if(messageIndicator.gameObject.activeSelf)
 			messageIndicator.gameObject.SetActive(false);
 	}
 	
-//	void ToggleMessageView()
-//	{
-//		messageViewActive = !messageViewActive;
-//		Debug.Log("ACTVE: " + messageViewActive);
-//
-//		messageView.ToggleGUI(!messageView.gameObject.activeSelf);
-//	}
+	void ToggleMessageView()
+	{
+		messageViewActive = !messageViewActive;
+		messageView.ToggleGUI(messageViewActive);
+	}
 	#endregion
 }

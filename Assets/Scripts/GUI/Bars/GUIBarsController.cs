@@ -65,6 +65,7 @@ public class GUIBarsController : MonoBehaviour {
 			UpdateFriends(1f, true);
 		}
 
+
 		HighscoreInformationData.GetInstance().LeftFriends = friendsBar.CurrentValue;
 		HighscoreInformationData.GetInstance().LostFriends = StartEndPosHandler.CurrentData.friends-friendsBar.CurrentValue;
 	}
