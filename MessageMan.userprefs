@@ -1,9 +1,20 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Main/NPCs/NPCAgent.cs">
     <Files>
       <File FileName="Assets/Scripts/Main/NPCs/NPCAgent.cs" Line="18" Column="2" />
       <File FileName="Assets/Scripts/Main/FPSCharacterController.cs" Line="10" Column="32" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/Messages/GUIMessageController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Tutorial/TutorialController.cs" Line="40" Column="15" />
+      <File FileName="Assets/Scripts/GUI/Tweets/GUITweet.cs" Line="110" Column="3" />
+      <File FileName="Assets/Scripts/GUI/Tweets/GUITweetController.cs" Line="111" Column="26" />
+      <File FileName="Assets/Scripts/GUI/Menu/GUIMainMenuController.cs" Line="8" Column="46" />
+      <File FileName="Assets/Scripts/GUI/Messages/GUIMessageController.cs" Line="134" Column="39" />
+>>>>>>> parent of 8e87d33... Clean Up
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
