@@ -14,9 +14,11 @@ public class NPCAgent : MonoBehaviour {
 	int failedYet = 0;
 	
 	Vector3 finalPosition;
+	Vector3 oldVelocity = Vector3.zero;
 	Animation anim;
 
 	bool gamePaused;
+	bool chOldVelo = false;
 
 	void Awake()
 	{
@@ -87,7 +89,7 @@ public class NPCAgent : MonoBehaviour {
 	public void SeekPosition(Vector3 playerPos, bool withDistance = false)
 	{
 		Vector3 randDir = Random.insideUnitSphere * walkRadius;
-		randDir += NPCHandler.PlayerPos + FPSCharacterController.MyForward*3f;
+		randDir += NPCHandler.PlayerPos + FPSCharacterController.MyForward*10f;
 
 		NavMeshHit hit;
 		if(NavMesh.SamplePosition(randDir, out hit, walkRadius, 1))
@@ -110,12 +112,27 @@ public class NPCAgent : MonoBehaviour {
 			if(anim.isPlaying)
 				anim.Stop();
 
+			if(!chOldVelo)
+			{
+				oldVelocity = rigidbody.velocity;
+				chOldVelo = true;
+			}
+
+			rigidbody.velocity = Vector3.zero;
+
 			return;
 		}
 		else
 		{
 			if(!anim.isPlaying)
 				anim.Play();
+
+			if(chOldVelo)
+			{
+				rigidbody.velocity = oldVelocity;
+				oldVelocity = Vector3.zero;
+				chOldVelo = false;
+			}
 		}
 
 		if(Vector3.Distance(transform.position, finalPosition) <= 4f)

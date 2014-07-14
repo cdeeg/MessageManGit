@@ -22,7 +22,6 @@ public class NPCHandler : MonoBehaviour {
 	#region Unity functions
 	void Start ()
 	{
-//		if(agentPrefabMale == null || agentPrefabFemale == null) return;
 		if(npcPrefabs.Length == 0) return;
 
 		maxDistancePlayer = distanceFromPlayer;

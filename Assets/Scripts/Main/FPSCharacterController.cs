@@ -165,6 +165,7 @@ public class FPSCharacterController : MonoBehaviour {
 	void MsgDone (object sender, System.EventArgs args)
 	{
 		msgIsActive = false;
+		ToggleCompass(sender, args);
 	}
 
 	void ToggleCompass (object sender, System.EventArgs args)
