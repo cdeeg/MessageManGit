@@ -20,5 +20,6 @@ public class GUIMainMenuController : GUIMenuController
 	
 	void ShowCredits()
 	{
+		Application.LoadLevel("Credits");
 	}
 }

@@ -1,0 +1,23 @@
+Concept Artist:Yasemin Asik,Jan-Philipp Eckhart
+;
+3D/Enviroment:Yasemin Asik
+;	
+3D/Assets:Jan-Philipp Eckhart,Estelle Madubuko
+;
+3D/Characters:Estelle Madubuko
+;
+3D/Rigging/Animation:Estelle Madubuko
+;
+HUD Artist:Yasemin Asik
+;
+Level Design:Jan-Philipp Eckhart
+;
+Lighting:Jan-Philipp Eckhart
+;
+Programming:Carolin Deeg
+;
+Sound/SFX:Carolin Deeg,Jan-Philipp Eckhart
+;
+Management:Estelle Madubuko
+;
+Special Thanks to:Carla Heinzel,Will Weber,Jens Schöbel,Boris Kunkel,Martin Leissler,Martin Streit,Katharina Kafka,Tilmann Kohlhaase,Tom Nietfeld,Christian Mayer,and,Sid

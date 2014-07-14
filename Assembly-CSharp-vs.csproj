@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Camerafreeze.cs" />
+     <Compile Include="Assets\Scripts\Credits\CreditsHandler.cs" />
      <Compile Include="Assets\Scripts\GUI\Bars\GUIBarsController.cs" />
      <Compile Include="Assets\Scripts\GUI\Bars\GUITweenableBar.cs" />
      <Compile Include="Assets\Scripts\GUI\GUIGameOverController.cs" />
@@ -255,6 +256,7 @@
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\_Gamecontent\Shaders\Unlit_Transparent_nocull.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Resources\Credits.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\tk2d\Shaders\AdditiveVertexColor.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
